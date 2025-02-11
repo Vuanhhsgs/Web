@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My New Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        .top-bar {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .top-bar .left p {
+            font-size: 1.2rem;
+            margin: 0.3rem 0;
+            color: #333;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .top-bar .left p a {
+            color: #0077cc;
+            text-decoration: none;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-weight: 600;
+        }
+
+        .top-bar .left p a:hover {
+            text-decoration: underline;
+        }
+
+        .top-bar .menu {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .top-bar .menu .menu-box {
+            display: inline-block;
+            margin: 0 1rem;
+            padding: 0.8rem 1.5rem;
+            border: 2px solid #0077cc;
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            position: relative;
+        }
+
+        .top-bar .menu .menu-box a {
+            color: #0077cc;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .top-bar .menu .menu-box a:hover {
+            color: #005f99;
+            text-decoration: underline;
+        }
+
+        .top-bar .menu .contact-icons {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for contrast */
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            width: 150px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .top-bar .menu .contact-icons a {
+            display: block;
+            padding: 0.5rem;
+            text-decoration: none;
+            color: white;
+        }
+
+        .top-bar .menu .contact-icons a:hover {
+            background-color: #575757;
+        }
+
+        .top-bar .menu .contact:hover .contact-icons {
+            display: block;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            flex: 1;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            width: 100%;
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .section-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 1rem;
+            width: 30%;
+            background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+        }
+
+        .section img {
+            width: 80%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .section-header {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0077cc;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .section-header:hover {
+            color: #005f99;
+        }
+
+        .clickable-text {
+            font-size: 1rem;
+            color: #0077cc;
+            cursor: pointer;
+            text-decoration: underline;
+            margin-top: 0.5rem;
+        }
+
+        .clickable-text:hover {
+            color: #005f99;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="left">
+            <p>Telephone: 0889769047</p>
+            <p>Email: <a href="mailto:havuanh8a0@gmail.com">havuanh8a0@gmail.com</a></p>
+        </div>
+        <div class="menu">
+            <div class="combined-menu-box">
+                <div class="menu-box">
+                    <a href="./">Home</a>
+                </div>
+                <div class="menu-box">
+                    <a href="./about.html">About</a>
+                </div>
+                <div class="menu-box contact">
+                    <a href="#">Contact</a>
+                    <div class="contact-icons">
+                        <a href="https://facebook.com" target="_blank">
+                            <img src="file:///C:/Users/quynhchi/OneDrive/Documents/Webbaitaptin/facebook-icon.png" style="width: 24px; height: 24px;"> Facebook
+                        </a>
+                        <a href="https://artofproblemsolving.com/community/user/1047323" target="_blank">
+                            <img src="file:///C:/Users/quynhchi/OneDrive/Documents/Webbaitaptin/aops.png" style="width: 24px; height: 24px;"> AoPs
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header>
+        <h1>NHỮNG BÀI HÌNH HỌC PHẲNG THÚ VỊ</h1>
+    </header>
+
+    <main>
+        <div class="section-container">
+            <div class="section">
+                <h2 class="section-header"><a href = "C:\\Users\\quynhchi\\OneDrive\\Documents\\Webbaitaptin\\Main page sections\\mainpagesec1.html" target="_blank">Đề bài luyện tập đội IMO 2024 thầy Trần Quang Hùng</a></h2>
+                <img src="file:///C:/Users/quynhchi/OneDrive/Documents/Webbaitaptin/Material/imgde1.png" alt="Section 1 Image">
+                <p class="clickable-text"><a href="file:///C:/Users/quynhchi/OneDrive/Documents/Webbaitaptin/Material/filepdfde1.pdf" target="_blank">Click here to view the file</a></p>
+            </div>
+            <div class="section">
+                <h2 class="section-header">Một số bài dự tuyển hè 2024 chọn lọc</h2>
+                <img src="https://via.placeholder.com/300" alt="Section 2 Image">
+                <p class="clickable-text"><a href="path/to/section2.pdf" target="_blank">Click here to view the file</a></p>
+            </div>
+            <div class="section">
+                <h2 class="section-header">Một số bài hay từ AoPs của t</h2>
+                <img src="https://via.placeholder.com/300" alt="Section 3 Image">
+                <p class="clickable-text"><a href="path/to/section3.pdf" target="_blank">Click here to view the file</a></p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p class="footer-title">NHỮNG BÀI HÌNH HỌC PHẲNG THÚ VỊ</p>
+        <p>&copy; 2025 NHỮNG BÀI HÌNH HỌC PHẲNG THÚ VỊ. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
