@@ -8,19 +8,25 @@
     <script src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js"></script>
     <style>
 
-        .set-link {
-            display: block;
-            margin-top: 15px;
-            color: #17a2b8; /* matching your problem box accent color */
-            font-weight: bold;
-            text-decoration: underline;
-            cursor: pointer;
+        /* New button-style link for the set of problems */
+        .set-btn {
+            background-color: #ffc107; /* bright yellow */
+            border-color: #ffc107;
+            color: black;
+            padding: 15px 30px;
+            border-radius: 5px;
             font-size: 18px;
-            text-align: center;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 15px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
         }
 
-        .set-link:hover {
-            color: #0d6efd; /* slightly darker on hover */
+        .set-btn:hover {
+            background-color: #e0a800; /* darker yellow on hover */
+            color: white;
         }
 
         .home-button {
@@ -47,16 +53,6 @@
             box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
         }
 
-        .title-container {
-            background-color: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            border-radius: 5px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-
         body {
             margin: 0;
             padding: 0;
@@ -73,130 +69,4 @@
         }
 
         .container {
-            background-color: #222;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            text-align: center;
-        }
-
-        .container h2 {
-            text-align: center;
-        }
-
-        .bold-text {
-            font-weight: bold;
-        }
-
-        .problem-image {
-            width: 100%;
-            max-width: 600px;
-            display: block;
-            margin: 10px auto;
-            border-radius: 5px;
-        }
-
-        .problem-box {
-            background-color: white; 
-            padding: 50px;
-            border: 4px solid #17a2b8;
-            border-radius: 20px;
-            text-align: center;
-            width: 80%;
-            max-width: 800px;
-            margin-bottom: 50px;
-        }
-
-        .problem-content {
-            color: black; 
-            font-size: 20px;
-            margin-bottom: 20px;
-            padding: 20px;
-            border: 2px solid black;
-            border-radius: 10px;
-        }
-
-        .problem-title {
-            font-size: 30px;
-            margin-bottom: 20px;
-            font-weight: bold;
-            background-color: #17a2b8;
-            padding: 10px;
-            border-radius: 10px;
-            display: inline-block;
-            color: white;
-        }
-
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .button {
-            padding: 15px 30px;
-            border: 2px solid;
-            color: white;
-            cursor: pointer;
-            border-radius: 5px;
-            font-family: Arial, sans-serif;
-            font-size: 18px;
-            font-weight: bold;
-            text-decoration: none;
-            margin-bottom: 10px;
-            text-align: center;
-        }
-
-        .solution-btn {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-
-        .try-btn {
-            background-color: #007bff;
-            border-color: #007bff;
-        }
-
-    </style>
-</head>
-<body>
-    <a href="index.html" class="home-button">Trang chủ</a>
-    
-    <div class="container">
-        <h2 class="bold-text">Các bài tập thầy Trần Quang Hùng cho luyện đội IMO Việt Nam 2024</h2>
-        <a href="https://artofproblemsolving.com/community/q3h3315409p30638727" class="set-link" target="_blank">Link to the set of problems</a>
-    </div>
-
-    <div class="problem-box">
-        <div class="problem-title">Problem 1</div>
-        <div class="problem-content">
-            Let ABC be a triangle with centroid G and symmedian point L. Let D be
-            the symmedian point of triangle GBC. Construct parallelogram GDLX. Similarly, we
-            have the points D, E, Y, Z. Prove that lines AX, BY, CZ are concurrent.
-        </div>
-        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/Problem%201.PNG?v=1739639379368" alt="Problem Image" class="problem-image">
-        <div class="button-container">
-            <a href="usertryingproblem1.html" class="button try-btn">Try It Yourself</a>
-            <a href="sec1problem1.html" class="button solution-btn">My Solution</a>
-        </div>
-    </div>
-
-    <div class="problem-box">
-        <div class="problem-title">Problem 2</div>
-        <div class="problem-content">
-            Let ABC be a triangle with two isogonal conjugate points. Let I and J be the
-            orthocenters of triangles QAC and QAB respectively. Let K be the second intersection
-            point of (PAB) and BC. Let L be the intersection of AK and IJ. Prove that PL ⊥ AC.
-        </div>
-        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/Problem%202.PNG?v=1739639381565" alt="Problem Image" class="problem-image">
-        <div class="button-container">
-            <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaobai1.gsp?v=1739639195728" target="_blank" class="button try-btn">Try It Yourself</a>
-            <a href="sec1problem2.html" class="button solution-btn">My Solution</a>
-        </div>
-    </div>
-
-</body>
-</html>
+            ba
