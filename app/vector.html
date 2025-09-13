@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+	.title-container {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/mainwebbackground.png?v=1739639361104') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid white;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #333;
+            border-color: #fff;
+            box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+        }
+        .container {
+            background-color: #222;
+            padding: 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .container h2 {
+            text-align: center;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .problem-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        .centered-text {
+            text-align: center;
+        }
+	.problem-box {
+            background-color: white; 
+            padding: 50px;
+            border: 4px solid #17a2b8;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+	.problem-content {
+            color: black; 
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+	.problem-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: bold;
+            background-color: #17a2b8;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            color: white;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 15px 30px;
+            border: 2px solid;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .solution-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .try-btn {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+    </style>
+</head>
+<body>
+
+    <a href="index.html" class="home-button">Trang chủ</a>
+    <div class = "title-container">
+    <h1>Véc-tơ</h1>
+    </div>
+    <div class="container">
+        <h2 class="bold-text">Phương pháp chung</h2>
+        <p class="centered-text">Trong các bài toán yêu cầu chứng minh thẳng hàng hay song song mà có xuất hiện các điểm đặc biệt, ta sử dụng công cụ véc-tơ cũng như tâm tỉ cự đã biết của các điểm này để xử lý</p>
+    </div>
+
+    <div class="container">
+        <h2 class="bold-text">Ví dụ từ một bài tôi làm</h2>
+        <p class="bold-text">Bài toán(Nguồn: anh Khương Nguyễn sưu tầm trên group Hình học phẳng Facebook):</p>
+        <p>Cho tam giác \(ABC\) nội tiếp đường tròn \((O)\) có trực tâm \(H\). \(L\) là điểm <i>Lemoine</i>. Gọi \(T\) là điểm liên hợp đẳng cự với \(L\). Chứng minh rằng \(HT \parallel OL\).</p>
+        <p class="bold-text">Hình ảnh:</p>
+        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/vectohinhbaiminhhoa.png?v=1739717425056" alt="Hình minh họa" class="problem-image">
+
+        <p class="bold-text">Lời giải:</p>
+        <p>
+          <h2>Bổ đề</h2>
+    <p>Cho tam giác <span class="math">ABC</span> với tam giác cevian <span class="math">DEF</span> của một điểm <span class="math">Q</span> bất kỳ đối với <span class="math">ABC</span>. Khi đó:</p>
+    <p class="math">\( \overrightarrow{u} = \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
+    <p>song song với <span class="math">\( \overrightarrow{QQ^*} \)</span>, trong đó <span class="math">Q^*</span> là liên hợp đẳng cự của <span class="math">Q</span> đối với tam giác <span class="math">ABC</span>.</p>
+    <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/hinh1baiminhhoavecto.png?v=1739728583341" alt="Hình lời giải 1" class="problem-image">
+    <h2>Chứng minh</h2>
+    <p>Gọi <span class="math">\(Q(a,b,c)\)</span>, ta có:</p>
+    <p class="math">\(DB/DC = b/c.\)</p>
+    <p>Gọi <span class="math">\(AQ^*\)</span> cắt <span class="math">\(BC\)</span> tại <span class="math">\(D'\)</span> thì <span class="math">\(\dfrac{D'B}{D'C} = \dfrac{c}{b}\)</span>, do đó <span class="math">\(Q^*(1/a,1/b,1/c)\)
+    </span>.</p>
+    
+    <p>Ta có:</p>
+    <p class="math">\( \overrightarrow{u} = \overrightarrow{QD} + \overrightarrow{QE} + \overrightarrow{QF} - (\overrightarrow{QA} + \overrightarrow{QB} + \overrightarrow{QC}) \)</p>
+    <p class="math">\( = \sum \left( \frac{b}{b+c} \overrightarrow{QB} + \frac{c}{b+c} \overrightarrow{QC} \right) - \sum \overrightarrow{QA} \)</p>
+    <p class="math">\( = \sum \left( \frac{a}{a+b} + \frac{a}{a+c} - 1 \right) \overrightarrow{QA} \)</p>
+    <p class="math">\( = \frac{1}{(a+b)(b+c)(c+a)} \sum (a^2 - bc)(b+c) \overrightarrow{QA} \quad (1) \)</p>
+    
+    <p>Ta có:</p>
+    <p class="math">\( \sum (a^2 - bc)(b+c) \overrightarrow{QA} = a(ab+bc+ca) \overrightarrow{QA} - bc(a+b+c) \overrightarrow{QA} \)</p>
+    <p class="math">\( = (ab+bc+ca) \sum a \overrightarrow{QA} - (a+b+c) \sum bc \overrightarrow{QA} \)</p>
+    <p class="math">\( = -(a+b+c) \sum bc \overrightarrow{QA} \quad (2) \)</p>
+    
+    <p>Từ (1) và (2), ta suy ra:</p>
+    <p class="math">\( \overrightarrow{u} \parallel \sum bc \overrightarrow{QA} \)</p>
+    
+    <p>Mặt khác, ta có:</p>
+    <p class="math">\( \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \overrightarrow{QQ^*} = \sum \frac{1}{a} \overrightarrow{AQ^*} + \sum \frac{1}{a} \overrightarrow{QA} \)</p>
+    <p class="math">\( = \frac{1}{abc} \sum bc \overrightarrow{QA} \)</p>
+    
+    <p>Nên:</p>
+    <p class="math">\( \overrightarrow{QQ^*} \parallel \sum bc \overrightarrow{QA} \parallel \overrightarrow{u} \)</p>
+    <p>Vậy ta có điều phải chứng minh.</p>
+          
+      <p>Quay trở lại bài toán </p>
+      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/hinh2baiminhhoavecto.png?v=1739728700860" alt="Hình lời giải 1" class="problem-image">
+        Gọi <span class="math">MNQ</span> là tam giác median của tam giác <span class="math">ABC</span>, khi đó <span class="math">ML</span> chia đôi đường cao. Do đó, tương tự, <span class="math">L</span> là liên hợp đẳng cự của <span class="math">O</span> đối với <span class="math">MNQ</span>. Vì <span class="math">O</span> là trực tâm tam giác <span class="math">ABC</span>, ta có:</p>
+        <p class="math">\(OL \parallel HH^*\)</p>
+        <p>với <span class="math">H^*</span> là liên hợp đẳng cự của <span class="math">H</span> đối với <span class="math">ABC</span>. Ta chứng minh rằng <span class="math">H, T, H^*</span> thẳng hàng. Có:</p>
+        <p class="math">\( \overrightarrow{HH^*} \parallel \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
+        <p>với <span class="math">AD, BE, CF</span> là đường cao. Do đó, ta chứng minh:</p>
+        <p class="math">\( \overrightarrow{HT} \parallel \overrightarrow{u} = \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
+        <p>Tiếp theo, ta có:</p>
+        <p class="math"> \(L(a^2, b^2, c^2) \Rightarrow T(1/a^2, 1/b^2, 1/c^2)\)</p>
+        <p class="math">\( \overrightarrow{HT} = \overrightarrow{HA} + \overrightarrow{AT} \)</p>
+        <p>Dẫn đến:</p>
+           <p>
+        \( \overrightarrow{HT} \left( \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} \right) = \sum \frac{\overrightarrow{AT}}{a^2} + \sum \frac{\overrightarrow{HA}}{a^2} = \sum \frac{\overrightarrow{HA}}{a^2} \)
+    </p>
+    <p>
+        \( = \sum \frac{\cos B \cos C \cdot bc}{(a^2+c^2-b^2)(a^2+b^2-c^2)} \overrightarrow{HA} \)
+    </p>
+    <p>
+        \( = \frac{1}{(a^2+c^2-b^2)(a^2+b^2-c^2)(b^2+c^2-a^2)} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
+    </p>
+    <p>
+        \( \frac{AH}{R} = \frac{2OM}{R} = 2\cos A, \quad \frac{AD}{AH} = \frac{S}{a \cdot AH} = \frac{S}{2aR \cos A} \)
+    </p>
+    <p>
+        \( \sum \overrightarrow{AD} = \frac{S}{2R} \sum \frac{\overrightarrow{AH}}{a \cos A} = \frac{S}{R \cos A \cos B \cos C \cdot abc} \sum \cos B \cos C \cdot bc \overrightarrow{AH} \)
+    </p>
+    <p>
+        \( = \frac{S}{R} (a^2+b^2+c^2) \cos A \cos B \cos C \cdot abc \sum \cos B \cos C \cdot bc \cdot (a^2+b^2+c^2) \overrightarrow{AH} \)
+    </p>
+    <p>
+        \( H (\cos B \cos C, \cos A \cos C, \cos B \cos A) \Rightarrow \sum \cos B \cos C \overrightarrow{AH} = 0 \)
+    </p>
+    <p>
+        \( \sum \cos B \cos C \cdot 2abc (a+b+c) \overrightarrow{HA} = 0 \)
+    </p>
+    <p>
+        \( x = \frac{1}{(a^2+c^2-b^2)(a^2+b^2-c^2)(b^2+c^2-a^2)}, \quad y = \frac{S}{R} (a^2+b^2+c^2) \cos A \cos B \cos C \cdot abc, \quad z = \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} \)
+    </p>
+    <p>
+        \( \overrightarrow{HT} \cdot z = x \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
+    </p>
+    <p>
+        \( \overrightarrow{HT} = \frac{x}{z} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
+    </p>
+    <p>
+        \( = \frac{x}{z} \left( \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} + \sum \cos B \cos C \cdot 2abc (a+b+c) \overrightarrow{HA} \right) \)
+    </p>
+    <p>
+        \( = \frac{x}{z} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2+a^2) \)
+    </p>
+    <p>
+        \( \overrightarrow{u} = y \sum \cos B \cos C \cdot bc \overrightarrow{AH} \)
+    </p>
+    <p>
+        \( \overrightarrow{u} = \frac{y \cdot z}{x} (a^2+b^2+c^2) \overrightarrow{HT} \)
+    </p>
+        <p class="math">\( \overrightarrow{HT} \parallel \overrightarrow{u} \)</p>
+        <p>Vậy <span class="math">\( \overrightarrow{HT} \parallel \overrightarrow{HH^*}\)</span>, từ đó ta chứng minh được điều phải chứng minh.</p>
+          
+          
+          
+
+    
+    </div>
+
+    <div class="container">
+        <h2 class="bold-text">Các bài toán luyện tập</h2>
+    </div>
+   <div class="problem-box">		
+        <div class="problem-title">Problem 1</div>
+       
+        <div class="problem-content">
+           <p>Cho tam giác <span class="math">ABC</span> nội tiếp đường tròn <span class="math">(O, R)</span>, bàng tiếp đường tròn <span class="math">(I, r)</span>, có trọng tâm <span class="math">G</span> và điểm Lemoine <span class="math">L</span>. Gọi <span class="math">P</span> thỏa mãn phương trình \(3R \overrightarrow{GP} + r \overrightarrow{OI} = \overrightarrow{0}\). Chứng minh rằng <span class="math">P</span> nằm trên đường thẳng <span class="math">IL</span>.</p>
+        </div>
+        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1.png?v=1739715498383" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/vectobai1.gsp?v=1739729250041" download = "vectobai1.gsp">Try It Yourself</a>
+            <a href="loigiaivectobai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+</body>
+</html>
