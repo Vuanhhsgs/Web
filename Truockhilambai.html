@@ -1,166 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Before Using</title>
-    <style>
-        /* Full-page background */
-        body {
-            font-family: Arial, sans-serif;
-             margin: 0;
-            padding: 20px;
-            color: #e6e6e6;
-            background: url('mainwebbackground.png') no-repeat center center fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: start;
-        }
-          .home-button {
-            position: fixed;
-            top: 10px;
-            left: 10px;
-            background-color: black;
-            color: white;
-            padding: 12px 20px;
-            font-size: 18px;
-            font-weight: bold;
-            font-family: Arial, sans-serif;
-            border-radius: 8px;
-            text-decoration: none;
-            border: 2px solid white;
-            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
-            text-transform: uppercase;
-            z-index: 1000;
-        }
-        .home-button:hover {
-            background-color: #333;
-            border-color: #fff;
-            box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Before Using</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/mainwebbackground.png?v=1739639361104') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      overflow-y: auto;
+      padding-top: 20px;
+      color: white;
+    }
 
-        /* Center card */
-        .container {
-            width: 90%;
-            max-width: 760px;
-            margin: 40px auto;
-            background-color: rgba(17,17,17,0.78);
-            padding: 22px;
-            border-radius: 12px;
-            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-            color: #f2f2f2;
-        }
+    .home-button {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      background-color: black;
+      color: white;
+      padding: 12px 20px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      border: 2px solid white;
+      box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+      text-transform: uppercase;
+      z-index: 1000;
+    }
 
-        h1 {
-            margin-top: 0;
-            color: #ffffff;
-            font-size: 1.8rem;
-            letter-spacing: 1px;
-        }
+    .home-button:hover {
+      background-color: #333;
+      border-color: #fff;
+      box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+    }
 
-        p {
-            font-size: 1rem;
-            line-height: 1.6;
-            color: #e6e6e6;
-        }
+    .container {
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 40px;
+      margin: 40px auto;
+      width: 90%;
+      max-width: 1000px;
+      border-radius: 15px;
+      text-align: center;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6);
+    }
 
-        code {
-            background: rgba(255,255,255,0.04);
-            padding: 2px 6px;
-            border-radius: 4px;
-            color: #fff;
-        }
+    h1 {
+      font-size: 36px;
+      color: #ffffff;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.6);
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
 
-        .problem-container {
-            background-color: rgba(34,34,34,0.95);
-            padding: 16px;
-            border-radius: 10px;
-            margin: 18px auto;
-            width: 100%;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-            text-align: center;
-        }
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 15px;
+      color: #e0e0e0;
+    }
 
-        .problem-image {
-            width: 100%;
-            max-width: 420px;
-            border-radius: 6px;
-            display:block;
-            margin: 0 auto;
-        }
-        .tool-section {
-            margin-top: 18px;
-            text-align: center;
-        }
-        .tool-section h2 {
-            color: #ffffff;
-            margin-bottom: 8px;
-        }
-        .tool-section p {
-            color: #dcdcdc;
-        }
+    strong {
+      color: #ffffff;
+    }
 
-         .try-button {
-            display: inline-block;
-             margin-top: 10px;
-            padding: 10px 14px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-             border-radius: 6px;
-            font-weight: bold;
-            border: 1px solid rgba(255,255,255,0.06);
-         }
-        .try-button:hover {
-            background-color: #0056b3;
-        }
-         @media (max-width: 700px) {
-            .container { padding: 16px; margin: 70px 12px; }
-            .home-button { padding: 10px 14px; font-size: 16px; }
-            .problem-image { max-width: 340px; }
-        }
-         </style>
+    .problem-container {
+      background-color: #222;
+      border: 3px solid #17a2b8;
+      padding: 30px;
+      border-radius: 15px;
+      margin: 40px auto;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    .problem-image, .tool-image {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 15px 30px;
+      font-size: 18px;
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px;
+      transition: all 0.3s ease;
+      border: 2px solid;
+      text-transform: uppercase;
+    }
+
+    .try-button {
+      background-color: #007bff;
+      border-color: #007bff;
+      color: white;
+    }
+
+    .try-button:hover {
+      background-color: #0056b3;
+      border-color: #0056b3;
+    }
+
+    h2 {
+      font-size: 28px;
+      color: #17a2b8;
+      margin-top: 30px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
+    }
+
+    code {
+      background-color: #333;
+      padding: 3px 6px;
+      border-radius: 4px;
+      color: #00ffcc;
+    }
+  </style>
 </head>
 <body>
-     <a href="index.html" class="home-button">Home</a>
+  <a href="index.html" class="home-button">Home</a>
 
-    <div class="container">
+  <div class="container">
+    <h1>Before Using</h1>
+    <p>This website provides a collection of selected geometry problems.  
+       For the best experience, please download and install <strong>Geometer’s Sketchpad</strong> 
+       from its <a href="https://www.keycurriculum.com" target="_blank" style="color: #17a2b8;">official website</a>.</p>
 
-     <h1>Usage Instructions</h1>
+    <p>Once installed, enter the following license information to use it for free:</p>
+    <p><strong>License name:</strong> Pythagoras Single User License 1863 KJUJAM<br>
+       <strong>Authorization code:</strong> BDFBF968</p>
 
-        <p>
-            This website provides a curated collection of geometry problems. For the best experience, please download and install
-            <strong>Geometer's Sketchpad</strong> from the official site:
-            <a href="https://www.keycurriculum.com" target="_blank" style="color:#9ecbff; text-decoration: none;">keycurriculum.com</a>.
-        </p>
-
-        <p>
-            After installing, the app will prompt for license information. To use it with the settings provided here, enter:
-            <br><strong>License name:</strong> Pythagoras Single User License 1863 KJUJAM
-            <br><strong>Authorization code:</strong> BDFBF968
-        </p>
-
-        <p>Each problem on this site follows the format shown below:</p>
-          <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872"
-                 alt="Illustrative problem" class="problem-image">
-         <p><strong>Click "My Solution"</strong> to view my solution.</p>
-        <p><strong>Click "Try It Yourself"</strong> to download a <code>.gsp</code> file. Open that file with <strong>Geometer's Sketchpad</strong> and work from the prepared figure.</p>
-
-        <div class="tool-section">
-            <h2>Drawing support tool</h2>
-            <p>You can download the drawing tool I prepared to help constructing figures quickly.</p>
-            <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/File-cong-cu%20(1).gsp?v=1739639528701"
-               download="File-cong-cu (1).gsp" class="try-button">Download drawing tool</a>
-            <h2 style="margin-top:18px;">How to use</h2>
-            <p>Open the downloaded tool file, then switch to your working figure. Hover where shown in the image below to access helper tools for easier drawing.</p>
-
-            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/tool_usage.PNG?v=1739639367658"
-                 alt="Tool usage guide" class="problem-image" style="max-width:420px; margin-top:10px;">
-        </div>
+    <p>Each problem generally looks like this:</p>
+    <div class="problem-container">
+      <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872" alt="Example problem" class="problem-image">
     </div>
+
+    <p><strong>Click “My Solution”</strong> to view my own solution.</p>
+    <p><strong>Click “Try It Yourself”</strong> to download a <code>.gsp</code> file and solve the problem using <strong>Geometer’s Sketchpad</strong>.</p>
+
+    <h2>Drawing Tool</h2>
+    <p>You can also download a <strong>custom geometry tool</strong> I created to make drawing easier.</p>
+    <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/File-cong-cu%20(1).gsp?v=1739639528701" download="File-cong-cu (1)" class="button try-button">Download Tool</a>
+
+    <h2>How to Use</h2>
+    <p>After downloading, open this file first, then return to the geometry file you're working on.  
+       Hover over the area shown below to access the enhanced drawing tools.</p>
+    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/tool_usage.PNG?v=1739639367658" alt="Tool usage guide" class="tool-image">
+  </div>
 </body>
 </html>
-
-        
