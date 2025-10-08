@@ -53,15 +53,16 @@
             border-color: #fff;
             box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
         }
-        .container {
-            background-color: #222;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            text-align: center;
-        }
+    	.container {
+		    background-color: #222;
+		    color: white; 
+		    padding: 20px;
+		    margin: 20px auto;
+		    width: 80%;
+		    max-width: 800px;
+		    border-radius: 10px;
+		    text-align: center;
+		}
         .container h2 {
             text-align: center;
         }
@@ -79,7 +80,8 @@
             text-align: center;
         }
 	.problem-box {
-            background-color: white; 
+            background-color: #222; 
+			color: white;
             padding: 50px;
             border: 4px solid #17a2b8;
             border-radius: 20px;
@@ -89,17 +91,17 @@
             margin-bottom: 50px;
         }
 	.problem-content {
-            color: black; 
+            color: white; 
             font-size: 20px;
             margin-bottom: 20px;
             padding: 20px;
-            border: 2px solid black;
+            border: 2px solid white;
             border-radius: 10px;
         }
 	.problem-title {
             font-size: 30px;
             margin-bottom: 20px;
-            color: black;
+            color: white;
             font-weight: bold;
             background-color: #17a2b8;
             padding: 10px;
@@ -136,22 +138,28 @@
             border-color: #007bff;
         }
 
+
     </style>
 </head>
 <body>
 
     <a href="index.html" class="home-button">Trang chủ</a>
     <div class = "title-container">
-    <h1>Biến đổi tỉ lệ</h1>
+    <h1>Ratio Chasing</h1>
     </div>
     <div class="container">
-        <h2 class="bold-text">Phương pháp chung</h2>
-        <p class="centered-text">Bằng việc sử dụng kết hợp các định lý quen thuộc như Menelaus, Ceva với định lý Sin (Cho tam giác ABC, khi đó \[\dfrac{sin \angle ABC}{sin \angle ACB} = \dfrac{AC}{AB}\], tôi muốn đề cập sự thực dụng của phương pháp này khi không thể chứng minh theo cách thông thường</p>
+        <h2 class="bold-text">Common Approach</h2>
+        <p class="centered-text">By using a combination of familiar theorems such as Menelaus and Ceva together with the Sine Theorem (For triangle \(ABC\), we have 
+\[
+\dfrac{\sin \angle ABC}{\sin \angle ACB} = \dfrac{AC}{AB}
+\]
+), I want to highlight the practicality of this method when it is not possible to prove it in the usual way.
+</p>
     </div>
 
     <div class="container">
-        <h2 class="bold-text">Ví dụ từ một bài tôi làm</h2>
-        <p class="bold-text">Bài toán(Nguồn: diễn đàn AoPs):</p>
+        <h2 class="bold-text">Example from a problem I solved</h2>
+        <p class="bold-text">Problem(AoPS):</p>
         <p>Let \( \triangle ABC \) be a triangle with orthocenter \( H \) and circumcircle \( (O) \).  
        Let the tangents from \( B \) and \( C \) to \( (O) \) intersect at \( K \),  
        and let the feet of \( K \) onto \( AC \) and \( AB \) be \( E \) and \( F \).  
@@ -266,13 +274,13 @@
     </div>
 
     <div class="container">
-        <h2 class="bold-text">Các bài toán luyện tập</h2>
+        <h2 class="bold-text">Practice Problems</h2>
     </div>
    <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
        
         <div class="problem-content">
-            (Thầy Trần Quang Hùng trên diễn đàn AoPs) Given triangle \(ABC\). Circle \((K)\) passing through \(B\) and \(C\) intersects \(CA\) and \(AB\) again at points \(E\) and \(F\) respectively. Let \(H\) be a point such that \(HE \perp CA\) and \(HF \perp AB\). Line \(AH\) intersects the circle \((BHC)\) again at \(D\). Line \(KD\) intersects \(BC\) at \(P\). On line \(AP\), choose point \(X\) such that \(HX \parallel BC\). A circle passing through \(A\) and \(H\) intersects \(CA\) and \(AB\) again at points \(M\) and \(N\) respectively. Circle \((J)\) passes through \(B\) and \(N\) and is tangent to line \(HB\). Circle \((L)\) passes through \(C\) and \(M\) and is tangent to line \(HC\). Prove that point \(X\) lies on the radical axis of circles \((J)\) and \((L)\).
+            (Teacher Tran Quang Hung on AoPS forum) Given triangle \(ABC\). Circle \((K)\) passing through \(B\) and \(C\) intersects \(CA\) and \(AB\) again at points \(E\) and \(F\) respectively. Let \(H\) be a point such that \(HE \perp CA\) and \(HF \perp AB\). Line \(AH\) intersects the circle \((BHC)\) again at \(D\). Line \(KD\) intersects \(BC\) at \(P\). On line \(AP\), choose point \(X\) such that \(HX \parallel BC\). A circle passing through \(A\) and \(H\) intersects \(CA\) and \(AB\) again at points \(M\) and \(N\) respectively. Circle \((J)\) passes through \(B\) and \(N\) and is tangent to line \(HB\). Circle \((L)\) passes through \(C\) and \(M\) and is tangent to line \(HC\). Prove that point \(X\) lies on the radical axis of circles \((J)\) and \((L)\).
         </div>
         <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1.png?v=1739715498383" alt="Problem Image" class="problem-image">
         <div class="button-container">
