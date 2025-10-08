@@ -1,186 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Inversion</title>
-  <script async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+	.title-container {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/mainwebbackground.png?v=1739639361104') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+        }
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            border-radius: 8px;
+            text-decoration: none;
+            border: 2px solid white;
+            box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+            text-transform: uppercase;
+            z-index: 1000;
+        }
+        .home-button:hover {
+            background-color: #333;
+            border-color: #fff;
+            box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+        }
+    	.container {
+		    background-color: #222;
+		    color: white; 
+		    padding: 20px;
+		    margin: 20px auto;
+		    width: 80%;
+		    max-width: 800px;
+		    border-radius: 10px;
+		    text-align: center;
+		}
+        .container h2 {
+            text-align: center;
+        }
+        .bold-text {
+            font-weight: bold;
+        }
+        .problem-image {
+            width: 100%;
+            max-width: 600px;
+            display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+        }
+        .centered-text {
+            text-align: center;
+        }
+	.problem-box {
+            background-color: #222; 
+			color: white;
+            padding: 50px;
+            border: 4px solid #17a2b8;
+            border-radius: 20px;
+            text-align: center;
+            width: 80%;
+            max-width: 800px;
+            margin-bottom: 50px;
+        }
+	.problem-content {
+            color: white; 
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            border: 2px solid white;
+            border-radius: 10px;
+        }
+	.problem-title {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: white;
+            font-weight: bold;
+            background-color: #17a2b8;
+            padding: 10px;
+            border-radius: 10px;
+            display: inline-block;
+            color: white;
+        }
 
-  <style>
-    /* Full-page background */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      color: #e6e6e6;
-      background: url('https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/mainwebbackground.png?v=1739639361104') no-repeat center center fixed;
-      background-size: cover;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .button {
+            padding: 15px 30px;
+            border: 2px solid;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        .solution-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+        }
+        .try-btn {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+    body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* semi-transparent black */
+    z-index: -1; /* behind all content */
+}
 
-    /* Fixed Home button */
-    .home-button {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      background-color: black;
-      color: white;
-      padding: 12px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      font-family: Arial, sans-serif;
-      border-radius: 8px;
-      text-decoration: none;
-      border: 2px solid white;
-      box-shadow: 0px 4px 6px rgba(255,255,255,0.15);
-      text-transform: uppercase;
-      z-index: 1000;
-    }
-    .home-button:hover {
-      background-color: #333;
-      border-color: #fff;
-      box-shadow: 0px 6px 10px rgba(255,255,255,0.2);
-    }
-
-    /* Main section container */
-    .container {
-      width: 90%;
-      max-width: 760px;
-      margin: 40px auto;
-      background-color: rgba(17,17,17,0.78);
-      padding: 22px;
-      border-radius: 12px;
-      box-shadow: 0 12px 40px rgba(0,0,0,0.6);
-      color: #f2f2f2;
-    }
-
-    h1 {
-      color: #ffffff;
-      font-size: 1.8rem;
-      text-align: center;
-      letter-spacing: 1px;
-      margin-top: 0;
-    }
-
-    h2 {
-      color: #ffffff;
-      text-align: center;
-      font-size: 1.3rem;
-      margin-top: 10px;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.6;
-      color: #e6e6e6;
-    }
-
-    code {
-      background: rgba(255,255,255,0.04);
-      padding: 2px 6px;
-      border-radius: 4px;
-      color: #fff;
-    }
-
-    /* Problem box */
-    .problem-box {
-      background-color: rgba(34,34,34,0.95);
-      padding: 16px;
-      border-radius: 10px;
-      margin: 18px auto;
-      width: 100%;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
-      text-align: center;
-    }
-
-    .problem-title {
-      background-color: #000;
-      color: white;
-      padding: 10px 20px;
-      border-radius: 10px;
-      font-size: 1.3rem;
-      font-weight: bold;
-      display: inline-block;
-      margin-bottom: 10px;
-      border: 2px solid #17a2b8;
-    }
-
-    .problem-content {
-      color: #f2f2f2;
-      text-align: left;
-      font-size: 1rem;
-      line-height: 1.6;
-      margin-top: 10px;
-    }
-
-    .problem-image {
-      width: 100%;
-      max-width: 450px;
-      border-radius: 8px;
-      display: block;
-      margin: 20px auto;
-      box-shadow: 0 0 20px rgba(255,255,255,0.1);
-    }
-
-    .button-container {
-      margin-top: 10px;
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .button {
-      padding: 10px 18px;
-      border: none;
-      color: white;
-      cursor: pointer;
-      border-radius: 6px;
-      font-size: 16px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: 0.3s;
-    }
-
-    .try-btn {
-      background-color: #007bff;
-    }
-    .try-btn:hover {
-      background-color: #0056b3;
-    }
-
-    .solution-btn {
-      background-color: #28a745;
-    }
-    .solution-btn:hover {
-      background-color: #1f7e33;
-    }
-
-    @media (max-width: 700px) {
-      .container { padding: 16px; margin: 70px 12px; }
-      .problem-image { max-width: 320px; }
-      .home-button { padding: 10px 14px; font-size: 16px; }
-    }
-  </style>
+/* Keep containers above the overlay */
+.container, .problem-box, .title-container {
+    position: relative;
+    z-index: 1;
+}
+    </style>
 </head>
 <body>
 
-  <a href="index.html" class="home-button">Home</a>
-
-  <div class="container">
+    <a href="index.html" class="home-button">Home</a>
+    <div class = "title-container">
     <h1>Inversion</h1>
+    </div>
+    <div class="container">
+        <h2 class="bold-text">Common Approach</h2>
+        <p class="centered-text">When a problem involves many circles and becomes hard to handle directly, we can apply inversions with familiar properties to reduce it to an easier configuration — especially in cases involving tangency between circles or between lines and circles.</p>
+    </div>
 
-    <h2>Common Approach</h2>
-    <p>When a problem involves many circles and becomes hard to handle directly, we can apply inversions with familiar properties to reduce it to an easier configuration — especially in cases involving tangency between circles or between lines and circles.</p>
-  </div>
-
-  <div class="container">
-    <h2>Example from a problem I solved</h2>
-    <p class="bold-text">Problem (Source: Plane Geometry group on Facebook): Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
+    <div class="container">
+        <h2 class="bold-text">Example from a problem I solved</h2>
+        <p class="bold-text">Problem (Source: Plane Geometry group on Facebook): Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
 a) Prove: \(L\) lies on \((T)\).  
 b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O)\) again at \(N\), and let \(NL\) meet \((O)\) again at \(J\). Prove: \(AJ\) always passes through a fixed point.</p>
         
@@ -190,7 +178,7 @@ b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O
         <p class="bold-text">Solution:</p>
         <p>(Using the first figure) Redefine point \(L\) as the intersection of \(AD\) and the \(A\)-mixtilinear circle. Let \(NL\) meet \((O)\) at \(U\) such that \(U\) is not the diametral opposite point.</p> 
 
-<p>Let \(J\) be the excenter of triangle \(ABC\) that is tangent to \(BC\) at \(E\); then \(AX\) and \(AE\) are isogonal (a familiar result). Let line \(XI\) meet \((O)\) at \(Q\), the midpoint of arc \(BAC\) of \((O)\). Then \(JQ\) meets \((O)\) at \(G\), and we have \(AD\) and \(AG\) are isogonal (another common result).</p>
+<p>Let \(J\) be the excenter of triangle \(ABC\) that is tangent to \(BC\) at \(E\); then \(AX\) and \(AE\) are isogonal (a familiar result). Let line \(XI\) meet \((O)\) at \(Q\), the midpoint of arc \(BAC\) of \((O)\). Then \(JQ\) meets \((O)\) at \(G\), and we have \(AD\) and \(AG\) are isogonal (another standard result).</p>
 
 <p>The perpendicular bisector of \(AJ\) meets \(BC\) at \(W\). Denote the three excenters of triangle \(ABC\) by \(I_A, I_B, I_C\), and let \(V\) be the circumcenter of the triangle formed by these three excenters. Then \(W\) lies on the radical axis between \((JV)\) and \((JI)\). Hence \(JW\) is perpendicular to \(IV\); note that \(IV\) is the Euler line of the triangle formed by the three excenters, whose circumcenter is \(O\). Therefore \(JW\) is perpendicular to \(OI\), so \(JW \parallel AK\). On the other hand, \(WJ = WA\), thus \(AW\) and \(AK\) are isogonal.</p>
 
@@ -250,29 +238,21 @@ Hence \(MR \parallel WG\), so
 \]
 and therefore \(A,R,Y,M\) are concyclic (Q.E.D.).</p>
 <p>Therefore, the problem is handled by using inversion centered at \(A\) with power \(AB\cdot AC\) combined with reflection about the bisector of \(\angle BAC\) to manage the originally difficult tangency conditions.</p>
-
-  </div>
-
-  <div class="container">
-    <h2>Practice Problems</h2>
-  </div>
-
-  <div class="problem-box">
-    <div class="problem-title">Problem 1</div>
-    <div class="problem-content">
-      (Teacher Trần Quang Hùng) Given a triangle \(ABC\) with altitude \(AD\)... (text unchanged)...
+</div>
+    <div class="container">
+        <h2 class="bold-text">Practice Problems</h2>
     </div>
-
-    <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/debainghichdao1.png?v=1739639336163"
-         alt="Problem Image" class="problem-image">
-
-    <div class="button-container">
-      <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaobai1.gsp?v=1739639195728"
-         class="button try-btn" target="_blank">Try It Yourself</a>
-
-      <a href="loigiainghichdaobai1.html" class="button solution-btn">My Solution</a>
+   <div class="problem-box">		
+        <div class="problem-title">Problem 1</div>
+        <div class="problem-content">
+            (Teacher Trần Quang Hùng) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that the circle \( (ZTH) \) is tangent to line \( BC \).
+        </div>
+        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/debainghichdao1.png?v=1739639336163" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaobai1.gsp?v=1739639195728" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai1.html" class="button solution-btn">My Solution</a>
+        </div>
     </div>
-  </div>
-
+  
 </body>
 </html>
