@@ -1,132 +1,178 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trước Khi Sử Dụng</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Before Using</title>
     <style>
+        /* Full-page background */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+            margin: 0;
             padding: 20px;
-            position: relative;
+            color: #e6e6e6;
+            background: url('mainwebbackground.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: start;
         }
-        
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
+
+        /* Fixed Home button similar to main page */
+        .home-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: black;
+            color: white;
+            padding: 12px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
             border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            border: 2px solid white;
+            box-shadow: 0px 4px 6px rgba(255,255,255,0.15);
+            text-transform: uppercase;
+            z-index: 1000;
         }
-	 .problem-container {
+        .home-button:hover {
             background-color: #333;
-            padding: 15px;
+            border-color: #fff;
+            box-shadow: 0px 6px 10px rgba(255,255,255,0.2);
+        }
+
+        /* Center card */
+        .container {
+            width: 90%;
+            max-width: 760px;
+            margin: 40px auto;
+            background-color: rgba(17,17,17,0.78);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            color: #f2f2f2;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        code {
+            background: rgba(255,255,255,0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        /* dark inner problem container (like your earlier style) */
+        .problem-container {
+            background-color: rgba(34,34,34,0.95);
+            padding: 16px;
             border-radius: 10px;
-            margin: 20px auto;
-            width: 70%;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+            margin: 18px auto;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            text-align: center;
         }
 
         .problem-image {
             width: 100%;
-            max-width: 400px;
-            border-radius: 5px;
-        }
-        .home-button {
-    position: fixed;
-    top: 10px; 
-    left: 10px; 
-    background-color: black;
-    color: white;
-    padding: 12px 20px;
-    font-size: 18px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    border-radius: 8px;
-    text-decoration: none;
-    border: 2px solid white; 
-    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
-    text-transform: uppercase; 
-    z-index: 1000; 
-}
-
-.home-button:hover {
-    background-color: #333; 
-    border-color: #fff;
-    box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
-}
-
-
-        h1 {
-            color: #0077cc;
+            max-width: 420px;
+            border-radius: 6px;
+            display:block;
+            margin: 0 auto;
         }
 
-        p {
-            font-size: 1.1rem;
-            line-height: 1.6;
+        /* Tool section similar to main page style */
+        .tool-section {
+            margin-top: 18px;
+            text-align: center;
         }
 
-        .download-link {
+        .tool-section h2 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .tool-section p {
+            color: #dcdcdc;
+        }
+
+        .try-button {
             display: inline-block;
-            margin-top: 15px;
-            padding: 10px 15px;
-            background-color: #0077cc;
+            margin-top: 10px;
+            padding: 10px 14px;
+            background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 5px;
-            font-size: 1.2rem;
+            border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.06);
+        }
+        .try-button:hover {
+            background-color: #0056b3;
         }
 
-        .download-link:hover {
-            background-color: #005f99;
+        /* Responsive */
+        @media (max-width: 700px) {
+            .container { padding: 16px; margin: 70px 12px; }
+            .home-button { padding: 10px 14px; font-size: 16px; }
+            .problem-image { max-width: 340px; }
         }
-      
-.problem-image {
-    width: 120%;
-    max-width: 300px; 
-    border-radius: 5px;
-}
-
-.tool-image {
-    width: 120%;
-    max-width: 300px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
     </style>
 </head>
 <body>
-    <!-- Nút Trang Chủ -->
-    <a href="index.html" class="home-button">Trang Chủ</a>
+    <!-- Home button -->
+    <a href="index.html" class="home-button">Home</a>
 
     <div class="container">
-        <h1>Hướng dẫn sử dụng</h1>
-        <p>Trang web này cung cấp các bài toán hình học chọn lọc. Để có trải nghiệm tốt nhất, vui lòng tải về và cài đặt <strong>Geometer Sketchpad</strong> từ <a href="https://www.keycurriculum.com" target="_blank" style="color: #0077cc;">trang web chính thức</a>.</p>
-	<p>Tải xong app sẽ yêu cầu điền thông tin license, các bạn hãy điền như sau để sử dụng miễn phí:
-	License name: Pythagoras Single User License 1863 KJUJAM
-	Authorization code: BDFBF968<p>
-        <p>Mỗi bài toán sẽ có hình thức sau:<p>
+        <h1>Usage Instructions</h1>
+
+        <p>
+            This website provides a curated collection of geometry problems. For the best experience, please download and install
+            <strong>Geometer's Sketchpad</strong> from the official site:
+            <a href="https://www.keycurriculum.com" target="_blank" style="color:#9ecbff; text-decoration: none;">keycurriculum.com</a>.
+        </p>
+
+        <p>
+            After installing, the app will prompt for license information. To use it with the settings provided here, enter:
+            <br><strong>License name:</strong> Pythagoras Single User License 1863 KJUJAM
+            <br><strong>Authorization code:</strong> BDFBF968
+        </p>
+
+        <p>Each problem on this site follows the format shown below:</p>
+
         <div class="problem-container">
-            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872" alt="Bài toán minh họa" class="problem-image">
-  
+            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872"
+                 alt="Illustrative problem" class="problem-image">
         </div>
 
-        <p><strong>Bấm vào ô "My Solution"</strong> sẽ hiện lời giải của tôi.</p>
-        <p><strong>Bấm vào ô "Try It Yourself"</strong> sẽ tải về một file <code>.gsp</code>. Hãy mở file này trong <strong>Geometer Sketchpad</strong> và giải bài toán theo hình tôi đã vẽ sẵn.</p>
-	<div class="tool-section">
-            <h2>Công cụ hỗ trợ vẽ hình</h2>
-            <p>Các bạn nên tải file công cụ tôi tự làm để tiện vẽ hình.</p>
-            <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/File-cong-cu%20(1).gsp?v=1739639528701" download = "File-cong-cu (1)" class="button try-button" download>Tải công cụ vẽ</a>
+        <p><strong>Click "My Solution"</strong> to view my solution.</p>
+        <p><strong>Click "Try It Yourself"</strong> to download a <code>.gsp</code> file. Open that file with <strong>Geometer's Sketchpad</strong> and work from the prepared figure.</p>
 
-            <h2>Cách sử dụng</h2>
-            <p>Mở file này sau khi tải về, rồi quay lại file các bạn đang vẽ hình. Di chuột vào chỗ như trong hình dưới và các bạn có thể vẽ hình tiện lợi hơn.</p>
-            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/tool_usage.PNG?v=1739639367658" alt="Hướng dẫn sử dụng công cụ vẽ" class="tool-image">
+        <div class="tool-section">
+            <h2>Drawing support tool</h2>
+            <p>You can download the drawing tool I prepared to help constructing figures quickly.</p>
+            <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/File-cong-cu%20(1).gsp?v=1739639528701"
+               download="File-cong-cu (1).gsp" class="try-button">Download drawing tool</a>
+
+            <h2 style="margin-top:18px;">How to use</h2>
+            <p>Open the downloaded tool file, then switch to your working figure. Hover where shown in the image below to access helper tools for easier drawing.</p>
+
+            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/tool_usage.PNG?v=1739639367658"
+                 alt="Tool usage guide" class="problem-image" style="max-width:420px; margin-top:10px;">
         </div>
     </div>
 </body>
-
 </html>
