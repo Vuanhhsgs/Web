@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -53,15 +53,16 @@
             border-color: #fff;
             box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
         }
-        .container {
-            background-color: #222;
-            padding: 20px;
-            margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
-            text-align: center;
-        }
+    	.container {
+		    background-color: #222;
+		    color: white; 
+		    padding: 20px;
+		    margin: 20px auto;
+		    width: 80%;
+		    max-width: 800px;
+		    border-radius: 10px;
+		    text-align: center;
+		}
         .container h2 {
             text-align: center;
         }
@@ -79,7 +80,8 @@
             text-align: center;
         }
 	.problem-box {
-            background-color: white; 
+            background-color: #222; 
+			color: white;
             padding: 50px;
             border: 4px solid #17a2b8;
             border-radius: 20px;
@@ -89,17 +91,17 @@
             margin-bottom: 50px;
         }
 	.problem-content {
-            color: black; 
+            color: white; 
             font-size: 20px;
             margin-bottom: 20px;
             padding: 20px;
-            border: 2px solid black;
+            border: 2px solid white;
             border-radius: 10px;
         }
 	.problem-title {
             font-size: 30px;
             margin-bottom: 20px;
-            color: black;
+            color: white;
             font-weight: bold;
             background-color: #17a2b8;
             padding: 10px;
@@ -146,89 +148,89 @@
     </div>
     <div class="container">
         <h2 class="bold-text">Common Approach</h2>
-        <p class="centered-text">Khi bài toán nhiều đường tròn khó xử lý, ta có thể sử dụng các phép nghịch đảo với các tính chất quen thuộc để đưa về bài toán dễ xử lý hơn, đặc biệt trong trường hợp các bài toán tiếp xúc giữa các đường tròn hay đường thẳng, đường tròn</p>
+        <p class="centered-text">When a problem involves many circles and becomes hard to handle directly, we can apply inversions with familiar properties to reduce it to an easier configuration — especially in cases involving tangency between circles or between lines and circles.</p>
     </div>
 
     <div class="container">
-        <h2 class="bold-text">Ví dụ từ một bài tôi làm</h2>
-        <p class="bold-text">Bài toán(Nguồn: group Hình Học Phẳng trên FB): Cho tam giác ABC nội tiếp (O), có B, C cố định, A di chuyển trên cung lớn BC của (O). (I) là đường tròn nội tiếp tam giác, (I) tiếp xúc BC tại D. AI cắt lại (O) tại P. (T) là đường tròn A-mixtilinear nội, (T) tiếp xúc (O) tại X. XP cắt AD tại L. 
-a, CMR: L thuộc T. 
-b, K đối xứng A qua OI, KD cắt lại (O) tại N, NL cắt lại (O) tại J. CMR: AJ luôn đi qua một điểm cố định.</p>
+        <h2 class="bold-text">Example from a problem I solved</h2>
+        <p class="bold-text">Problem (Source: Plane Geometry group on Facebook): Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
+a) Prove: \(L\) lies on \((T)\).  
+b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O)\) again at \(N\), and let \(NL\) meet \((O)\) again at \(J\). Prove: \(AJ\) always passes through a fixed point.</p>
         
-        <p class="bold-text">Hình ảnh:</p>
-        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaoanhminhhoabaividu.jpg?v=1739639363024" alt="Hình minh họa" class="problem-image">
+        <p class="bold-text">Illustration:</p>
+        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaoanhminhhoabaividu.jpg?v=1739639363024" alt="Illustration" class="problem-image">
 
-        <p class="bold-text">Lời giải:</p>
-        <p>(Dùng ảnh thứ nhất)} Định nghĩa lại điểm \( L \) là giao điểm của \( AD \) và đường tròn mixtilinear trong góc \( A \). Gọi \( NL \) cắt \( (O) \) tại \( U \) sao cho \( U \) không trùng với tâm bàng.</p> 
+        <p class="bold-text">Solution:</p>
+        <p>(Using the first figure) Redefine point \(L\) as the intersection of \(AD\) and the \(A\)-mixtilinear circle. Let \(NL\) meet \((O)\) at \(U\) such that \(U\) is not the diametral opposite point.</p> 
 
-<p>Gọi \( J \) là tâm bàng của tam giác \( ABC \) tiếp xúc với \( BC \) tại \( E \), khi đó ta có \( AX \) và \( AE \) đẳng giác (kết quả quen thuộc). Gọi \( XI \) cắt \( (O) \) tại \( Q \), là trung điểm cung \( BAC \) của \( (O) \). Khi đó, \( JQ \) cắt \( (O) \) tại \( G \), và ta có \( AD \) và \( AG \) đẳng giác (kết quả quen thuộc).</p>
+<p>Let \(J\) be the excenter of triangle \(ABC\) that is tangent to \(BC\) at \(E\); then \(AX\) and \(AE\) are isogonal (a familiar result). Let line \(XI\) meet \((O)\) at \(Q\), the midpoint of arc \(BAC\) of \((O)\). Then \(JQ\) meets \((O)\) at \(G\), and we have \(AD\) and \(AG\) are isogonal (another standard result).</p>
 
-<p>Trung trực của \( AJ \) cắt \( BC \) tại \( W \). Gọi ba tâm bàng của tam giác \( ABC \) là \( I_A, I_B, I_C \), và gọi \( V \) là tâm đường tròn ngoại tiếp tam giác tạo bởi ba tâm bàng. Khi đó, \( W \) thuộc trục đẳng phương của \( (JV) \) và \( (JI) \). Do đó, ta suy ra \( JW \) vuông góc với \( IV \), mà \( IV \) chính là đường Euler của tam giác tạo bởi ba tâm bàng đi qua tâm đường tròn Euler của tam giác đó là \( O \), nên \( JW \) vuông góc với \( OI \), hay \( JW \parallel AK \). Mặt khác, \( WJ = WA \), do đó \( AW \) và \( AK \) đẳng giác.</p>
+<p>The perpendicular bisector of \(AJ\) meets \(BC\) at \(W\). Denote the three excenters of triangle \(ABC\) by \(I_A, I_B, I_C\), and let \(V\) be the circumcenter of the triangle formed by these three excenters. Then \(W\) lies on the radical axis between \((JV)\) and \((JI)\). Hence \(JW\) is perpendicular to \(IV\); note that \(IV\) is the Euler line of the triangle formed by the three excenters, whose circumcenter is \(O\). Therefore \(JW\) is perpendicular to \(OI\), so \(JW \parallel AK\). On the other hand, \(WJ = WA\), thus \(AW\) and \(AK\) are isogonal.</p>
 
-<p>Xét phép nghịch đảo tâm \( A \) phương tích \( AB \cdot AC \), kết hợp với phép đối xứng qua phân giác góc \( BAC \), ta có:<p>
-<p>- Đường tròn mixtilinear trong góc \( A \) biến thành \( (J) \).
-<p>- \( K \) biến thành \( W \).</p>
-<p>- \( D \) biến thành \( G \).</p>
-<p>- \( X \) biến thành \( E \).</p>
-<p>- \( P \) biến thành \( T \) (giao điểm của \( AI \) với \( BC \)).</p>
-<p>- \( N \) biến thành \( Y \) (giao điểm của \( (AGW) \) với \( BC \)).</p>
-<p>- \( L \) biến thành \( R \) (giao điểm của \( AG \) với \( (J) \), điểm \( R \) nằm gần \( A \) hơn).</p>
-<p>- \( U \) biến thành \( M \) (giao điểm của \( (ARY) \) với \( BC \)).</p>
+<p>Consider inversion centered at \(A\) with power \(AB\cdot AC\), combined with reflection across the bisector of \(\angle BAC\). Under this transformation we obtain:</p>
+<p>- The internal \(A\)-mixtilinear circle maps to \((J)\) (the excenter circle).  
+- \(K\) maps to \(W\).  
+- \(D\) maps to \(G\).  
+- \(X\) maps to \(E\).  
+- \(P\) maps to \(T\) (the intersection of \(AI\) with \(BC\)).  
+- \(N\) maps to \(Y\) (the intersection of \((AGW)\) with \(BC\)).  
+- \(L\) maps to \(R\) (the intersection of \(AG\) with \((J)\); point \(R\) lies closer to \(A\)).  
+- \(U\) maps to \(M\) (the intersection of \((ARY)\) with \(BC\)).</p>
 
-<p>Vậy, bài toán trở nên tương đương với:
-<p>1. Chứng minh rằng \( X, L, P \) thẳng hàng, hay chứng minh rằng \( ATRE \) nội tiếp.</p>
-<p>2. Chứng minh rằng \( AU \) đi qua giao điểm của hai tiếp tuyến tại \( B \) và \( C \) của \( (O) \), hay chứng minh rằng \( AU \) là đường đối trung, hay chứng minh rằng \( M \) (giao điểm của \( (ARY) \) với \( BC \)) là trung điểm của \( BC \).</p>
+<p>Thus the problem is equivalent to proving:</p>
+<p>1. That \(X, L, P\) are collinear, which is equivalent to showing that \(A,T,R,E\) are concyclic.  
+2. That \(AU\) passes through the intersection of the two tangents at \(B\) and \(C\) to \((O)\); equivalently, that \(AU\) is a symmedian, or that \(M\) (the intersection of \((ARY)\) with \(BC\)) is the midpoint of \(BC\).</p>
 
-<p>(Dùng ảnh thứ hai) Chuyển bài toán trên thành cấu hình với đường tròn nội tiếp, ta phát biểu lại như sau:</p>
+<p>(Using the second figure) Transforming the above into the configuration with an incircle, we restate the problem as follows:</p>
 
-<p>Tam giác \( ABC \) nội tiếp \( (O) \) và ngoại tiếp \( (I) \). Đường thẳng \( AI \) cắt \( BC \) tại \( T \), và \( (I) \) tiếp xúc với \( BC \) tại \( D \). Gọi \( G \) là tiếp điểm của đường tròn mixtilinear trong góc \( A \) với \( (O) \). Khi đó:</p>
-<p>- \( AG \) cắt \( (I) \) tại \( R \) (điểm \( R \) gần \( G \) hơn).</p>
-<p>- \( (AGW) \) cắt \( BC \) tại \( Y \).</p>
+<p>Triangle \(ABC\) is inscribed in \((O)\) and has incircle \((I)\). Line \(AI\) meets \(BC\) at \(T\), and \((I)\) is tangent to \(BC\) at \(D\). Let \(G\) be the tangency point of the \(A\)-mixtilinear circle with \((O)\). Then:</p>
+<p>- \(AG\) meets \((I)\) at \(R\) (the point \(R\) is closer to \(G\)).  
+- The circle \((AGW)\) meets \(BC\) at \(Y\).</p>
 
-<p>Ta cần chứng minh:</p>
-1. \( ARDT \) nội tiếp.</p>
-2. \( (ARY) \) chia đôi \( BC \).</p>
+<p>We need to prove:</p>
+<p>1. \(A,R,D,T\) are concyclic.  
+2. The circle \((ARY)\) bisects segment \(BC\).</p>
 
-Chứng minh (a): Gọi \( AG \) cắt \( (I) \) lần thứ hai tại \( H \). Vì \( GI \) là phân giác của \( \angle AGD \), ta có \( IHGD \) nội tiếp. Do đó:
+<p><strong>Proof (a):</strong> Let \(AG\) meet \((I)\) a second time at \(H\). Since \(GI\) is the bisector of \(\angle AGD\), quadrilateral \(IHGD\) is cyclic. Therefore:
 \[
-\angle ARD = 90^\circ + \angle IHD = 90^\circ + \angle IGA = 90^\circ + \angle DIT = 180^\circ - \angle ATD
+\angle ARD = 90^\circ + \angle IHD = 90^\circ + \angle IGA = 90^\circ + \angle DIT = 180^\circ - \angle ATD,
 \]
-Suy ra \( ARDT \) nội tiếp (đpcm).
+hence \(A,R,D,T\) are concyclic (Q.E.D.).</p>
 
-\textbf{Chứng minh (b):} Dễ thấy \( R \) đối xứng với \( D \) qua \( GI \), do đó \( GR = GD \). Gọi \( MI \) cắt \( BC \) tại \( N \), và \( GI \) cắt \( (O) \) tại \( M \). Gọi \( AI \) cắt \( (O) \) tại \( X \), ta có:
+<p><strong>Proof (b):</strong> It is clear that \(R\) is the reflection of \(D\) across line \(GI\), so \(GR = GD\). Let \(MI\) meet \(BC\) at \(N\), and let \(GI\) meet \((O)\) at \(M\). Let \(AI\) meet \((O)\) at \(X\). Then:
 \[
-\angle AIN = \angle MIT = \angle IVX = \angle NAI
+\angle AIN = \angle MIT = \angle IVX = \angle NAI,
 \]
-Suy ra \( NA = NI \). Gọi \( U \) là tâm của \( (AIG) \), khi đó \( U \) thuộc \( MN \), và ta có:
+so \(NA = NI\). Let \(U\) be the center of \((AIG)\); then \(U\) lies on \(MN\), and
 \[
-\angle UIA = 90^\circ - \angle AGI = \angle ACX = \angle ATB
+\angle UIA = 90^\circ - \angle AGI = \angle ACX = \angle ATB,
 \]
-nên \( UI \parallel BC \). Gọi \( AG \) cắt \( UI \) và \( BC \) lần lượt tại \( Z \) và \( J \), khi đó:
+so \(UI \parallel BC\). Let \(AG\) meet \(UI\) and \(BC\) at \(Z\) and \(J\) respectively; then
 \[
-\frac{WJ}{WM} = \frac{UZ}{UI}
+\frac{WJ}{WM} = \frac{UZ}{UI}.
 \]
-Gọi \( GD \) cắt \( (O) \) tại \( S \), và chọn điểm \( A' \) trên \( GS \) sao cho \( GA' = GA \). Khi đó:
+Let \(GD\) meet \((O)\) at \(S\), and choose a point \(A'\) on \(GS\) with \(GA' = GA\). Then:
 \[
-\triangle ZUA \sim \triangle AGS, \quad \triangle AUI \sim \triangle AGA'
+\triangle ZUA \sim \triangle AGS, \quad \triangle AUI \sim \triangle AGA',
 \]
-Suy ra:
+which yield
 \[
-\frac{WJ}{WM} = \frac{UZ}{UI} = \frac{GA'}{GS} = \frac{GA}{GS} = \frac{GJ}{GD} = \frac{GJ}{GR}
+\frac{WJ}{WM} = \frac{UZ}{UI} = \frac{GA'}{GS} = \frac{GA}{GS} = \frac{GJ}{GD} = \frac{GJ}{GR}.
 \]
-Do đó, \( MR \parallel WG \), suy ra:
+Hence \(MR \parallel WG\), so
 \[
-\angle RMY = \angle YWG = \angle YAR
+\angle RMY = \angle YWG = \angle YAR,
 \]
-nên \( ARYM \) nội tiếp (đpcm).</p>
-<p>Vậy, bài toán trên sử dụng phép nghịch đảo đối xứng tâm A phương tích AB.AC để xử lý giả thiết khó phân tích</p>
+and therefore \(A,R,Y,M\) are concyclic (Q.E.D.).</p>
+<p>Therefore, the problem is handled by using inversion centered at \(A\) with power \(AB\cdot AC\) combined with reflection about the bisector of \(\angle BAC\) to manage the originally difficult tangency conditions.</p>
 </div>
     <div class="container">
-        <h2 class="bold-text">Các bài toán luyện tập</h2>
+        <h2 class="bold-text">Practice Problems</h2>
     </div>
    <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
         <div class="problem-content">
-            (Thầy Trần Quang Hùng) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that \( (ZTH) \) is tangent to the line \( BC \).
+            (Teacher Trần Quang Hùng) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that the circle \( (ZTH) \) is tangent to line \( BC \).
         </div>
         <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/debainghichdao1.png?v=1739639336163" alt="Problem Image" class="problem-image">
         <div class="button-container">
