@@ -3,70 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Liệu Tham Khảo</title>
+     <title>Reference Materials</title>
     <style>
+        /* Full-page background */
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            text-align: center;
+             margin: 0;
             padding: 20px;
-        }
-        .container {
-            max-width: 600px;
-            margin: auto;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            color: #0077cc;
-        }
-        .reference-title {
-            font-size: 1.8rem;
-            font-weight: bold;
+            color: #e6e6e6;
+            background: url('mainwebbackground.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 100vh;
             display: flex;
-            align-items: center;
             justify-content: center;
-            margin-top: 15px;
+            align-items: start;
         }
-        .reference-icon {
-            width: 48px;
-            height: 48px;
-            margin-left: 10px;
-            cursor: pointer;
-        }
-        .reference-icon-large {
-            width: 290px;
-            height: 170px;
-        }
-        .reference-icon-big {
-            width: 360px;
-            height: 120px;
-        }
-        .home-button {
+          .home-button {
             position: fixed;
-            top: 10px; 
-            left: 10px; 
+            top: 10px;
+            left: 10px;
             background-color: black;
             color: white;
             padding: 12px 20px;
             font-size: 18px;
             font-weight: bold;
+            font-family: Arial, sans-serif;
             border-radius: 8px;
             text-decoration: none;
             border: 2px solid white;
             box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
-            text-transform: uppercase; 
-            z-index: 1000; 
+            text-transform: uppercase;
+            z-index: 1000;
         }
         .home-button:hover {
-            background-color: #333; 
+            background-color: #333;
             border-color: #fff;
             box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
         }
-    </style>
+
+        /* Center card */
+        .container {
+            width: 90%;
+            max-width: 760px;
+            margin: 40px auto;
+            background-color: rgba(17,17,17,0.78);
+            padding: 22px;
+            border-radius: 12px;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.6);
+            color: #f2f2f2;
+        }
+
+        h1 {
+            margin-top: 0;
+            color: #ffffff;
+            font-size: 1.8rem;
+            letter-spacing: 1px;
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6;
+            color: #e6e6e6;
+        }
+
+        code {
+            background: rgba(255,255,255,0.04);
+            padding: 2px 6px;
+            border-radius: 4px;
+            color: #fff;
+        }
+
+        .problem-container {
+            background-color: rgba(34,34,34,0.95);
+            padding: 16px;
+            border-radius: 10px;
+            margin: 18px auto;
+            width: 100%;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+            text-align: center;
+        }
+
+        .problem-image {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 6px;
+            display:block;
+            margin: 0 auto;
+        }
+        .tool-section {
+            margin-top: 18px;
+            text-align: center;
+        }
+        .tool-section h2 {
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+        .tool-section p {
+            color: #dcdcdc;
+        }
+
+         .try-button {
+            display: inline-block;
+             margin-top: 10px;
+            padding: 10px 14px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+             border-radius: 6px;
+            font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.06);
+         }
+        .try-button:hover {
+            background-color: #0056b3;
+        }
+         @media (max-width: 700px) {
+            .container { padding: 16px; margin: 70px 12px; }
+            .home-button { padding: 10px 14px; font-size: 16px; }
+            .problem-image { max-width: 340px; }
+        }
+         </style>
 </head>
 <body>
     <a href="index.html" class="home-button">Trang Chủ</a>
