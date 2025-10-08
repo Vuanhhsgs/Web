@@ -9,7 +9,7 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
 
-        body {
+          body {
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
@@ -47,18 +47,28 @@
         }
         .container {
             background-color: #222;
-            padding: 20px;
+            padding: 30px;            /* increased padding */
             margin: 20px auto;
-            width: 80%;
-            max-width: 800px;
-            border-radius: 10px;
+            width: 90%;               /* wider container */
+            max-width: 1200px;        /* bigger max width */
+            border-radius: 15px;      /* slightly more rounded */
             text-align: center;
         }
-        .container h2 {
-            text-align: center;
+       .container h2.bold-text {
+            font-size: 36px;            /* tăng chữ */
+            color: #ffffff;             /* trắng */
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.6); /* bóng chữ để nổi bật */
+            margin-bottom: 20px;
         }
         .bold-text {
             font-weight: bold;
+        }
+        /* Style for the PDF iframe */
+        .container iframe {
+            width: 100%;
+            height: 900px;           /* taller iframe */
+            border: 2px solid black;
+            border-radius: 10px;
         }
         .problem-image {
             width: 100%;
@@ -70,7 +80,7 @@
         .centered-text {
             text-align: center;
         }
-	.problem-box {
+        .problem-box {
             background-color: white; 
             padding: 50px;
             border: 4px solid #17a2b8;
@@ -80,7 +90,7 @@
             max-width: 800px;
             margin-bottom: 50px;
         }
-	.problem-content {
+        .problem-content {
             color: black; 
             font-size: 20px;
             margin-bottom: 20px;
@@ -88,7 +98,7 @@
             border: 2px solid black;
             border-radius: 10px;
         }
-	.problem-title {
+        .problem-title {
             font-size: 30px;
             margin-bottom: 20px;
             color: black;
@@ -132,18 +142,15 @@
 </head>
 <body>
 
-    <a href="bien_doi_ti_le.html" class="home-button">Quay lại trang trước</a>
-    <div class="container">
-        <h2 class="bold-text">Lời giải</h2>
-        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai1.png?v=1739716705382" alt="Problem Image" class="problem-image">
-	      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai2.png?v=1739716238054" alt="Problem Image" class="problem-image">
-        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai3.png?v=1739716252849" alt="Problem Image" class="problem-image">
-	      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai4.png?v=1739716274263" alt="Problem Image" class="problem-image">
-        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai5.png?v=1739716290382" alt="Problem Image" class="problem-image">
-	      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai6.png?v=1739716310783" alt="Problem Image" class="problem-image">
-        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai7.png?v=1739716311501" alt="Problem Image" class="problem-image">
-	      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1loigiai8.png?v=1739716552695" alt="Problem Image" class="problem-image">
-    </div>
+    <a href="nghich_dao.html" class="home-button">Back to homepage</a>
+   <div class="container">
+    <h2 class="bold-text">Solution</h2>
+    <iframe src="loigiainghichdaobdtlbai1.pdf" 
+            width="100%" 
+            height="600px"
+            style="border: 2px solid black; border-radius: 10px;">
+    </iframe>
+</div>
 
  
 </body>
