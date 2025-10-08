@@ -8,7 +8,7 @@
         /* Full-page background */
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
+             margin: 0;
             padding: 20px;
             color: #e6e6e6;
             background: url('mainwebbackground.png') no-repeat center center fixed;
@@ -18,9 +18,7 @@
             justify-content: center;
             align-items: start;
         }
-
-        /* Fixed Home button similar to main page */
-        .home-button {
+         .home-button {
             position: fixed;
             top: 10px;
             left: 10px;
@@ -31,11 +29,6 @@
             font-weight: bold;
             font-family: Arial, sans-serif;
             border-radius: 8px;
-            text-decoration: none;
-            border: 2px solid white;
-            box-shadow: 0px 4px 6px rgba(255,255,255,0.15);
-            text-transform: uppercase;
-            z-index: 1000;
         }
         .home-button:hover {
             background-color: #333;
@@ -75,8 +68,7 @@
             color: #fff;
         }
 
-        
-       .problem-container {
+        .problem-container {
             background-color: rgba(34,34,34,0.95);
             padding: 16px;
             border-radius: 10px;
@@ -84,61 +76,54 @@
             width: 100%;
             box-shadow: 0 8px 24px rgba(0,0,0,0.6);
             text-align: center;
-            overflow: hidden; 
-    }
+        }
 
-    .problem-image {
-        width: 100%;
-        height: auto;
-        max-width: 100%; 
-        border-radius: 6px;
-        display: block;
-        margin: 0 auto;
-    }
-
-     
+        .problem-image {
+            width: 100%;
+            max-width: 420px;
+            border-radius: 6px;
+            display:block;
+            margin: 0 auto;
+        }
         .tool-section {
             margin-top: 18px;
             text-align: center;
         }
-
         .tool-section h2 {
             color: #ffffff;
             margin-bottom: 8px;
         }
-
         .tool-section p {
             color: #dcdcdc;
         }
 
-        .try-button {
+         .try-button {
             display: inline-block;
-            margin-top: 10px;
+             margin-top: 10px;
             padding: 10px 14px;
             background-color: #007bff;
             color: white;
             text-decoration: none;
-            border-radius: 6px;
+             border-radius: 6px;
             font-weight: bold;
             border: 1px solid rgba(255,255,255,0.06);
-        }
+         }
         .try-button:hover {
             background-color: #0056b3;
         }
-
-       
-        @media (max-width: 700px) {
+         @media (max-width: 700px) {
             .container { padding: 16px; margin: 70px 12px; }
             .home-button { padding: 10px 14px; font-size: 16px; }
             .problem-image { max-width: 340px; }
         }
-    </style>
+         </style>
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>
 
     <div class="container">
-        <h1>Usage Instructions</h1>
+
+     <h1>Usage Instructions</h1>
 
         <p>
             This website provides a curated collection of geometry problems. For the best experience, please download and install
@@ -155,11 +140,10 @@
         <p>Each problem on this site follows the format shown below:</p>
 
         <div class="problem-container">
-            <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872"
+          <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/baitoanminhhoa.PNG?v=1739639165872"
                  alt="Illustrative problem" class="problem-image">
         </div>
-
-        <p><strong>Click "My Solution"</strong> to view my solution.</p>
+         <p><strong>Click "My Solution"</strong> to view my solution.</p>
         <p><strong>Click "Try It Yourself"</strong> to download a <code>.gsp</code> file. Open that file with <strong>Geometer's Sketchpad</strong> and work from the prepared figure.</p>
 
         <div class="tool-section">
@@ -167,7 +151,6 @@
             <p>You can download the drawing tool I prepared to help constructing figures quickly.</p>
             <a href="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/File-cong-cu%20(1).gsp?v=1739639528701"
                download="File-cong-cu (1).gsp" class="try-button">Download drawing tool</a>
-
             <h2 style="margin-top:18px;">How to use</h2>
             <p>Open the downloaded tool file, then switch to your working figure. Hover where shown in the image below to access helper tools for easier drawing.</p>
 
@@ -177,3 +160,5 @@
     </div>
 </body>
 </html>
+
+        
