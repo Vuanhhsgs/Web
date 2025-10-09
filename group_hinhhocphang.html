@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" async
+      src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <style>
+	body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: url('mainwebbackground.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+    padding-top: 20px;
+    color: white;
+}
+
+/* Subtle global overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: -1;
+}
+
+/* ====== TITLE ====== */
+.title-container {
+    background: linear-gradient(145deg, #1a1a1a, #2b2b2b);
+    color: white;
+    text-align: center;
+    padding: 25px 40px;
+    border-radius: 18px;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 1.2px;
+    box-shadow: 
+        0 0 20px rgba(255, 255, 255, 0.15),
+        inset 0 0 15px rgba(255, 255, 255, 0.05);
+    border: 2px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+}
+.title-container:hover {
+    box-shadow: 
+        0 0 25px rgba(255, 255, 255, 0.25),
+        inset 0 0 20px rgba(255, 255, 255, 0.08);
+    transform: translateY(-3px);
+}
+
+/* ====== HOME BUTTON ====== */
+.home-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    text-decoration: none;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
+    text-transform: uppercase;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+.home-button:hover {
+    background-color: #333;
+    box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
+}
+
+/* ====== CONTENT CONTAINERS ====== */
+.container {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 25px 30px;
+    margin: 25px auto;
+    width: 80%;
+    max-width: 850px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+.container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+/* ====== PROBLEM BOX ====== */
+.problem-box {
+    background: linear-gradient(160deg, #1e1e1e, #2b2b2b);
+    color: white;
+    padding: 40px;
+    border: 3px solid #17a2b8;
+    border-radius: 20px;
+    text-align: center;
+    width: 80%;
+    max-width: 850px;
+    margin: 50px auto;
+    box-shadow: 
+        0 0 30px rgba(0, 0, 0, 0.7),
+        inset 0 0 20px rgba(23, 162, 184, 0.15);
+    transition: all 0.3s ease;
+}
+.problem-box:hover {
+    box-shadow:
+        0 0 40px rgba(23, 162, 184, 0.3),
+        inset 0 0 25px rgba(23, 162, 184, 0.2);
+    transform: translateY(-5px);
+}
+
+/* ====== PROBLEM TITLE ====== */
+.problem-title {
+    font-size: 28px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    background-color: #17a2b8;
+    padding: 12px 25px;
+    border-radius: 12px;
+    display: inline-block;
+    box-shadow: 0 0 15px rgba(23, 162, 184, 0.4);
+    letter-spacing: 0.5px;
+}
+
+/* ====== PROBLEM CONTENT ====== */
+.problem-content {
+    background: rgba(255, 255, 255, 0.03);
+    color: white;
+    font-size: 18px;
+    margin-bottom: 25px;
+    padding: 18px 20px;
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    line-height: 1.6;
+}
+
+/* ====== IMAGE ====== */
+.problem-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
+
+/* ====== BUTTONS ====== */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+.button {
+    padding: 14px 28px;
+    border: 2px solid;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.solution-btn {
+    background-color: #28a745;
+    border-color: #28a745;
+}
+.try-btn {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 700px) {
+    .container, .problem-box { width: 90%; padding: 16px; }
+    .title-container { font-size: 22px; padding: 18px; }
+    .home-button { padding: 10px 14px; font-size: 16px; }
+}
+</style>
+</head>
+<body>
+    <a href="index.html" class="home-button">Home</a>
+     <div class = "title-container">
+    <h1>Problems from AoPS Forum that I solved</h1>
+	 </div>
+    <div class="problem-box">		
+        <div class="problem-title">Problem 1</div>
+        <div class="problem-content">
+            (Nguyen Hoang Nam) Given \( \triangle ABC \) with circumcenter \( O \).
+A line through \( O \) meets \( AB \) and \( AC \) at \( E \) and \( F \), respectively.
+
+Let \( H \) and \( K \) be the orthocenters of \( \triangle ABC \) and \( \triangle AEF \), respectively.
+The line \( KH \) meets \( EF \) at \( P \).
+
+Let \( Q \) be the isogonal conjugate of \( P \) with respect to \( \triangle ABC \). 
+Prove that
+\( HQ \parallel OP. \) 
+        </div>
+        <img src="hinh_hhpbai1.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "geometryforum_problem1.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaihhpbai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+    
+</body>
+
+
+
+
+
+
+
+
+
+
+    
+</html>
