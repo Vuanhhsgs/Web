@@ -165,17 +165,24 @@ body::before {
 }
 
 /* Hover effect */
-.problem-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+.problem-tag {
+    display: block;
+    width: 90%;
+    margin: 10px auto;
+    padding: 8px 0;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
 }
 
-/* Difficulty colors */
-.hardness-easy { background-color: #28a745; }        /* green */
-.hardness-moderate { background-color: #ffc107; }    /* yellow */
-.hardness-hard { background-color: #fd7e14; }        /* orange */
-.hardness-veryhard { background-color: #dc3545; }    /* red */
-.hardness-extreme { background-color: #6f42c1; }     /* purple */
+/* Colors per difficulty */
+.hardness-easy { background-color: #28a745; }       /* green */
+.hardness-moderate { background-color: #ffc107; }   /* yellow */
+.hardness-hard { background-color: #fd7e14; }       /* orange */
+.hardness-very { background-color: #dc3545; }       /* red */
+.hardness-extreme { background-color: #6f42c1; }   /* purple */
 
 
 /* ====== IMAGE ====== */
