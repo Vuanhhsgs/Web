@@ -149,7 +149,33 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
+/* Base tag style */
+.problem-tag {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;       /* bigger size */
+    font-size: 18px;          /* slightly larger text */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+}
 
+
+/* Hover effect */
+.problem-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+/* Colors per difficulty */
+.hardness-easy { background-color: #28a745; }       /* green */
+.hardness-moderate { background-color: #ffc107; }   /* yellow */
+.hardness-hard { background-color: #fd7e14; }       /* orange */
+.hardness-very { background-color: #dc3545; }       /* red */
+.hardness-extreme { background-color: #6f42c1; }   /* purple */
+.hardness-misc { background-color: #6c757d; }       /* grey */
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -288,13 +314,77 @@ and therefore \(A,R,Y,M\) are concyclic (Q.E.D.).</p>
     </div>
    <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
+	   <div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
-            (Teacher Trần Quang Hùng) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that the circle \( (ZTH) \) is tangent to line \( BC \).
+            (Teacher Tran Quang Hung) Given a triangle \( ABC \) with altitude \( AD \) and orthocenter \( H \). Let \( M \) be the midpoint of \( BC \). \( G \) is the projection of \( A \) onto \( HM \). \( GD \) intersects the circle with diameter \( AH \) again at \( X \). \( XM \) intersects the circle with diameter \( AH \) again at \( Y \). \( DY \) intersects the circle with diameter \( AH \) again at \( Z \). The circles \( (ZXD) \) and \( (ZGM) \) intersect again at \( T \). Prove that the circle \( (ZTH) \) is tangent to line \( BC \).
         </div>
         <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/debainghichdao1.png?v=1739639336163" alt="Problem Image" class="problem-image">
         <div class="button-container">
             <a class="button try-btn" href = "https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaobai1.gsp?v=1739639195728" target = "_blank">Try It Yourself</a>
             <a href="loigiainghichdaobai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 2</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+           (AoPS, navi_09220114 Malaysian SST 2024) Given a triangle \(ABC\), let \(I\) be the incenter, and \(J\) be the \(A\)-excenter. A line \(\ell\) through \(A\) perpendicular to \(BC\) intersects the lines \(BI\), \(CI\), \(BJ\), \(CJ\) at \(P\), \(Q\), \(R\), \(S\) respectively. Suppose the angle bisector of \(\angle BAC\) meets \(BC\) at \(K\), and \(L\) is a point such that \(AL\) is a diameter in \((ABC)\).
+
+Prove that the line \(KL\), \(\ell\), and the line through the centers of circles \((IPQ)\) and \((JRS)\) are concurrent.
+
+        </div>
+        <img src= "hinh_nghichdaobai2.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem2.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai2.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 3</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+           (Teacher Nguyen Duy Khuong) Let triangle \( A B C \) be inscribed in circle \( (O) \) and have circumcircle \( (I) \). \( X \) is the touchpoint of the \( A\text{-}mix \) incircle with \( (O) \). Let \( A^{\prime} \) be the reflection of \( A \) across \( I \). The line through \( X \) perpendicular to \( A^{\prime} X \) intersects \( (A\text{-}mix) \) at the second point \( T \). Prove that \( A T \) passes through the Feuerbach point.
+        </div>
+        <img src= "hinh_nghichdaobai3.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem3.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai3.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 4</div>
+		<div class="problem-tag hardness-very">Very Hard</div>
+        <div class="problem-content">
+           (Teacher Tran Quang Hung) Let \(ABCD\) be a parallelogram. Construct a point \(K\) such that \(KD \perp AD\) and \(KB \perp AB\). On an arbitrary line through \(A\), take two points \(E, F\) such that \(KE \parallel AB\) and \(KF \parallel AD\). The lines \(ED\) and \(FB\) intersect at \(P\). Let \(L\) be symmetric to \(K\) with respect to \(C\). Let \(Q \in PL\) such that \(\overline{PL} \cdot \overline{PQ} = PK^2\). Prove that \(AQ = AK\).
+
+        </div>
+        <img src= "hinh_nghichdaobai4.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem4.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai4.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 5</div>
+		<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+           	(AoPS forum, user tuquanhang) Given triangle \(ABC\) inscribed in circle \((O)\). The circle \((K)\) is tangent with \(AB, AC\) and tangent with \((O)\) internally at \(T\). Let \(L\) be the point on \((K)\) such that circle \((BLC)\) is tangent with \((K)\). \(AL\) cuts \((BLC)\) again at \(P\). Let \(I\) be the incenter of triangle \(ABC\).  
+a. Prove that \(L, P, T\) and \(I\) are concyclic.  
+b. Let \(M, N\) be the points on the circle \((BLC)\) such that \(PM, PN\) are tangent with the incircle \((I)\). Prove that \(MN \parallel BC\).
+
+        </div>
+        <img src= "hinh_nghichdaobai5.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_Problem5.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiainghichdaobai5.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
   
