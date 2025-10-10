@@ -8,7 +8,7 @@
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-	 body {
+	body {
     margin: 0;
     padding: 0;
     font-family: "Segoe UI", Arial, sans-serif;
@@ -118,7 +118,6 @@ body::before {
         inset 0 0 20px rgba(23, 162, 184, 0.15);
     transition: all 0.3s ease;
 }
-		
 .problem-box:hover {
     box-shadow:
         0 0 40px rgba(23, 162, 184, 0.3),
@@ -177,8 +176,6 @@ body::before {
 .hardness-very { background-color: #dc3545; }       /* red */
 .hardness-extreme { background-color: #6f42c1; }   /* purple */
 .hardness-misc { background-color: #6c757d; }       /* grey */
-
-
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -208,12 +205,17 @@ body::before {
     transition: all 0.3s ease;
 }
 .solution-btn {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-.try-btn {
-    background-color: #007bff;
-    border-color: #007bff;
+      background-color: #28A745;
+      border-color: #1F7A35;
+    }
+
+    .try-btn {
+      background-color: #007BFF;
+      border-color: #0056B3;
+    }
+	.stuck-btn {
+  background: #FF6B00;    /* hoặc #DC3545 nếu muốn đỏ */
+  border-color: #CC5600;  /* hoặc #A71F2B cho đỏ */
 }
 .button:hover {
     transform: translateY(-3px);
@@ -226,6 +228,7 @@ body::before {
     .title-container { font-size: 22px; padding: 18px; }
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
+</style>
     </style>
 </head>
 <body>
@@ -373,6 +376,92 @@ body::before {
         <div class="button-container">
             <a class="button try-btn" href = "https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbai1.gsp?v=1739715938071" download = "nghichdaobai1.gsp">Try It Yourself</a>
             <a href="loigiaibdtlbai1.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	 <div class="problem-box">		
+        <div class="problem-title">Problem 2</div>
+       	<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Let \( \triangle ABC \) be inscribed in the circle \( (O) \), and let \( P \) be an arbitrary point.  
+\( PQ \) is the diameter of the circumcircle of \( \triangle PBC \).  
+Points \( E \) and \( F \) lie on \( PC \) and \( PB \), respectively, such that \( EF \perp OQ \).  
+Lines \( PB \) and \( PC \) intersect \( (O) \) again at \( M \) and \( N \), respectively.  
+The circumcircles of \( \triangle CME \) and \( \triangle BNF \) intersect \( PB \) and \( PC \) again at \( K \) and \( L \), respectively.  
+Prove that the four points \( E, F, K, L \) lie on a circle \( (J) \), and \( J \) lies on \( PQ \).
+
+        </div>
+        <img src="hinh_bdtlbai2.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem2.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai2.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	
+	<div class="problem-box">		
+        <div class="problem-title">Problem 3</div>
+       	<div class="problem-tag hardness-moderate">Moderate</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Given a triangle \( ABC \) with incenter \( I \).  
+The perpendicular bisectors of \( AB \) and \( AC \) intersect \( IB \) and \( IC \) at \( M \) and \( N \), respectively.  
+The perpendicular bisector of \( IA \) intersects \( CA \) and \( AB \) at \( E \) and \( F \), respectively.  
+
+Choose points \( S \) and \( T \) such that  
+\( AS \perp AM \), \( FS \perp AB \), \( AT \perp AN \), and \( ET \perp AC \).  
+
+Choose points \( Q \) and \( R \) such that  
+\( MQ \parallel SR \parallel AB \) and \( TQ \parallel NR \parallel AC \).  
+
+Prove that \( QR \perp AO \), where \( O \) is the circumcenter of \( \triangle ABC \).
+
+        </div>
+        <img src="hinh_bdtlbai3.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem3.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai3.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 4</div>
+       	<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Given a triangle \(ABC\) with incircle \((I)\) touching \(CA\) and \(AB\) at \(E\) and \(F\), respectively. The lines \(IB\) and \(IC\) intersect the circumcircle \((ABC)\) again at \(M\) and \(N\), respectively. Let \(P\) and \(Q\) be the reflections of \(C\) and \(B\) across \(M\) and \(N\), respectively. Denote \(J\), \(K\), and \(L\) as the circumcenters of triangles \(APQ\), \(BFQ\), and \(CEP\), respectively. Prove that \(FK\), \(EL\), and \(AJ\) are concurrent.
+        </div>
+        <img src="hinh_bdtlbai4.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem4.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai4.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box">		
+        <div class="problem-title">Problem 5</div>
+       	<div class="problem-tag hardness-noderate">Moderate</div>
+        <div class="problem-content">
+            	(Teacher Tran Quang Hung on AoPS forum)Let the triangle \(ABC\) with \(P,Q\) as two isogonal conjugate points. 
+\(E,F\) are the projections of \(P\) onto \(CA,AB\) respectively. 
+\(M,N\) are symmetrical of \(Q\) through the midpoints of \(BE,CF\) respectively. 
+\(MN\) meets \(EF\) at \(R\). 
+Prove that \(PR\parallel BC\).
+
+        </div>
+        <img src="hinh_bdtlbai5.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem5.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai5.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box">		
+        <div class="problem-title">Problem 6</div>
+       	<div class="problem-tag hardness-very">Very Hard</div>
+        <div class="problem-content">
+            (Teacher Tran Quang Hung on AoPS forum)Let \(ABC\) be an acute triangle inscribed in circle \((O)\). Let \(M,N\) be the midpoints of \(AB,AC\), respectively. Let \(E,F\) be the midpoints of the minor arcs \(CA,AB\), respectively. \(EF\) meets \(CA,AB\) at \(Q,R\), respectively. Let \(L,K\) be the projections of \(E,F\) onto \(AO\), respectively. Let \(S,T\) be the centers of \((RMK),(QNL)\), respectively. On line \(ST\), take \(X\) such that \(XO\perp OA\). Suppose the line through \(X\) parallel to \(EF\) intersects \((O)\) at \(Y,Z\). Prove that the orthocenter of triangle \(AYZ\) lies on \(EF\).
+
+        </div>
+        <img src="hinh_bdtlbai6.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratiochasing_Problem6.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaibdtlbai6.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
 </body>
