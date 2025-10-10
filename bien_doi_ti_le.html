@@ -166,15 +166,14 @@ body::before {
 
 /* Hover effect */
 .problem-tag {
-    display: block;
-    width: 90%;
-    margin: 10px auto;
-    padding: 8px 0;
+    display: inline-block;   /* only as wide as content */
+    padding: 6px 14px;       /* adjust horizontal/vertical padding */
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
     color: white;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    box-shadow: 0 0 8px rgba(0,0,0,0.3);
+    margin: 8px auto;        /* centers under title */
 }
 
 /* Colors per difficulty */
