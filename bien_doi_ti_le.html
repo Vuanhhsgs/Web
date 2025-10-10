@@ -152,14 +152,15 @@ body::before {
 }
 /* Base tag style */
 .problem-tag {
-    display: inline-block;   /* only as wide as content */
-    padding: 6px 14px;       /* adjust horizontal/vertical padding */
+    display: block;           /* force new line */
+    width: fit-content;       /* shrink to text */
+    padding: 6px 14px;
     text-align: center;
     font-weight: bold;
     border-radius: 10px;
     color: white;
     box-shadow: 0 0 8px rgba(0,0,0,0.3);
-    margin: 8px auto;        /* centers under title */
+    margin: 8px auto;         /* center horizontally */
 }
 
 /* Hover effect */
