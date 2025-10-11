@@ -149,7 +149,33 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
+/* Base tag style */
+.problem-tag {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;       /* bigger size */
+    font-size: 18px;          /* slightly larger text */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+}
 
+
+/* Hover effect */
+.problem-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+/* Colors per difficulty */
+.hardness-easy { background-color: #28a745; }       /* green */
+.hardness-moderate { background-color: #ffc107; }   /* yellow */
+.hardness-hard { background-color: #fd7e14; }       /* orange */
+.hardness-very { background-color: #dc3545; }       /* red */
+.hardness-extreme { background-color: #6f42c1; }   /* purple */
+.hardness-misc { background-color: #6c757d; }       /* grey */
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -179,16 +205,34 @@ body::before {
     transition: all 0.3s ease;
 }
 .solution-btn {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-.try-btn {
-    background-color: #007bff;
-    border-color: #007bff;
+      background-color: #28A745;
+      border-color: #1F7A35;
+    }
+
+    .try-btn {
+      background-color: #007BFF;
+      border-color: #0056B3;
+    }
+	.stuck-btn {
+  background: #FF6B00;    /* hoặc #DC3545 nếu muốn đỏ */
+  border-color: #CC5600;  /* hoặc #A71F2B cho đỏ */
 }
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+.link-text {
+  color: white;             /* same color as surrounding text */
+  text-decoration: none;    /* remove underline */
+  font-weight: normal;      /* looks like plain text */
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+cursor: pointer;
+  font-weight: bold;         /* bold when hovered */
+  color: #00e0ff;            /* optional: light cyan highlight */
+  text-shadow: 0 0 10px rgba(23, 162, 184, 0.6); /* subtle glow */
 }
 
 /* ====== RESPONSIVE ====== */
@@ -205,6 +249,7 @@ body::before {
     <h1>HSGS Team Selection Test 2024</h1>
     <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
+		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
             (P4 Day 4) Given a triangle \(ABC\). Points \(E, F\) lie on sides \(AC, AB\) respectively, such that there exists a point \(P\) inside the triangle satisfying \(AP \perp EF\) and \(\angle BPF = \angle CPE\).  
 On \(PE, PF\), choose points \(M, N\) such that \(FM \perp PB\) and \(EN \perp PC\).  
@@ -219,6 +264,7 @@ Let \(Q = BM \cap CN\). Prove that \(PQ \perp MN\).
     </div>
        <div class="problem-box">		
         <div class="problem-title">Problem 2</div>
+		   <div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
             <p>
 <b>(P3 Day 3)</b> Given a triangle \(ABC\), take a point \(Y\) in the half-plane bounded by \(AC\) not containing \(B\), and a point \(Z\) in the half-plane bounded by \(AB\) not containing \(C\), such that \(\triangle AYC = \triangle BZA\).  
@@ -240,12 +286,88 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
             <a href="loigiaidethibai2.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
-
-
-
        
-     </div>
-    
+</div>
+	
+	<div class = "title-container">
+
+	<h1><a href="https://artofproblemsolving.com/community/c3797371_dgo__djgo"
+       class="link-text"
+       target="_blank">
+       DGO – Discord Geometry Olympiad
+    </a>
+	</h1>
+	<div class="problem-box">		
+        <div class="problem-title">Problem 3</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (P3 DGO 2023) Let \(ABCD\) be a cyclic quadrilateral with \(M_1,M_2,M_3,M_4\) being the midpoints of segments \(AB,BC,CD,DA\) respectively. Suppose \(E\) is the intersection of diagonals \(AC,BD\) of quadrilateral \(ABCD\). Define \(E_1\) to be the isogonal conjugate point of point \(E\) in \(\triangle M_1CD\). Define \(E_2,E_3,E_4\) similarly. Suppose \(E_1E_3\) intersects \(E_2E_4\) at a point \(W\). Prove that: The Newton-Gauss line of quadrilateral \(ABCD\) bisects segment \(EW\).
+        </div>
+        <img src="hinh_dethibai3.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "Test_problem3.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaidethibai3.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 4</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (P4 DGO 2023) Let \(\triangle ABC\) be a triangle with altitude \(AD\), circumcircle \(\Gamma\) and diameter \(AP\) of \(\Gamma\). Points \(U,V\) lie on the perpendicular bisector of \(BC\) such that \(B,U,C,V\) lie on a circle. Line \(AU\) intersects \(BC\) at \(K\). \(VP\) intersects the circle with diameter \(UV\) again at \(S\). Line \(SK\) intersects the circle with diameter \(UV\) again at \(T\). Prove that: \(T,D,U\) are collinear.
+
+        </div>
+        <img src="hinh_dethibai4.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "Test_problem4.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaidethibai4.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 5</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (P2 DGO 2023) Given \(\triangle ABC\) with \(K\) being the \(A\)-Humpty point. Points \(X,D\) lie on line \(BC\) such that \((XD,BC) = -1\). Point \(W\) lies on the bisector of \(\angle BAC\) such that \(XW\) is perpendicular to \(AD\). The perpendicular bisector of segment \(WK\) cuts the line from point \(X\) perpendicular to the bisector of \(\angle BAC\) at point \(P\) and line \(AD\) at point \(N\). Prove that: \(A,P,N,K\) lie on a circle.
+
+        </div>
+        <img src="hinh_dethibai5.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "Test_problem5.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaidethibai5.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+	<div class="problem-box">		
+        <div class="problem-title">Problem 6</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (P3 DJGO 2023) Let \(\triangle ABC\) be an acute triangle with \(N,P\) being the midpoint of arc \(BC\) not containing \(A\) and the arc \(BC\) containing \(A\) of the circumcircle of \(\triangle ABC\) respectively. The external bisector of \(\angle BAC\) intersects \(BC\) at point \(S\). Construct the point \(N^*\) to be the reflection of point \(N\) over \(BC\). \(D\) is an arbitrary point lying on segment \(BC\). \(E\) is a point lying on line \(BC\) and satisfying \((BC,DE) = -1\). Line \(AE\) intersects the circumcircle of \(\triangle ABC\) again at \(Z\). Line \(PZ\) and \(BC\) intersects at \(K\). Line \(PD\) intersects the circumcircle of \(\triangle ABC\) again at \(R\). The circumcircle of \(\triangle PDK\) intersects the circumcircle of \(\triangle PRN^*}\) again at \(L\). Prove that: Lines \(LS\) and \(LP\) are perpendicular.
+
+        </div>
+        <img src="hinh_dethibai6.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "Test_problem6.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaidethibai6.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+	<div class="problem-box">		
+        <div class="problem-title">Problem 7</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+        <div class="problem-content">
+            (P6 DJGO 2023) Let \(ABCD\) be a convex quadrilateral. Suppose there exists a circle \(\Omega\) with center \(I\), lying inside \(ABCD\) such that \(AB,BC,CD,DA\) are tangent to \(\Omega\) at \(X,Y,Z,T\) respectively. Let \(N,P\) be the midpoints of segments \(DC,DA\). Let \(DX,AZ\) intersect at \(K\) and \(DY,CT\) intersect at \(L\). \(KP\) intersects \(XZ\) at point \(U\) and \(LN\) intersects \(YT\) at point \(V\). Suppose the circumcircle of \(\triangle DAC\) is internally tangent to \(\Omega\). Prove that: Points \(X,U,V,Y\) lie on a circle.
+
+        </div>
+        <img src="hinh_dethibai7.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "Test_problem6.gsp" target = "_blank">Try It Yourself</a>
+            <a href="loigiaidethibai7.html" class="button solution-btn">My Solution</a>
+        </div>
+    </div>
+
+		
+	
+	</div>
 </body>
 
 
