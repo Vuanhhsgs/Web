@@ -7,7 +7,7 @@
       src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
+   <style>
 	body {
     margin: 0;
     padding: 0;
@@ -149,7 +149,33 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
+/* Base tag style */
+.problem-tag {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;       /* bigger size */
+    font-size: 18px;          /* slightly larger text */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+}
 
+
+/* Hover effect */
+.problem-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+/* Colors per difficulty */
+.hardness-easy { background-color: #28a745; }       /* green */
+.hardness-moderate { background-color: #ffc107; }   /* yellow */
+.hardness-hard { background-color: #fd7e14; }       /* orange */
+.hardness-very { background-color: #dc3545; }       /* red */
+.hardness-extreme { background-color: #6f42c1; }   /* purple */
+.hardness-misc { background-color: #6c757d; }       /* grey */
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -179,12 +205,17 @@ body::before {
     transition: all 0.3s ease;
 }
 .solution-btn {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-.try-btn {
-    background-color: #007bff;
-    border-color: #007bff;
+      background-color: #28A745;
+      border-color: #1F7A35;
+    }
+
+    .try-btn {
+      background-color: #007BFF;
+      border-color: #0056B3;
+    }
+	.stuck-btn {
+  background: #FF6B00;    /* hoặc #DC3545 nếu muốn đỏ */
+  border-color: #CC5600;  /* hoặc #A71F2B cho đỏ */
 }
 .button:hover {
     transform: translateY(-3px);
@@ -206,8 +237,9 @@ body::before {
 	 </div>
     <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
+		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
-            (Nguyen Hoang Nam) Given \( \triangle ABC \) with circumcenter \( O \).
+            (<a href="https://web.facebook.com/groups/205466756603509/user/100009531305578/" target="_blank" style =  "color: white">Nguyen Hoang Nam</a>) Given \( \triangle ABC \) with circumcenter \( O \).
 A line through \( O \) meets \( AB \) and \( AC \) at \( E \) and \( F \), respectively.
 
 Let \( H \) and \( K \) be the orthocenters of \( \triangle ABC \) and \( \triangle AEF \), respectively.
@@ -226,8 +258,14 @@ Prove that
 
 	<div class="problem-box">		
     <div class="problem-title">Problem 2</div>
+	<div class="problem-tag hardness-extreme">Extremely Hard</div>
     <div class="problem-content">
-    
+    	(<a href="https://web.facebook.com/groups/205466756603509/user/100033216160173/" target="_blank" style =  "color: white">Le Xuan Hoang</a>) Let \(\triangle ABC\) be inscribed in \((O)\). Let \(M,N,P\) be the midpoints of arcs \(BC,CA,AB\) not containing \(A,B,C\), respectively. Let \(AO\) intersect \(NP\) at \(X\). Define \(Y\) and \(Z\) similarly.
+
+a) Prove that \(MX, NY, PZ\) are concurrent at \(K\).
+
+b) Prove that \(OK\) passes through the Lemoine point of \(\triangle ABC\).
+
     </div>
     <img src="hinh_hhpbai2.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -238,8 +276,17 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 3</div>
+	<div class="problem-tag hardness-hard">Hard</div>
     <div class="problem-content">
-    
+    	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Let \(\triangle ABC\) be inscribed in \((O)\) with orthocenter \(H\).  
+Point \(X\) lies on segment \(HO\) such that \(HX = \tfrac{1}{2}OX\).  
+Let \(L\) be the Lemoine point of \(\triangle ABC\).
+
+The line through \(H\) parallel to the bisector of \(\angle XLO\) meets the line through \(B\) parallel to \(AC\) and the line through \(C\) parallel to \(AB\) at points \(B_1\) and \(C_1\), respectively.  
+Points \(B_2\) and \(C_2\) are the reflections of \(B_1\) over \(B\) and \(C_1\) over \(C\), respectively.  
+
+Prove that line \(B_2C_2\) is tangent to the circumcircle \((O)\).
+
     </div>
     <img src="hinh_hhpbai3.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -250,8 +297,16 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 4</div>
+	<div class="problem-tag hardness-hard">Hard</div>
     <div class="problem-content">
-    
+    	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Given triangle \(ABC\) with \(J\) being an arbitrary point on the bisector of angle \(A\).  
+Point \(P\) lies inside angle \(BJC\) such that triangles \(BPJ\) and \(JPC\) are similar.  
+\(AK\) is the isogonal ray of \(AP\) with respect to angle \(BAC\).  
+Let \(M\) be the midpoint of \(BC\).  
+
+Prove that \(JM \parallel AK.\)
+
+
     </div>
     <img src="hinh_hhpbai4.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -259,11 +314,18 @@ Prove that
         <a href="loigiaihhpbai4.html" class="button solution-btn">My Solution</a>
     </div>
 </div>
-
+	
 <div class="problem-box">		
     <div class="problem-title">Problem 5</div>
+	<div class="problem-tag hardness-very">Very Hard</div>
     <div class="problem-content">
-    
+    	(<a href="https://web.facebook.com/groups/205466756603509/user/100072450942447/" target="_blank" style =  "color: white">Duong Nguyen</a>)Given triangle \(ABC\) inscribed in \((O)\) and circumscribed about \((I)\).  
+\((I)\) is tangent to \(BC\) at \(D\), and \(K\) is the reflection of \(D\) across \(I\).  
+Take points \(X, Y\) on the line through \(K\) parallel to \(BC\) such that \(\angle XIY = 90^\circ.\)  
+\(OI\) meets \((XY)\) again at \(Z.\)  
+
+Prove that \(I\) lies on the radical axis of \((AXY)\) and \((AOZ)\).
+
     </div>
     <img src="hinh_hhpbai5.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -274,8 +336,12 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 6</div>
+	<div class="problem-tag hardness-easy">Easy</div>
     <div class="problem-content">
-    
+    	Let \(ABC\) be a triangle with incenter \(I\). Let \((I)\) be tangent to \(BC,AB,AC\) at \(D,E,F\) respectively, and let the Euler line of \(\triangle DEF\) meet \(EF\) at \(J\). 
+
+Prove that the reflection of the line \(JA\) across \(EF\) passes through the midpoint of \(BC\).
+
     </div>
     <img src="hinh_hhpbai6.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -286,8 +352,14 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 7</div>
+	<div class="problem-tag hardness-moderate">Moderate</div>
     <div class="problem-content">
-    
+    	Let \(ABC\) be a triangle inscribed in \((O)\) and circumscribed about \((I)\).  
+Let \(T\) be the tangency point of the A–mixtilinear incircle of \(\triangle ABC\) with \((O)\).  
+The line through \(T\) perpendicular to \(BC\) meets \((O)\) again at \(D\).  
+
+Prove that the Euler circle of \(\triangle DBC\) is tangent to \((I)\).
+
     </div>
     <img src="hinh_hhpbai7.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -298,8 +370,10 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 8</div>
+	<div class="problem-tag hardness-very">Very Hard</div>
     <div class="problem-content">
-    
+    	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Given triangle \(ABC\) with \(H,G\) be its orthocenter and centroid respectively. Let \(J\) be the orthocenter of triangle \(AHG\). Let \(R\) be an arbitrary point on \((AJ)\), and let \(AR\) cut \((BRC)\) again at \(S\). Prove that the Euler lines of triangle \(SBC\) and triangle \(ABC\) are parallel.
+
     </div>
     <img src="hinh_hhpbai8.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -310,8 +384,14 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 9</div>
+	<div class="problem-tag hardness-hard">Hard</div>
     <div class="problem-content">
-    
+    	Let \(ABC\) be a triangle inscribed in \((O)\) and escribed to \((I)\), with orthocenter \(H\).  
+Let \(P\) be the \(A\)-Humpty point and \(Fe\) the Feuerbach point of triangle \(ABC\).  
+Let \(K\) be the second intersection point of \((AIP)\) and \((BHC)\).  
+
+Prove that \(Fe\) is the midpoint of \(AK\).
+
     </div>
     <img src="hinh_hhpbai9.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -322,8 +402,12 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 10</div>
+	<div class="problem-tag hardness-moderate">Moderate</div>
     <div class="problem-content">
-    
+    	Let \(ABC\) be a triangle. Let \(I\) be the incenter and \(J\) be the midpoint of arc \(BC\) not containing \(A\) of \((ABC)\). Let \(S\) be an arbitrary point on the circumcircle \((ABC)\). The line \(IS\) intersects the circle \((BSC)\) again at \(P\). The line through \(I\) parallel to \(JP\) meets \(BC\) at \(R\).
+
+Prove that \(\angle ASI = \angle RSP\).
+
     </div>
     <img src="hinh_hhpbai10.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -334,8 +418,12 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 11</div>
+	<div class="problem-tag hardness-hard">Hard</div>
     <div class="problem-content">
-    
+    	(Teacher <a href="https://web.facebook.com/groups/205466756603509/user/100007955232157/?_rdc=1&_rdr#" target="_blank" style =  "color: white">Nguyen Duy Khuong</a>) Let \(ABC\) be a triangle inscribed in \((O)\) and escribed to \((I)\). Let \(N_a\) be the Nagel point of triangle \(ABC\). The line \(ON_a\) meets \((O)\) again at \(P\). Let \(X\) be the point of tangency of the \(A\)-mixtilinear incircle with \((O)\). Let \(M\) be the midpoint of \(BC\). The line \(MN_a\) meets the line through \(A\) perpendicular to \(BC\) at \(S\). Let \(G\) be the centroid of triangle \(ABC\). The line \(SG\) meets \(XP\) at \(J\).
+
+Prove that \(AJ\) is the \(A\)-symmedian of triangle \(ABC\).
+
     </div>
     <img src="hinh_hhpbai11.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
@@ -346,8 +434,12 @@ Prove that
 
 <div class="problem-box">		
     <div class="problem-title">Problem 12</div>
+	<div class="problem-tag hardness-moderate">Moderate</div>
     <div class="problem-content">
-    
+    	Let \(ABC\) be a triangle inscribed in \((O)\) with altitudes \(AD, BE, CF\) concurrent at the orthocenter \(H\). Let \(P\) be the intersection of \(DF\) and \(BE\), and \(Q\) the intersection of \(DE\) and \(CF\). Let \(M\) and \(N\) be the midpoints of \(BF\) and \(CE\), respectively. 
+
+Prove that the lines \(MP\), \(NQ\), and \(OH\) are concurrent.
+
     </div>
     <img src="hinh_hhpbai12.png" alt="Problem Image" class="problem-image">
     <div class="button-container">
