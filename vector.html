@@ -149,7 +149,33 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
+/* Base tag style */
+.problem-tag {
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;       /* bigger size */
+    font-size: 18px;          /* slightly larger text */
+    text-align: center;
+    font-weight: bold;
+    border-radius: 12px;
+    color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+}
 
+
+/* Hover effect */
+.problem-tag:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+}
+/* Colors per difficulty */
+.hardness-easy { background-color: #28a745; }       /* green */
+.hardness-moderate { background-color: #ffc107; }   /* yellow */
+.hardness-hard { background-color: #fd7e14; }       /* orange */
+.hardness-very { background-color: #dc3545; }       /* red */
+.hardness-extreme { background-color: #6f42c1; }   /* purple */
+.hardness-misc { background-color: #6c757d; }       /* grey */
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -179,16 +205,36 @@ body::before {
     transition: all 0.3s ease;
 }
 .solution-btn {
-    background-color: #28a745;
-    border-color: #28a745;
-}
-.try-btn {
-    background-color: #007bff;
-    border-color: #007bff;
+      background-color: #28A745;
+      border-color: #1F7A35;
+    }
+
+    .try-btn {
+      background-color: #007BFF;
+      border-color: #0056B3;
+    }
+	.stuck-btn {
+  background: #FF6B00;    /* hoặc #DC3545 nếu muốn đỏ */
+  border-color: #CC5600;  /* hoặc #A71F2B cho đỏ */
 }
 .button:hover {
     transform: translateY(-3px);
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
+}
+.link-text {
+  color: white;             /* same color as surrounding text */
+  text-decoration: none;    /* remove underline */
+  font-weight: normal;      /* looks like plain text */
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+cursor: pointer;
+   color: #00e0ff;
+  text-shadow:
+    0 0 8px rgba(23, 162, 184, 0.6),
+    0 0 15px rgba(23, 162, 184, 0.4);
+  cursor: pointer;
 }
 
 /* ====== RESPONSIVE ====== */
@@ -197,19 +243,18 @@ body::before {
     .title-container { font-size: 22px; padding: 18px; }
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
-    html, body {
-    overflow: auto; 
-    -ms-overflow-style: none;  
-    scrollbar-width: none;    
+
+hhtml::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none; 
-}
-html {
-    scroll-behavior: smooth;
-}
 </style>
 
 </head>
@@ -335,6 +380,7 @@ html {
     </div>
    <div class="problem-box">		
         <div class="problem-title">Problem 1</div>
+        <div class="problem-tag hardness-very">Very Hard</div>
        
         <div class="problem-content">
            <p>Given a triangle <span class="math">ABC</span> inscribed in the circle <span class="math">(O, R)</span> and tangent to the incircle <span class="math">(I, r)</span>, with centroid <span class="math">G</span> and Lemoine point <span class="math">L</span>. Let <span class="math">P</span> satisfy the equation \(3R \overrightarrow{GP} + r \overrightarrow{OI} = \overrightarrow{0}\). Prove that <span class="math">P</span> lies on the line <span class="math">IL</span>.</p>

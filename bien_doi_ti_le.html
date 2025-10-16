@@ -229,19 +229,17 @@ body::before {
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
 ,
-html, body {
-    overflow: auto; 
-    -ms-overflow-style: none;  
-    scrollbar-width: none;    
+hhtml::-webkit-scrollbar {
+  width: 6px;
+}
+html::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 4px;
+}
+html::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0,0,0,0.5);
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar {
-    display: none; 
-}
-html {
-    scroll-behavior: smooth;
-}
 </style>
 
 </head>
@@ -470,7 +468,6 @@ Prove that \(PR\parallel BC\).
        	<div class="problem-tag hardness-very">Very Hard</div>
         <div class="problem-content">
             (Teacher Tran Quang Hung on AoPS forum)Let \(ABC\) be an acute triangle inscribed in circle \((O)\). Let \(M,N\) be the midpoints of \(AB,AC\), respectively. Let \(E,F\) be the midpoints of the minor arcs \(CA,AB\), respectively. \(EF\) meets \(CA,AB\) at \(Q,R\), respectively. Let \(L,K\) be the projections of \(E,F\) onto \(AO\), respectively. Let \(S,T\) be the centers of \((RMK),(QNL)\), respectively. On line \(ST\), take \(X\) such that \(XO\perp OA\). Suppose the line through \(X\) parallel to \(EF\) intersects \((O)\) at \(Y,Z\). Prove that the orthocenter of triangle \(AYZ\) lies on \(EF\).
-
         </div>
         <img src="hinh_bdtlbai6.png" alt="Problem Image" class="problem-image">
         <div class="button-container">
