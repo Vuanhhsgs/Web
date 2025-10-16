@@ -85,41 +85,110 @@
             color: #cccccc;
             text-decoration: underline;
         }
+        .contact {
+            position: relative;
+            display: inline-block;
+        }
 
-        /* Contact dropdown */
-        .top-bar .menu .contact-icons {
-            display: none;
+        /* Dropdown stays invisible by default */
+        .contact-icons {
             position: absolute;
-            top: calc(100% + 8px);
-            left: 0;
+            top: 100%; /* directly below button */
+            left: 50%;
+            transform: translateX(-50%) translateY(-4px); /* slightly overlap to prevent flicker */
             background-color: rgba(0, 0, 0, 0.85);
-            color: white;
-            padding: 0.75rem;
-            border-radius: 8px;
-            width: 180px;
-            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+            min-width: 180px;
+            z-index: 100;
+
+            opacity: 0;
+            pointer-events: none;
+
+            transition: opacity 0.25s ease 0.2s, transform 0.25s ease 0.2s;
         }
 
-        .top-bar .menu .contact-icons a {
-            display: block;
-            padding: 0.35rem 0.25rem;
-            text-decoration: none;
-            color: white;
+        /* Hover either the button OR dropdown keeps it visible */
+        .contact:hover .contact-icons,
+        .contact-icons:hover {
+            opacity: 1;
+            pointer-events: auto;
+            transform: translateX(-50%) translateY(0);
+            transition-delay: 0s; /* show immediately on hover */
+        }
+
+        /* Dropdown links */
+        .contact-icons a {
+            display: flex;
             align-items: center;
+            color: #fff;
+            text-decoration: none;
+            padding: 6px 0;
+            font-size: 14px;
+            transition: color 0.2s ease, background-color 0.2s ease;
         }
 
-        .top-bar .menu .contact-icons a img {
-            vertical-align: middle;
+        .contact-icons a img {
+            width: 20px;
+            height: 20px;
             margin-right: 8px;
         }
 
-        .top-bar .menu .contact-icons a:hover {
-            background-color: rgba(255, 255, 255, 0.04);
+        .contact-icons a:hover {
+            color: #9ecbff;
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 6px;
+            padding-left: 4px;
         }
 
-        .top-bar .menu .contact:hover .contact-icons {
-            display: block;
+
+        
+        .menu-box {
+            position: relative;
         }
+        .menu-box .hover-info {
+            display: none;
+            position: absolute;
+            top: calc(100% + 6px); /* slightly below the menu box */
+            left: 50%;
+            transform: translateX(-50%) translateY(-4px); /* small offset for smooth transition */
+            
+            background-color: rgba(15, 15, 15, 0.85); /* dark translucent like sections */
+            color: #f5f5f5; /* light text for readability */
+            padding: 10px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            text-align: center;
+            min-width: 200px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.5);
+            z-index: 50;
+            
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            
+            transition: opacity 0.25s ease 0.2s, transform 0.25s ease 0.2s;
+        }
+
+        /* Keep visible when hovering either the menu box or the hover-info */
+        .menu-box:hover .hover-info,
+        .hover-info:hover {
+            display: block;
+            pointer-events: auto;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+            transition-delay: 0s;
+        }
+
+        /* Optional: text styling inside the hover info */
+        .menu-box .hover-info {
+            text-shadow: 0 0 6px rgba(0,0,0,0.4);
+            letter-spacing: 0.3px;
+        }
+
 
         /* Page header */
         header {
@@ -267,7 +336,28 @@
             .top-bar .left p { font-size: 1rem; }
             .top-bar .menu .menu-box { padding: 0.5rem 1rem; }
         }
-    </style>
+
+    
+
+    html, body {
+    overflow: auto; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none; 
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    a, button, input[type="button"], input[type="submit"], [role="button"] {
+    cursor: pointer;
+}
+
+</style>
+
 </head>
 
 <body>
@@ -280,15 +370,18 @@
             <div class="combined-menu-box">
                 <div class="menu-box">
                     <a href="Truockhilambai.html">Before Using</a>
+                    <div class="hover-info">Introduction on how to navigate this website</div>
                 </div>
+
                 <div class="menu-box">
-                    <a href="Tailieuthamkhao.html">Reference Materials</a>
+                    <a href="About.html">About this website</a>
+                    <div class="hover-info">A brief introduction about the website</div>
                 </div>
             </div>
             <div class="menu-box contact">
                 <a href="#">Contact</a>
                 <div class="contact-icons">
-                    <a href="https://facebook.com" target="_blank">
+                    <a href="https://web.facebook.com/ha.vu.annh" target="_blank">
                         <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/facebook-icon.png?v=1739639316034" style="width: 20px; height: 20px;"> Facebook
                     </a>
                     <a href="https://artofproblemsolving.com/community/user/1047323" target="_blank">
@@ -296,6 +389,8 @@
                     </a>
                 </div>
             </div>
+            
+
         </div>
     </div>
 

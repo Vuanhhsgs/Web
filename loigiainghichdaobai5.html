@@ -166,7 +166,21 @@
       background-color: #007BFF;
       border-color: #0056B3;
     }
-  </style>
+  html, body {
+    overflow: auto; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; 
+}
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
 </head>
 <body>
 

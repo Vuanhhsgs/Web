@@ -228,7 +228,34 @@ body::before {
     .title-container { font-size: 22px; padding: 18px; }
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
+html, body {
+    overflow: auto; /* keep scroll working */
+    -ms-overflow-style: none;  /* for Internet Explorer and Edge */
+    scrollbar-width: none;     /* for Firefox */
+    }
+
+    html::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+        display: none;  /* for Chrome, Safari, and Opera */
+    }
+    html {
+        scroll-behavior: smooth;
+}
+html, body {
+    overflow: auto; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; 
+}
+html {
+    scroll-behavior: smooth;
+}
 </style>
+
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>

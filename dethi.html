@@ -243,7 +243,22 @@ cursor: pointer;
     .title-container { font-size: 22px; padding: 18px; }
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
+,
+html, body {
+    overflow: auto; 
+    -ms-overflow-style: none;  
+    scrollbar-width: none;    
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+    display: none; 
+}
+html {
+    scroll-behavior: smooth;
+}
 </style>
+
 </head>
 <body>
     <a href="index.html" class="home-button">Home</a>
