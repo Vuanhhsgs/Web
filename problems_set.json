@@ -1,0 +1,163 @@
+[
+  {
+    "id": "vietnamese_geoforum_problem1",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Hard",
+    "problemTags": ["isogonal conjugates", "orthocenter", "circumcircle", "parallelism"],
+    "methodTags": ["angle chasing", "ratio chasing", "radical axis", "power of a point"]
+  },
+
+  {
+    "id": "vietnamese_geoforum_problem2",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Extremely Hard",
+    "problemTags": ["circumcircle", "symmedian-Lemoine point", "arc midpoints", "concurrency", "collinearity"],
+    "methodTags": ["cross-ratio", "ratio chasing", "law of sines", "special points constrution", "geometric transformation", "homothety"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem3",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Hard",
+    "problemTags": ["tangency", "symmedian-Lemoine point", "circumcircle", "orthocenter", "reflections"],
+    "methodTags": ["ratio chasing", "law of sines", "Menelaus theorem", "harmonic conjugate", "special points constrution"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem4",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Hard",
+    "problemTags": ["similar triangles", "arbitrary point", "parallelism", "isogonal lines", "angle bisector"],
+    "methodTags": ["angle chasing", "ratio chasing", "special points constrution"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem5",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Very Hard",
+    "problemTags": ["incircle", "circumcircle", "radical axis"],
+    "methodTags": ["angle chasing", "coaxial circles", "ratio chasing", "law of sines", "Menelaus theorem", "power of a point"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem6",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Easy",
+    "problemTags": ["incircle", "circumcircle", "reflections"],
+    "methodTags": ["inversion", "ratio chasing", "cross-ratio", "harmonic conjugate"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem7",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Moderate",
+    "problemTags": ["incircle", "circumcircle", "mixtilinear incircle", "tangent circles"],
+    "methodTags": ["angle chasing", "cross-ratio", "harmonic conjugate"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem8",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Very Hard",
+    "problemTags": ["orthocenter", "centroid", "arbitrary point", "Euler line", "parallelism"],
+    "methodTags": ["angle chasing", "power of a point", "Pascal theorem", "special points construction", "geometric transformation"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem9",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Hard",
+    "problemTags": ["Feuerbach point", "A-Humpty point", "incircle", "orthocenter", "parallelism"],
+    "methodTags": ["angle chasing", "radical axis", "power of a point", "harmonic conjugate", "special points construction", "homothety", "pole and polar", "La Hire theorem"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem10",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Moderate",
+    "problemTags": ["arbitrary point", "arc midpoints", "incircle", "orthocenter", "parallelism"],
+    "methodTags": ["angle chasing", "radical axis", "power of a point", "harmonic conjugate", "special points construction", "homothety", "pole and polar", "La Hire theorem"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem11",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Hard",
+    "problemTags": ["arbitrary point", "arc midpoints", "incircle", "orthocenter", "parallelism"],
+    "methodTags": ["angle chasing", "radical axis", "power of a point", "harmonic conjugate", "special points construction", "homothety", "pole and polar", "La Hire theorem"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem12",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Moderate",
+    "problemTags": ["orthocenter", "concurrency"],
+    "methodTags": ["angle chasing", "radical axis", "cross-ratio", "harmonic conjugate", "pole and polar", "La Hire theorem"]
+  },
+  {
+    "id": "exam_problem1",
+    "section_html": "dethi.html",
+    "section_display_name": "HSGS Team Selection Test 2024",
+    "difficulty": "Hard",
+    "problemTags": ["isogonal lines", "arbitrary point", "perpendicularity"],
+    "methodTags": ["cross-ratio", "ratio chasing", "Menelaus theorem", "law of Sines", "Desargues theorem"]
+  },
+  { 
+    "id": "exam_problem2",
+    "section_html": "dethi.html",
+    "section_display_name": "HSGS Team Selection Test 2024",
+    "difficulty": "Hard",
+    "problemTags": ["orthocenter", "similar triangles", "perpendicularity", "concurrency", "symmedian line", "radical axis"],
+    "methodTags": ["power of a point", "ratio chasing", "law of Sines", "angle chasing", "spiral similarity"]
+  },
+  {
+    "id": "exam_problem3",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Hard",
+    "problemTags": ["cyclic quadrilateral", "isogonal conjugates", "Newton-Gauss line", "bisects"],
+    "methodTags": ["harmonic conjugate", "cross-ratio", "power of a point", "Pascal theorem", "homothety"]
+  },
+  {
+    "id": "exam_problem4",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Very Easy",
+    "problemTags": ["arbitrary point", "cyclic quadrilateral", "circumcircle", "collinearity"],
+    "methodTags": ["radical center", "power of a point", "angle chasing"]
+  },
+  {
+    "id": "exam_problem5",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Moderate",
+    "problemTags": ["A-Humpty point", "harmonic conjugate", "angle bisector", "perpendicular bisector", "arbitrary point", "concyclic"],
+    "methodTags": ["ratio chasing", "angle chasing", "power of a point"]
+  },
+  {
+    "id": "exam_problem6",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Moderate",
+    "problemTags": ["arc midpoints", "harmonic conjugate", "angle bisector", "arbitrary point", "perpendicularity", "circumcircle"],
+    "methodTags": ["power of a point", "angle chasing", "harmonic conjugate"]
+  },
+  {
+    "id": "exam_problem7",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Hard",
+    "problemTags": ["arc midpoints", "harmonic conjugate", "angle bisector", "arbitrary point", "perpendicularity", "circumcircle"],
+    "methodTags": ["power of a point", "angle chasing", "harmonic conjugate"]
+  },
+  {
+    "id": "exam_problem8",
+    "section_html": "dethi.html",
+    "section_display_name": "DGO – Discord Geometry Olympiad",
+    "difficulty": "Hard",
+    "problemTags": ["arc midpoints", "harmonic conjugate", "angle bisector", "arbitrary point", "perpendicularity", "circumcircle"],
+    "methodTags": ["power of a point", "angle chasing", "harmonic conjugate"]
+  }
+]

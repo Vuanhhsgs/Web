@@ -8,29 +8,59 @@
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <style>
-	body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url('mainwebbackground.png') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-y: auto;
-    padding-top: 20px;
-    color: white;
-}
+	        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+                url('mainwebbackground.png') center center / cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+            color: white;
 
-/* Subtle global overlay for readability */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
+            animation: fadeInBg 1.5s ease-in-out, vibrateLight 7s ease-in-out infinite;
+            filter: saturate(1.15) contrast(1.08) brightness(0.9);
+        }
+
+        /* --- Vibrant overlay --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(120deg,
+                rgba(255, 100, 100, 0.05),
+                rgba(100, 180, 255, 0.07),
+                rgba(0, 255, 180, 0.06)
+            );
+            background-size: 200% 200%;
+            animation: gradientShift 16s ease-in-out infinite alternate;
+            background-blend-mode: soft-light;
+            backdrop-filter: blur(1.2px) brightness(1.02);
+            z-index: -1;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes vibrateLight {
+            0%, 100% { filter: brightness(0.9); }
+            50% { filter: brightness(0.97); }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
 /* ====== TITLE ====== */
 .title-container {
@@ -59,8 +89,8 @@ body::before {
 /* ====== HOME BUTTON ====== */
 .home-button {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 10px !important;
+    left: 10px !important;
     background-color: black;
     color: white;
     padding: 12px 20px;
@@ -71,8 +101,24 @@ body::before {
     border: 2px solid white;
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
-    z-index: 1000;
+    z-index: 99999;
     transition: all 0.3s ease;
+    
+    /* Force it to stay in viewport */
+    transform: none !important;
+    will-change: transform;
+    pointer-events: auto !important;
+}
+
+/* Ensure no parent is creating stacking context that breaks fixed positioning */
+body, html {
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+}
+
+body::before {
+    z-index: -1 !important;
 }
 .home-button:hover {
     background-color: #333;
@@ -251,7 +297,7 @@ html::-webkit-scrollbar-thumb:hover {
     </div>
     <div class="container">
         <h2 class="bold-text">Common Approach</h2>
-        <p class="centered-text">By using a combination of familiar theorems such as Menelaus and Ceva, techniques like cross-ratio, together with the Sine Theorem (For triangle \(ABC\), we have 
+        <p class="centered-text">By using a combination of familiar theorems such as Menelaus and Ceva, techniques like cross-ratio, together with the law of sines (For triangle \(ABC\), we have 
 \[
 \dfrac{\sin \angle ABC}{\sin \angle ACB} = \dfrac{AC}{AB}
 \]

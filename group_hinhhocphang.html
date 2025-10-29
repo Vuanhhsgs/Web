@@ -8,29 +8,59 @@
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
    <style>
-	body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url('mainwebbackground.png') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-y: auto;
-    padding-top: 20px;
-    color: white;
-}
+	    body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+                url('mainwebbackground.png') center center / cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+            color: white;
 
-/* Subtle global overlay for readability */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
+            animation: fadeInBg 1.5s ease-in-out, vibrateLight 7s ease-in-out infinite;
+                filter: saturate(1.15) contrast(1.08) brightness(0.9);
+        }
+
+        /* --- Vibrant overlay --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(120deg,
+                rgba(255, 100, 100, 0.05),
+                rgba(100, 180, 255, 0.07),
+                rgba(0, 255, 180, 0.06)
+            );
+            background-size: 200% 200%;
+            animation: gradientShift 16s ease-in-out infinite alternate;
+            background-blend-mode: soft-light;
+            backdrop-filter: blur(1.2px) brightness(1.02);
+            z-index: -1;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes vibrateLight {
+            0%, 100% { filter: brightness(0.9); }
+            50% { filter: brightness(0.97); }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
 /* ====== TITLE ====== */
 .title-container {
@@ -59,8 +89,8 @@ body::before {
 /* ====== HOME BUTTON ====== */
 .home-button {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 10px !important;
+    left: 10px !important;
     background-color: black;
     color: white;
     padding: 12px 20px;
@@ -71,8 +101,24 @@ body::before {
     border: 2px solid white;
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
-    z-index: 1000;
+    z-index: 99999;
     transition: all 0.3s ease;
+    
+    /* Force it to stay in viewport */
+    transform: none !important;
+    will-change: transform;
+    pointer-events: auto !important;
+}
+
+/* Ensure no parent is creating stacking context that breaks fixed positioning */
+body, html {
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+}
+
+body::before {
+    z-index: -1 !important;
 }
 .home-button:hover {
     background-color: #333;
@@ -149,7 +195,7 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
-/* Base tag style */
+/* Difficulty tag */
 .problem-tag {
     display: block;
     width: fit-content;
@@ -160,7 +206,7 @@ body::before {
     border-radius: 12px;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+    margin: -10px auto 20px auto; /* top 6px, bottom 14px */
 }
 
 
@@ -176,6 +222,65 @@ body::before {
 .hardness-very { background-color: #dc3545; }       /* red */
 .hardness-extreme { background-color: #6f42c1; }   /* purple */
 .hardness-misc { background-color: #6c757d; }       /* grey */
+
+/* ====== PROBLEM TAGS ====== */
+.problem-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: -4px;       /* tightens spacing under difficulty */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.problem-tags .tag {
+    background-color: #6c757d;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.problem-tags .tag:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.method-tags {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       /* tightens spacing under problem tag */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.method-tags .tag {
+    background-color: #2E7D32;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.method-tags .tag:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -185,6 +290,8 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+
 
 /* ====== BUTTONS ====== */
 .button-container {
@@ -229,16 +336,8 @@ body::before {
     .home-button { padding: 10px 14px; font-size: 16px; }
 }
 
-hhtml::-webkit-scrollbar {
-  width: 6px;
-}
-html::-webkit-scrollbar-thumb {
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 4px;
-}
-html::-webkit-scrollbar-thumb:hover {
-  background-color: rgba(0,0,0,0.5);
-}
+
+
 
 
 </style>
@@ -249,9 +348,10 @@ html::-webkit-scrollbar-thumb:hover {
      <div class = "title-container">
     <h1>Problems from Vietnamese Euclidean Geometry Forum that I solved</h1>
 	 </div>
-    <div class="problem-box">		
+    <div class="problem-box" id = "vietnamese_geoforum_problem1">	
         <div class="problem-title">Problem 1</div>
 		<div class="problem-tag hardness-hard">Hard</div>
+
         <div class="problem-content">
             (<a href="https://web.facebook.com/groups/205466756603509/user/100009531305578/" target="_blank" style =  "color: white">Nguyen Hoang Nam</a>) Given \( \triangle ABC \) with circumcenter \( O \).
 A line through \( O \) meets \( AB \) and \( AC \) at \( E \) and \( F \), respectively.
@@ -270,10 +370,11 @@ Prove that
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "vietnamese_geoforum_problem2">		
     <div class="problem-title">Problem 2</div>
 	<div class="problem-tag hardness-extreme">Extremely Hard</div>
-    <div class="problem-content">
+
+        <div class="problem-content">
     	(<a href="https://web.facebook.com/groups/205466756603509/user/100033216160173/" target="_blank" style =  "color: white">Le Xuan Hoang</a>) Let \(\triangle ABC\) be inscribed in \((O)\). Let \(M,N,P\) be the midpoints of arcs \(BC,CA,AB\) not containing \(A,B,C\), respectively. Let \(AO\) intersect \(NP\) at \(X\). Define \(Y\) and \(Z\) similarly.
 
 a) Prove that \(MX, NY, PZ\) are concurrent at \(K\).
@@ -288,10 +389,12 @@ b) Prove that \(OK\) passes through the Lemoine point of \(\triangle ABC\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem3">	
+	
     <div class="problem-title">Problem 3</div>
 	<div class="problem-tag hardness-hard">Hard</div>
-    <div class="problem-content">
+
+        <div class="problem-content">
     	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Let \(\triangle ABC\) be inscribed in \((O)\) with orthocenter \(H\).  
 Point \(X\) lies on segment \(HO\) such that \(HX = \tfrac{1}{2}OX\).  
 Let \(L\) be the Lemoine point of \(\triangle ABC\).
@@ -309,10 +412,12 @@ Prove that line \(B_2C_2\) is tangent to the circumcircle \((O)\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem4">	
+	
     <div class="problem-title">Problem 4</div>
 	<div class="problem-tag hardness-hard">Hard</div>
-    <div class="problem-content">
+
+        <div class="problem-content">
     	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Given triangle \(ABC\) with \(J\) being an arbitrary point on the bisector of angle \(A\).  
 Point \(P\) lies inside angle \(BJC\) such that triangles \(BPJ\) and \(JPC\) are similar.  
 \(AK\) is the isogonal ray of \(AP\) with respect to angle \(BAC\).  
@@ -329,10 +434,13 @@ Prove that \(JM \parallel AK.\)
     </div>
 </div>
 	
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem5">	
+        <div class="method-tags" style="display:none;">
+           
+        </div>		
     <div class="problem-title">Problem 5</div>
 	<div class="problem-tag hardness-very">Very Hard</div>
-    <div class="problem-content">
+        <div class="problem-content">
     	(<a href="https://web.facebook.com/groups/205466756603509/user/100072450942447/" target="_blank" style =  "color: white">Duong Nguyen</a>)Given triangle \(ABC\) inscribed in \((O)\) and circumscribed about \((I)\).  
 \((I)\) is tangent to \(BC\) at \(D\), and \(K\) is the reflection of \(D\) across \(I\).  
 Take points \(X, Y\) on the line through \(K\) parallel to \(BC\) such that \(\angle XIY = 90^\circ.\)  
@@ -348,10 +456,13 @@ Prove that \(I\) lies on the radical axis of \((AXY)\) and \((AOZ)\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem6">	
+	
     <div class="problem-title">Problem 6</div>
 	<div class="problem-tag hardness-easy">Easy</div>
-    <div class="problem-content">
+
+
+        <div class="problem-content">
     	Let \(ABC\) be a triangle with incenter \(I\). Let \((I)\) be tangent to \(BC,AB,AC\) at \(D,E,F\) respectively, and let the Euler line of \(\triangle DEF\) meet \(EF\) at \(J\). 
 
 Prove that the reflection of the line \(JA\) across \(EF\) passes through the midpoint of \(BC\).
@@ -364,10 +475,12 @@ Prove that the reflection of the line \(JA\) across \(EF\) passes through the mi
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem7">	
+
     <div class="problem-title">Problem 7</div>
 	<div class="problem-tag hardness-moderate">Moderate</div>
-    <div class="problem-content">
+
+        <div class="problem-content">
     	Let \(ABC\) be a triangle inscribed in \((O)\) and circumscribed about \((I)\).  
 Let \(T\) be the tangency point of the A–mixtilinear incircle of \(\triangle ABC\) with \((O)\).  
 The line through \(T\) perpendicular to \(BC\) meets \((O)\) again at \(D\).  
@@ -382,10 +495,12 @@ Prove that the Euler circle of \(\triangle DBC\) is tangent to \((I)\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem8">	
     <div class="problem-title">Problem 8</div>
 	<div class="problem-tag hardness-very">Very Hard</div>
-    <div class="problem-content">
+
+
+        <div class="problem-content">
     	(Teacher <a href="https://web.facebook.com/groups/2067670343428318/user/100000105904444/" target="_blank" style =  "color: white">Nguyen Van Linh</a>) Given triangle \(ABC\) with \(H,G\) be its orthocenter and centroid respectively. Let \(J\) be the orthocenter of triangle \(AHG\). Let \(R\) be an arbitrary point on \((AJ)\), and let \(AR\) cut \((BRC)\) again at \(S\). Prove that the Euler lines of triangle \(SBC\) and triangle \(ABC\) are parallel.
 
     </div>
@@ -396,10 +511,11 @@ Prove that the Euler circle of \(\triangle DBC\) is tangent to \((I)\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem9">		
     <div class="problem-title">Problem 9</div>
 	<div class="problem-tag hardness-hard">Hard</div>
-    <div class="problem-content">
+   
+        <div class="problem-content" >
     	Let \(ABC\) be a triangle inscribed in \((O)\) and escribed to \((I)\), with orthocenter \(H\).  
 Let \(P\) be the \(A\)-Humpty point and \(Fe\) the Feuerbach point of triangle \(ABC\).  
 Let \(K\) be the second intersection point of \((AIP)\) and \((BHC)\).  
@@ -414,10 +530,12 @@ Prove that \(Fe\) is the midpoint of \(AK\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem10">	
+
     <div class="problem-title">Problem 10</div>
 	<div class="problem-tag hardness-moderate">Moderate</div>
-    <div class="problem-content">
+  
+        <div class="problem-content">
     	Let \(ABC\) be a triangle. Let \(I\) be the incenter and \(J\) be the midpoint of arc \(BC\) not containing \(A\) of \((ABC)\). Let \(S\) be an arbitrary point on the circumcircle \((ABC)\). The line \(IS\) intersects the circle \((BSC)\) again at \(P\). The line through \(I\) parallel to \(JP\) meets \(BC\) at \(R\).
 
 Prove that \(\angle ASI = \angle RSP\).
@@ -430,10 +548,11 @@ Prove that \(\angle ASI = \angle RSP\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem11">	
     <div class="problem-title">Problem 11</div>
 	<div class="problem-tag hardness-hard">Hard</div>
-    <div class="problem-content">
+  
+        <div class="problem-content">
     	(Teacher <a href="https://web.facebook.com/groups/205466756603509/user/100007955232157/?_rdc=1&_rdr#" target="_blank" style =  "color: white">Nguyen Duy Khuong</a>) Let \(ABC\) be a triangle inscribed in \((O)\) and escribed to \((I)\). Let \(N_a\) be the Nagel point of triangle \(ABC\). The line \(ON_a\) meets \((O)\) again at \(P\). Let \(X\) be the point of tangency of the \(A\)-mixtilinear incircle with \((O)\). Let \(M\) be the midpoint of \(BC\). The line \(MN_a\) meets the line through \(A\) perpendicular to \(BC\) at \(S\). Let \(G\) be the centroid of triangle \(ABC\). The line \(SG\) meets \(XP\) at \(J\).
 
 Prove that \(AJ\) is the \(A\)-symmedian of triangle \(ABC\).
@@ -446,10 +565,11 @@ Prove that \(AJ\) is the \(A\)-symmedian of triangle \(ABC\).
     </div>
 </div>
 
-<div class="problem-box">		
+<div class="problem-box" id = "vietnamese_geoforum_problem12">			
     <div class="problem-title">Problem 12</div>
 	<div class="problem-tag hardness-moderate">Moderate</div>
-    <div class="problem-content">
+   
+        <div class="problem-content">
     	Let \(ABC\) be a triangle inscribed in \((O)\) with altitudes \(AD, BE, CF\) concurrent at the orthocenter \(H\). Let \(P\) be the intersection of \(DF\) and \(BE\), and \(Q\) the intersection of \(DE\) and \(CF\). Let \(M\) and \(N\) be the midpoints of \(BF\) and \(CE\), respectively. 
 
 Prove that the lines \(MP\), \(NQ\), and \(OH\) are concurrent.
@@ -461,8 +581,60 @@ Prove that the lines \(MP\), \(NQ\), and \(OH\) are concurrent.
         <a href="loigiaihhpbai12.html" class="button solution-btn">My Solution</a>
     </div>
 </div>
-
+<script>
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("problems_set.json");
+    const problems = await response.json();
     
+    const currentPage = window.location.pathname.split("/").pop();
+    
+    const filteredProblems = problems.filter(p => p.section_html === currentPage);
+
+    filteredProblems.forEach(problem => {
+      const problemBox = document.getElementById(problem.id);
+      if (!problemBox) return;
+
+      // Problem tags
+      const problemTagsDiv = document.createElement("div");
+      problemTagsDiv.className = "problem-tags";
+      problem.problemTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        problemTagsDiv.appendChild(span);
+      });
+
+      // Method tags
+      const methodTagsDiv = document.createElement("div");
+      methodTagsDiv.className = "method-tags";
+      problem.methodTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        methodTagsDiv.appendChild(span);
+      });
+
+      // Insert right after the difficulty tag
+      const difficultyDiv = problemBox.querySelector(".problem-tag");
+      if (difficultyDiv) {
+        difficultyDiv.insertAdjacentElement("afterend", problemTagsDiv);
+        problemTagsDiv.insertAdjacentElement("afterend", methodTagsDiv);
+      } else {
+        problemBox.appendChild(problemTagsDiv);
+        problemBox.appendChild(methodTagsDiv);
+      }
+    });
+
+  } catch (err) {
+    console.error("Failed to load problems.json:", err);
+  }
+});
+</script>
+
+
+
+   
 </body>
 
 

@@ -7,30 +7,60 @@
       src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-	body {
-    margin: 0;
-    padding: 0;
-    font-family: "Segoe UI", Arial, sans-serif;
-    background: url('mainwebbackground.png') no-repeat center center fixed;
-    background-size: cover;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
-    overflow-y: auto;
-    padding-top: 20px;
-    color: white;
-}
+<style>
+	    body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background:
+                linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.82)),
+                url('mainwebbackground.png') center center / cover no-repeat fixed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            overflow-y: auto;
+            padding-top: 20px;
+            color: white;
 
-/* Subtle global overlay for readability */
-body::before {
-    content: "";
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.6);
-    z-index: -1;
-}
+            animation: fadeInBg 1.5s ease-in-out, vibrateLight 7s ease-in-out infinite;
+            filter: saturate(1.15) contrast(1.08) brightness(0.9);
+        }
+
+        /* --- Vibrant overlay --- */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: linear-gradient(120deg,
+                rgba(255, 100, 100, 0.05),
+                rgba(100, 180, 255, 0.07),
+                rgba(0, 255, 180, 0.06)
+            );
+            background-size: 200% 200%;
+            animation: gradientShift 16s ease-in-out infinite alternate;
+            background-blend-mode: soft-light;
+            backdrop-filter: blur(1.2px) brightness(1.02);
+            z-index: -1;
+        }
+
+        /* --- Animations --- */
+        @keyframes fadeInBg {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes vibrateLight {
+            0%, 100% { filter: brightness(0.9); }
+            50% { filter: brightness(0.97); }
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
 
 /* ====== TITLE ====== */
 .title-container {
@@ -59,8 +89,8 @@ body::before {
 /* ====== HOME BUTTON ====== */
 .home-button {
     position: fixed;
-    top: 10px;
-    left: 10px;
+    top: 10px !important;
+    left: 10px !important;
     background-color: black;
     color: white;
     padding: 12px 20px;
@@ -71,8 +101,24 @@ body::before {
     border: 2px solid white;
     box-shadow: 0px 4px 6px rgba(255, 255, 255, 0.3);
     text-transform: uppercase;
-    z-index: 1000;
+    z-index: 99999;
     transition: all 0.3s ease;
+    
+    /* Force it to stay in viewport */
+    transform: none !important;
+    will-change: transform;
+    pointer-events: auto !important;
+}
+
+/* Ensure no parent is creating stacking context that breaks fixed positioning */
+body, html {
+    transform: none !important;
+    filter: none !important;
+    perspective: none !important;
+}
+
+body::before {
+    z-index: -1 !important;
 }
 .home-button:hover {
     background-color: #333;
@@ -149,7 +195,7 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
-/* Base tag style */
+/* Difficulty tag */
 .problem-tag {
     display: block;
     width: fit-content;
@@ -160,7 +206,7 @@ body::before {
     border-radius: 12px;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+    margin: -10px auto 20px auto; /* top 6px, bottom 14px */
 }
 
 
@@ -176,6 +222,65 @@ body::before {
 .hardness-very { background-color: #dc3545; }       /* red */
 .hardness-extreme { background-color: #6f42c1; }   /* purple */
 .hardness-misc { background-color: #6c757d; }       /* grey */
+
+/* ====== PROBLEM TAGS ====== */
+.problem-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: -4px;       /* tightens spacing under difficulty */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.problem-tags .tag {
+    background-color: #6c757d;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.problem-tags .tag:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.method-tags {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       /* tightens spacing under problem tag */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.method-tags .tag {
+    background-color: #2E7D32;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.method-tags .tag:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -185,6 +290,8 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+
 
 /* ====== BUTTONS ====== */
 .button-container {
@@ -221,21 +328,6 @@ body::before {
     transform: translateY(-3px);
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
 }
-.link-text {
-  color: white;             /* same color as surrounding text */
-  text-decoration: none;    /* remove underline */
-  font-weight: normal;      /* looks like plain text */
-  transition: all 0.3s ease;
-}
-
-.link-text:hover {
-cursor: pointer;
-   color: #00e0ff;
-  text-shadow:
-    0 0 8px rgba(23, 162, 184, 0.6),
-    0 0 15px rgba(23, 162, 184, 0.4);
-  cursor: pointer;
-}
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 700px) {
@@ -255,6 +347,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0,0,0,0.5);
 }
 
+
 </style>
 
 </head>
@@ -262,7 +355,7 @@ html::-webkit-scrollbar-thumb:hover {
     <a href="index.html" class="home-button">Home</a>
      <div class = "title-container">
     <h1>HSGS Team Selection Test 2024</h1>
-    <div class="problem-box">		
+    <div class="problem-box" id = "exam_problem1">		
         <div class="problem-title">Problem 1</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -277,9 +370,10 @@ Let \(Q = BM \cap CN\). Prove that \(PQ \perp MN\).
             <a href="loigiaidethibai1.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
-       <div class="problem-box">		
+    <div class="problem-box" id = "exam_problem2">		
         <div class="problem-title">Problem 2</div>
-		   <div class="problem-tag hardness-hard">Hard</div>
+		<div class="problem-tag hardness-hard">Hard</div>
+
         <div class="problem-content">
             <p>
 <b>(P3 Day 3)</b> Given a triangle \(ABC\), take a point \(Y\) in the half-plane bounded by \(AC\) not containing \(B\), and a point \(Z\) in the half-plane bounded by \(AB\) not containing \(C\), such that \(\triangle AYC = \triangle BZA\).  
@@ -312,9 +406,10 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
        DGO – Discord Geometry Olympiad
     </a>
 	</h1>
-	<div class="problem-box">		
+	<div class="problem-box" id = "exam_problem3">		
         <div class="problem-title">Problem 3</div>
 		<div class="problem-tag hardness-hard">Hard</div>
+
         <div class="problem-content">
             (P3 DGO 2023) Let \(ABCD\) be a cyclic quadrilateral with \(M_1,M_2,M_3,M_4\) being the midpoints of segments \(AB,BC,CD,DA\) respectively. Suppose \(E\) is the intersection of diagonals \(AC,BD\) of quadrilateral \(ABCD\). Define \(E_1\) to be the isogonal conjugate point of point \(E\) in \(\triangle M_1CD\). Define \(E_2,E_3,E_4\) similarly. Suppose \(E_1E_3\) intersects \(E_2E_4\) at a point \(W\). Prove that: The Newton-Gauss line of quadrilateral \(ABCD\) bisects segment \(EW\).
         </div>
@@ -325,9 +420,10 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "exam_problem4">		
         <div class="problem-title">Problem 4</div>
 		<div class="problem-tag hardness-easy">Very Easy</div>
+
         <div class="problem-content">
             (P4 DGO 2023) Let \(\triangle ABC\) be a triangle with altitude \(AD\), circumcircle \(\Gamma\) and diameter \(AP\) of \(\Gamma\). Points \(U,V\) lie on the perpendicular bisector of \(BC\) such that \(B,U,C,V\) lie on a circle. Line \(AU\) intersects \(BC\) at \(K\). \(VP\) intersects the circle with diameter \(UV\) again at \(S\). Line \(SK\) intersects the circle with diameter \(UV\) again at \(T\). Prove that: \(T,D,U\) are collinear.
 
@@ -339,9 +435,9 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "exam_problem5">		
         <div class="problem-title">Problem 5</div>
-		<div class="problem-tag hardness-moderate">Moderate</div>
+		<div class="problem-tag hardness-moderate">Moderate</div>     
         <div class="problem-content">
             (P2 DGO 2023) Given \(\triangle ABC\) with \(K\) being the \(A\)-Humpty point. Points \(X,D\) lie on line \(BC\) such that \((XD,BC) = -1\). Point \(W\) lies on the bisector of \(\angle BAC\) such that \(XW\) is perpendicular to \(AD\). The perpendicular bisector of segment \(WK\) cuts the line from point \(X\) perpendicular to the bisector of \(\angle BAC\) at point \(P\) and line \(AD\) at point \(N\). Prove that: \(A,P,N,K\) lie on a circle.
 
@@ -353,9 +449,9 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "exam_problem6">		
         <div class="problem-title">Problem 6</div>
-		<div class="problem-tag hardness-moderate">Moderate</div>
+		<div class="problem-tag hardness-moderate">Moderate</div>       
         <div class="problem-content">
             (P3 DJGO 2023) Let \(\triangle ABC\) be an acute triangle with \(N,P\) being the midpoint of arc \(BC\) not containing \(A\) and the arc \(BC\) containing \(A\) of the circumcircle of \(\triangle ABC\) respectively. The external bisector of \(\angle BAC\) intersects \(BC\) at point \(S\). Construct the point \(N^*\) to be the reflection of point \(N\) over \(BC\). \(D\) is an arbitrary point lying on segment \(BC\). \(E\) is a point lying on line \(BC\) and satisfying \((BC,DE) = -1\). Line \(AE\) intersects the circumcircle of \(\triangle ABC\) again at \(Z\). Line \(PZ\) and \(BC\) intersects at \(K\). Line \(PD\) intersects the circumcircle of \(\triangle ABC\) again at \(R\). The circumcircle of \(\triangle PDK\) intersects the circumcircle of \(\triangle PRN^*\) again at \(L\). Prove that: Lines \(LS\) and \(LP\) are perpendicular.
 
@@ -366,9 +462,9 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
             <a href="loigiaidethibai6.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
-	<div class="problem-box">		
+	<div class="problem-box" id = "exam_problem7">		
         <div class="problem-title">Problem 7</div>
-		<div class="problem-tag hardness-hard">Hard</div>
+		<div class="problem-tag hardness-hard">Hard</div> 
         <div class="problem-content">
             (P6 DJGO 2023) Let \(ABCD\) be a convex quadrilateral. Suppose there exists a circle \(\Omega\) with center \(I\), lying inside \(ABCD\) such that \(AB,BC,CD,DA\) are tangent to \(\Omega\) at \(X,Y,Z,T\) respectively. Let \(N,P\) be the midpoints of segments \(DC,DA\). Let \(DX,AZ\) intersect at \(K\) and \(DY,CT\) intersect at \(L\). \(KP\) intersects \(XZ\) at point \(U\) and \(LN\) intersects \(YT\) at point \(V\). Suppose the circumcircle of \(\triangle DAC\) is internally tangent to \(\Omega\). Prove that: Points \(X,U,V,Y\) lie on a circle.
 
@@ -387,7 +483,7 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
 
 	 <div class = "title-container">
     <h1>Provincial and National Olympiad Exams</h1>
-    <div class="problem-box">		
+    <div class="problem-box" id = "exam_problem8">		
         <div class="problem-title">Problem 8</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -404,7 +500,7 @@ Suppose \(D, E, F\) are three distinct balancing points. Prove that \(M\) is the
             <a href="loigiaidethibai8.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
-       <div class="problem-box">		
+       <div class="problem-box" id = "exam_problem9">		
         <div class="problem-title">Problem 9</div>
 		   <div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -434,7 +530,7 @@ Suppose that line \(IT\) intersects \(OA\) at \(J\). Prove that
        target="_blank">
        Iranian Geometry Olympiad
     </a>
-    <div class="problem-box">		
+    <div class="problem-box" id = "exam_problem10">		
         <div class="problem-title">Problem 10</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -451,7 +547,7 @@ Prove that line \(AI\) bisects segment \(XY\).
             <a href="loigiaidethibai10.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
-       <div class="problem-box">		
+       <div class="problem-box" id = "exam_problem11">		
         <div class="problem-title">Problem 11</div>
 		   <div class="problem-tag hardness-moderate">Moderate</div>
         <div class="problem-content">
@@ -464,7 +560,7 @@ Prove that line \(AI\) bisects segment \(XY\).
             <a href="loigiaidethibai11.html" class="button solution-btn">My Solution</a>
         </div>
     </div>     
-     <div class="problem-box">		
+     <div class="problem-box" id = "exam_problem12">		
         <div class="problem-title">Problem 12</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -491,7 +587,56 @@ Prove that circles \((CMK)\) and \((BNL)\) intersect on the perpendicular bisect
     </div>
     
 </div>
+<script>
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("problems_set.json");
+    const problems = await response.json();
+    
+    const currentPage = window.location.pathname.split("/").pop();
+    
+    const filteredProblems = problems.filter(p => p.section_html === currentPage);
 
+    filteredProblems.forEach(problem => {
+      const problemBox = document.getElementById(problem.id);
+      if (!problemBox) return;
+
+      // Problem tags
+      const problemTagsDiv = document.createElement("div");
+      problemTagsDiv.className = "problem-tags";
+      problem.problemTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        problemTagsDiv.appendChild(span);
+      });
+
+      // Method tags
+      const methodTagsDiv = document.createElement("div");
+      methodTagsDiv.className = "method-tags";
+      problem.methodTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        methodTagsDiv.appendChild(span);
+      });
+
+      // Insert right after the difficulty tag
+      const difficultyDiv = problemBox.querySelector(".problem-tag");
+      if (difficultyDiv) {
+        difficultyDiv.insertAdjacentElement("afterend", problemTagsDiv);
+        problemTagsDiv.insertAdjacentElement("afterend", methodTagsDiv);
+      } else {
+        problemBox.appendChild(problemTagsDiv);
+        problemBox.appendChild(methodTagsDiv);
+      }
+    });
+
+  } catch (err) {
+    console.error("Failed to load problems.json:", err);
+  }
+});
+</script>
 
 
 </body>
