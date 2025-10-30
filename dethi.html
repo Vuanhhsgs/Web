@@ -147,6 +147,21 @@ body::before {
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
+.link-text {
+  color: white;             /* same color as surrounding text */
+  text-decoration: none;    /* remove underline */
+  font-weight: normal;      /* looks like plain text */
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+cursor: pointer;
+   color: #00e0ff;
+  text-shadow:
+    0 0 8px rgba(23, 162, 184, 0.6),
+    0 0 15px rgba(23, 162, 184, 0.4);
+  cursor: pointer;
+}
 
 /* ====== PROBLEM BOX ====== */
 .problem-box {
@@ -491,7 +506,7 @@ Let \(K\) and \(L\) be the orthocenters of triangles \(BZA\) and \(AYC\), respec
 
 We call a point \(X \in (O)\) a *balanced point* if the line through \(X\) perpendicular to \(MX\) intersects \(AB\) and \(AC\) at two points that are equidistant from \(M\).   
 
-Suppose \(D, E, F\) are three distinct balancing points. Prove that \(M\) is the incenter of triangle \(DEF\).
+Suppose \(D, E, F\) are three distinct "balanced points". Prove that \(M\) is the incenter of triangle \(DEF\).
 
         </div>
         <img src="hinh_dethibai8.png" alt="Problem Image" class="problem-image">
@@ -502,7 +517,7 @@ Suppose \(D, E, F\) are three distinct balancing points. Prove that \(M\) is the
     </div>
        <div class="problem-box" id = "exam_problem9">		
         <div class="problem-title">Problem 9</div>
-		   <div class="problem-tag hardness-hard">Hard</div>
+		   <div class="problem-tag hardness-very">Very Hard</div>
         <div class="problem-content">
 (Vietnam TST P5) Let \(ABC\) be an acute, non-isosceles triangle inscribed in circle \((O)\).  
 The incircle \((I)\) of triangle \(ABC\) touches sides \(BC, CA, AB\) at \(D, E, F\), respectively.  
