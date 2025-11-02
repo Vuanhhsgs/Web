@@ -68,6 +68,9 @@
   color: white;
   z-index: 999;
   animation: fadeIn 0.3s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 10px 0;   /* reduced from 40px so search bar is near top */
 }
 
 @keyframes fadeIn {
@@ -76,29 +79,28 @@
 }
 
 .overlay-content {
-  max-width: 800px;
-  margin: 5% auto;
-  padding: 1.5rem;
-  text-align: left;
-  
+    max-width: 800px;
+    margin: 0.1% auto;        /* reduce top margin to bring it closer to top */
+    padding: 1.5rem 1rem;   /* keep some padding inside */
+    text-align: left;
 }
 
 .overlay-top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;       /* slightly reduce from 1.5rem */
+    gap: 0.5rem;               /* optional: spacing between input and button */
 }
-
 .overlay-top input {
-  flex: 1;
-  padding: 0.75rem 1rem;
-  border: 2px solid #666;
-  border-radius: 8px;
-  background-color: #222;
-  color: white;
-  font-size: 1rem;
-  outline: none;
+    flex: 1;
+    padding: 1rem 1rem;        /* bigger input height */
+    font-size: 1.1rem;
+    border-radius: 8px;
+    background-color: #222;
+    color: white;
+    outline: none;
+    border: 2px solid #666;
 }
 
 .overlay-top input:focus {
@@ -124,13 +126,18 @@
   font-weight: 600;
   margin-bottom: 0.75rem;
 }
+.search_tag-container p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
 
 .difficulty-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 6px;       
-  margin-bottom: 14px;
+  margin-top: 4px;       
+  margin-bottom: 12px;
 }
 
 .difficulty-tag {
@@ -156,62 +163,84 @@
 .hardness-misc { background-color: #6c757d; }       /* grey */
 
 
+/* Problem Tags Container */
 .problem-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 6px;       
-  margin-bottom: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 6px;
+    margin-bottom: 14px;
+
+    max-height: 120px;      /* fixed visible height */
+    overflow-y: auto;       /* scroll if content exceeds */
+    padding: 4px;           /* inner spacing */
 }
 
+/* Individual Problem Tag */
 .problem-tag {
-  background-color: #6c757d;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  padding: 0.5rem 0.8rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: all 0.2s ease;
+    background-color: #6c757d;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
 }
 
 .problem-tag:hover {
-  background-color: #7d8690;
+    background-color: #7d8690;
     transform: translateY(-2px);
     box-shadow: 0 0 16px rgba(255,255,255,0.15);
 }
 
+/* Method Tags Container */
 .method-tags {
-  display: none;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 6px;       
-  margin-bottom: 14px;
-}
-.method-tags.show {
-  display: flex; /* show when advanced search is enabled */
-  flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 6px;       
-  margin-bottom: 14px;
+    display: none;          /* hidden by default */
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 6px;
+    margin-bottom: 14px;
+
+    max-height: 120px;      /* fixed visible height */
+    overflow-y: auto;       /* scroll if content exceeds */
+    padding: 4px;
 }
 
+.method-tags.show {
+    display: flex;          /* show when advanced search is enabled */
+}
+
+/* Individual Method Tag */
 .method-tag {
-  background-color: #2E7D32;
-  color: white;
-  font-weight: bold;
-  border-radius: 6px;
-  padding: 0.5rem 0.8rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px rgba(0,0,0,0.4);
-  transition: all 0.2s ease;
+    background-color: #2E7D32;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+    padding: 0.5rem 0.8rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.2s ease;
 }
 
 .method-tag:hover {
-  background-color: #1B5E20;
+    background-color: #1B5E20;
     transform: translateY(-2px);
     box-shadow: 0 0 16px rgba(255,255,255,0.15);
 }
+
+/* Optional: custom scrollbar for both containers */
+.problem-tags::-webkit-scrollbar,
+.method-tags::-webkit-scrollbar {
+    width: 6px;
+}
+
+.problem-tags::-webkit-scrollbar-thumb,
+.method-tags::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
+
 
         
     body {
@@ -573,13 +602,13 @@
             margin-top: 0.5rem;
         }
 
-        .search-buttons {
+.search-buttons {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 6px;       
-    margin-bottom: 14px;
+    margin-bottom: 8px;
 }
 
 .search-buttons .but {
@@ -587,7 +616,7 @@
     color: white;
     font-weight: bold;
     font-size: 25px;
-    padding: 14px 28px;
+    padding: 10px 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
     transition: all 0.25s ease;
@@ -623,6 +652,42 @@
   font-weight: bold;
   cursor: pointer;
 }
+
+/*auto  suggestion of the dropdown box*/
+
+.overlay-top {
+    position: relative; /* now dropdown positions relative to overlay-top */
+}
+
+#suggestionDropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 94.3%;
+    max-height: 200px;
+    overflow-y: auto;
+    background-color: #444;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    z-index: 1000;
+    margin-top: 4px;
+}
+
+
+#suggestionDropdown .suggestion-item {
+    padding: 6px 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+#suggestionDropdown .suggestion-item:hover {
+    background-color: #555;       /* slightly lighter on hover */
+}
+
 
         /* Responsive tweaks */
         @media (max-width: 980px) {
@@ -709,13 +774,25 @@
   </div>
 </div>
 </div>
+
+
 <!-- FULLSCREEN SEARCH OVERLAY -->
 <div class="search-overlay" id="searchOverlay">
   <div class="overlay-content">
     <div class="overlay-top">
-      <input type="text" id="overlayInputOverlay" placeholder="Type to search problems or techniques..." autofocus />
+      <input type="text" id="overlayInputOverlay" 
+       placeholder="Type to search problems or techniques you are looking for" 
+       autofocus 
+       autocomplete="off" />
+
       <button class="close-btn" id="closeOverlay">✕</button>
+      <div id="suggestionDropdown"></div>
     </div>
+
+    
+
+    <div class = "search_tag-container"></div>
+
      <div id="selectedTags" style="display:flex; flex-wrap: wrap; gap:6px; margin-bottom:10px;"></div>
     <div style="margin-bottom: 12px;">
         <label style="font-size: 0.95rem; cursor: pointer;">
@@ -741,7 +818,7 @@
 <div class="problem-tags">
   <span class="problem-tag">isogonal conjugates</span>
   <span class="problem-tag">orthocenter</span>
-  <span class="problem-tag">circumcircle</span>
+  <span class="problem-tag">circumcircle/circumcenter</span>
   <span class="problem-tag">parallelism</span>
   <span class="problem-tag">symmedian-Lemoine point</span>
   <span class="problem-tag">arc midpoints</span>
@@ -752,14 +829,48 @@
   <span class="problem-tag">similar triangles</span>
   <span class="problem-tag">arbitrary point</span>
   <span class="problem-tag">isogonal lines</span>
-  <span class="problem-tag">angle bisector</span>
-  <span class="problem-tag">incircle</span>
+  <span class="problem-tag">angle bisectors</span>
+  <span class="problem-tag">incircle/incenter</span>
   <span class="problem-tag">mixtilinear incircle</span>
   <span class="problem-tag">tangent circles</span>
   <span class="problem-tag">centroid</span>
   <span class="problem-tag">Euler line</span>
   <span class="problem-tag">Feuerbach point</span>
   <span class="problem-tag">A-Humpty point</span>
+  <span class="problem-tag">A-Dumpty point</span>
+  <span class="problem-tag">Nagel point</span>
+  <span class="problem-tag">external homothety center</span>
+  <span class="problem-tag">common tangents</span>
+  <span class="problem-tag">equal segments</span>
+  <span class="problem-tag">equal angles</span>
+  <span class="problem-tag">tangential quadrilateral</span>
+  <span class="problem-tag">cyclic quadrilateral</span>
+  <span class="problem-tag">geometric construction</span>
+  <span class="problem-tag">perpendicular bisector</span>
+  <span class="problem-tag">perpendicularity</span>
+  <span class="problem-tag">projections</span>
+  <span class="problem-tag">excircle/excenter</span>
+  <span class="problem-tag">diameter</span>
+  <span class="problem-tag">perpendicular bisector</span>
+  <span class="problem-tag">bisects</span>
+  <span class="problem-tag">equal segments</span>
+  <span class="problem-tag">orthocenter</span>
+  <span class="problem-tag">tangents</span>
+  <span class="problem-tag">power of a point</span>
+  <span class="problem-tag">circumcircle</span>
+  <span class="problem-tag">geometric number theory</span>
+  <span class="problem-tag">vector</span>
+  <span class="problem-tag">symmedian line</span>
+  <span class="problem-tag">assumption</span>
+  <span class="problem-tag">trapezoid</span>
+  <span class="problem-tag">isosceles trapezoid</span>
+  <span class="problem-tag">parallelogram</span>
+  <span class="problem-tag">isosceles triangle</span>
+  <span class="problem-tag">arbitrary line</span>
+  <span class="problem-tag">geometric construction</span>
+  <span class="problem-tag">radical center</span>
+  <span class="problem-tag">centroid</span>
+  <span class="problem-tag">Feuerbach point</span>
 </div>
 
 <p>Method Tags:</p>
@@ -769,11 +880,11 @@
   <span class="method-tag">radical axis</span>
   <span class="method-tag">power of a point</span>
   <span class="method-tag">cross-ratio</span>
-  <span class="method-tag">law of sines</span>
-  <span class="method-tag">special points constrution</span>
+  <span class="method-tag">law of Sines</span>
+  <span class="method-tag">special points construction</span>
   <span class="method-tag">geometric transformation</span>
   <span class="method-tag">homothety</span>
-  <span class="method-tag">Menelaus theorem</span>
+  <span class="method-tag">Menelaus-Ceva theorem</span>
   <span class="method-tag">harmonic conjugate</span>
   <span class="method-tag">coaxial circles</span>
   <span class="method-tag">inversion</span>
@@ -781,7 +892,25 @@
   <span class="method-tag">pole and polar</span>
   <span class="method-tag">La Hire theorem</span>
   <span class="method-tag">Desargues theorem</span>
+  <span class="method-tag">geometric similarity</span>
+  <span class="method-tag">ERIQ lemma</span>
+  <span class="method-tag">symmetry</span>
+  <span class="method-tag">extraversion</span>
+  <span class="method-tag">trigonometric computation</span>
+  <span class="method-tag">Pythagores theorem</span>
+  <span class="method-tag">spiral similarity</span>
+  <span class="method-tag">ratio chasing</span>
+  <span class="method-tag">law of Sines</span>
+  <span class="method-tag">harmonic conjugate</span>
+  <span class="method-tag">Pascal theorem</span>
+  <span class="method-tag">geometric similarity</span>
+  <span class="method-tag">Menelaus theorem</span>
+  <span class="method-tag">ERIQ lemma</span>
+  <span class="method-tag">vectorial geometry</span>
+  <span class="method-tag">law of sines</span>
+  <span class="method-tag">Monge D'Alembert theorem</span>
 </div>
+
 
     </div>
 
@@ -845,19 +974,47 @@ const searchBox = document.getElementById('searchBox');
 const searchOverlay = document.getElementById('searchOverlay');
 const closeOverlay = document.getElementById('closeOverlay');
 
+//Open the search overlay screen
 searchBox.addEventListener('click', () => {
     searchOverlay.style.display = 'block';
     document.getElementById('overlayInputOverlay').focus();
 });
+//Closing overlay reset everything to default
+function resetOverlay() {
+    // Restore all nodes below search button
+    const buttonContainer = searchButton.parentElement; // div.search-buttons
+    let sibling = buttonContainer.nextElementSibling;
+    while (sibling) {
+        sibling.style.display = '';
+        sibling = sibling.nextElementSibling;
+    }
 
+    // Clear search tag container
+    searchTagContainer.innerHTML = '';
+
+    // Re-enable interactive elements
+    overlayInput.disabled = false;
+    advancedToggle.disabled = false;
+    methodTags.style.pointerEvents = '';
+    difficultyTags.style.pointerEvents = '';
+    problemTags.style.pointerEvents = '';
+
+    // Reset button text
+    searchButton.textContent = "SEARCH";
+    methodTags.classList.remove('show');
+    advancedToggle.checked = false;
+    // Reset toggle state
+    searchToggled = false;
+}
 closeOverlay.addEventListener('click', () => {
     searchOverlay.style.display = 'none';
+    resetOverlay()
 });
 
 
 const advancedToggle = document.getElementById('advancedToggle');
 const methodTags = document.querySelector('.method-tags');
-
+//Turn off and on option to show or hide mathod tags
 advancedToggle.addEventListener('change', () => {
     if(advancedToggle.checked){
         methodTags.classList.add('show');
@@ -866,39 +1023,229 @@ advancedToggle.addEventListener('change', () => {
     }
 });
 
+//Make tags clickable and add to u know
+const allTags = document.querySelectorAll(
+  '.difficulty-tag, .problem-tag, .method-tag'
+);
 
-const overlayInput = document.getElementById('overlayInputOverlay');
-const selectedTags = document.getElementById('selectedTags');
-let tags = [];
+// Make each tag clickable
+allTags.forEach(tag => {
+  tag.style.cursor = 'pointer'; // optional: indicate clickable
+  tag.addEventListener('click', () => {
+    const tagText = tag.textContent.trim();
+    renderTagByText(tagText);
+  });
+}); 
 
-function renderTags() {
-    selectedTags.innerHTML = '';
-    tags.forEach((tag, i) => {
-        const span = document.createElement('span');
-        span.className = 'tag';
-        span.textContent = tag;
-        const removeBtn = document.createElement('span');
-        removeBtn.textContent = '×';
-        removeBtn.className = 'remove';
-        removeBtn.onclick = () => {
-            tags.splice(i, 1);
-            renderTags();
-        };
-        span.appendChild(removeBtn);
-        selectedTags.appendChild(span);
+
+
+const overlayInput = document.getElementById("overlayInputOverlay");
+const suggestionDropdown = document.getElementById("suggestionDropdown");
+
+// Grab your tag groups
+const tagGroups = [
+    document.querySelectorAll('.difficulty-tags .difficulty-tag'),
+    document.querySelectorAll('.problem-tags .problem-tag'),
+    document.querySelectorAll('.method-tags .method-tag')
+];
+
+// Helper: get all tags for search based on toggle
+function getTagsForSearch() {
+    const difficultyTags = Array.from(tagGroups[0]).map(el => el.textContent.trim());
+    const problemTags = Array.from(tagGroups[1]).map(el => el.textContent.trim());
+    const methodTags = Array.from(tagGroups[2]).map(el => el.textContent.trim());
+
+    return advancedToggle.checked 
+        ? [...difficultyTags, ...problemTags, ...methodTags] 
+        : [...difficultyTags, ...problemTags];
+}
+
+// Filter input and render suggestions
+function updateSuggestions(inputText) {
+    suggestionDropdown.innerHTML = ""; // clear previous suggestions
+    const textLower = inputText.trim().toLowerCase();
+    if (!textLower) return;
+
+    const allTags = getTagsForSearch();
+
+    // Only include tags that **start with the input** (case-insensitive)
+    const filteredTags = allTags.filter(tag => tag.toLowerCase().startsWith(textLower));
+
+    filteredTags.forEach(tagText => {
+        const div = document.createElement("div");
+        div.className = "suggestion-item";
+        div.textContent = tagText;
+
+        div.addEventListener("click", () => {
+            renderTagByText(tagText);      // render the full tag block
+            overlayInput.value = "";        // clear input
+            suggestionDropdown.innerHTML = ""; // hide suggestions
+        });
+
+        suggestionDropdown.appendChild(div);
     });
 }
 
-overlayInput.addEventListener('keydown', (e) => {
-    if(e.key === 'Enter'){
-        e.preventDefault();
-        const val = overlayInput.value.trim();
-        if(val && !tags.includes(val)){
-            tags.push(val);
-            overlayInput.value = '';
-            renderTags();
-        }
+
+// Event listener: input typing
+overlayInput.addEventListener("input", e => updateSuggestions(e.target.value));
+
+// Update suggestions if advancedToggle changes
+advancedToggle.addEventListener("change", () => updateSuggestions(overlayInput.value));
+
+// Optional: hide suggestions if input loses focus
+overlayInput.addEventListener("blur", () => setTimeout(() => suggestionDropdown.innerHTML = "", 100));
+
+
+//take input as a text, found the tag with corresponding text, and render it under the search bar, exact as how it look underneath
+function renderTagByText(tagText) {
+  const searchText = tagText.trim().toLowerCase();
+
+  const tagGroups = [
+    document.querySelectorAll('.difficulty-tags .difficulty-tag'),
+    document.querySelectorAll('.problem-tags .problem-tag'),
+    document.querySelectorAll('.method-tags .method-tag')
+  ];
+
+  let foundTag = null;
+
+  for (const group of tagGroups) {
+    for (const tag of group) {
+      if (tag.textContent.trim().toLowerCase() === searchText) {
+        foundTag = tag.cloneNode(true);
+        break;
+      }
     }
+    if (foundTag) break;
+  }
+
+  const container = document.querySelector('.search_tag-container');
+
+  if (foundTag) {
+
+    // Wrapper to align tag and X button side by side
+    const wrapper = document.createElement('div');
+    wrapper.style.display = 'inline-flex';
+    wrapper.style.alignItems = 'center';
+    wrapper.style.gap = '6px';
+    wrapper.style.margin = '4px';
+
+    // Style adjustments for cloned tag
+    foundTag.style.cursor = 'default'; // not clickable now
+    foundTag.style.userSelect = 'none';
+
+    // Create transparent X button
+    const removeBtn = document.createElement('button');
+    removeBtn.textContent = '✕';
+    removeBtn.style.background = 'transparent';
+    removeBtn.style.border = 'none';
+    removeBtn.style.color = 'white';
+    removeBtn.style.fontWeight = 'bold';
+    removeBtn.style.fontSize = '0.9rem';
+    removeBtn.style.cursor = 'pointer';
+    removeBtn.style.height = foundTag.offsetHeight ? `${foundTag.offsetHeight}px` : '26px';
+    removeBtn.style.aspectRatio = '1 / 1';
+    removeBtn.style.display = 'flex';
+    removeBtn.style.alignItems = 'center';
+    removeBtn.style.justifyContent = 'center';
+    removeBtn.style.borderRadius = '50%';
+    removeBtn.style.opacity = '0.6';
+    removeBtn.style.transition = 'all 0.2s ease';
+    
+    removeBtn.addEventListener('mouseenter', () => {
+      removeBtn.style.opacity = '1';
+      removeBtn.style.background = 'rgba(255,255,255,0.1)';
+    });
+    removeBtn.addEventListener('mouseleave', () => {
+      removeBtn.style.opacity = '0.6';
+      removeBtn.style.background = 'transparent';
+    });
+
+    // Remove on click
+    removeBtn.addEventListener('click', () => {
+      wrapper.remove();
+    });
+
+    // Assemble
+    wrapper.appendChild(foundTag);
+    wrapper.appendChild(removeBtn);
+    container.appendChild(wrapper);
+  } 
+  //no tag  founded, i don't think most tag do this so
+  else {
+    console.warn(`Tag "${tagText}" not found.`);
+  }
+}
+
+//User enters all the tags and proceed to search
+const searchButton = document.getElementById('searchButton');
+const overlayContent = document.querySelector('.overlay-content');
+const searchTagContainer = document.querySelector('.search_tag-container');
+const difficultyTags = document.querySelector('.difficulty-tags');
+const problemTags = document.querySelector('.problem-tags');
+
+let searchToggled = false;  // tracks toggle state
+
+searchButton.addEventListener('click', () => {
+    if (!searchTagContainer.hasChildNodes()) {
+        // Show temporary warning
+        const originalText = searchButton.textContent;
+        searchButton.textContent = "Please enter problems' tags";
+
+        // Revert back after 2 seconds
+        setTimeout(() => {
+            searchButton.textContent = originalText;
+        }, 2000);
+
+        return; // stop further actions
+    }
+    
+  else if (!searchToggled) {
+    // First click → hide everything below button
+    const buttonContainer = searchButton.parentElement; // div.search-buttons
+    const nodesToHide = [];
+    let sibling = buttonContainer.nextElementSibling;
+    while (sibling) {
+      nodesToHide.push(sibling);
+      sibling.style.display = 'none';
+      sibling = sibling.nextElementSibling;
+    }
+
+    // Disable all interactive elements above search button except closeOverlay
+    overlayInput.disabled = true;
+    advancedToggle.disabled = true;
+    methodTags.style.pointerEvents = 'none';
+    difficultyTags.style.pointerEvents = 'none';
+    problemTags.style.pointerEvents = 'none';
+
+    // Update button text
+    searchButton.textContent = "SEARCH ANOTHER TAGS?";
+
+    searchToggled = true;
+  } else {  
+    // Second click → restore everything
+    const buttonContainer = searchButton.parentElement; 
+    let sibling = buttonContainer.nextElementSibling;
+    while (sibling) {
+      sibling.style.display = '';
+      sibling = sibling.nextElementSibling;
+    }
+
+    // Clear search tag container
+    searchTagContainer.innerHTML = '';
+
+    // Re-enable interactive elements
+    overlayInput.disabled = false;
+    advancedToggle.disabled = false;
+    methodTags.style.pointerEvents = '';
+    difficultyTags.style.pointerEvents = '';
+    problemTags.style.pointerEvents = '';
+
+    // Reset button text
+    searchButton.textContent = "SEARCH";
+
+    searchToggled = false;
+  }
 });
 
 </script>

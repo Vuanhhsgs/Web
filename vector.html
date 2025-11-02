@@ -7,8 +7,8 @@
       src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-	        body {
+   <style>
+	    body {
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
@@ -147,6 +147,21 @@ body::before {
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
+.link-text {
+  color: white;             /* same color as surrounding text */
+  text-decoration: none;    /* remove underline */
+  font-weight: normal;      /* looks like plain text */
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+cursor: pointer;
+   color: #00e0ff;
+  text-shadow:
+    0 0 8px rgba(23, 162, 184, 0.6),
+    0 0 15px rgba(23, 162, 184, 0.4);
+  cursor: pointer;
+}
 
 /* ====== PROBLEM BOX ====== */
 .problem-box {
@@ -195,7 +210,7 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
-/* Base tag style */
+/* Difficulty tag */
 .problem-tag {
     display: block;
     width: fit-content;
@@ -206,7 +221,7 @@ body::before {
     border-radius: 12px;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+    margin: -10px auto 20px auto; /* top 6px, bottom 14px */
 }
 
 
@@ -222,6 +237,65 @@ body::before {
 .hardness-very { background-color: #dc3545; }       /* red */
 .hardness-extreme { background-color: #6f42c1; }   /* purple */
 .hardness-misc { background-color: #6c757d; }       /* grey */
+
+/* ====== PROBLEM TAGS ====== */
+.problem-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: -4px;       /* tightens spacing under difficulty */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.problem-tags .tag {
+    background-color: #6c757d;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.problem-tags .tag:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.method-tags {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       /* tightens spacing under problem tag */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.method-tags .tag {
+    background-color: #2E7D32;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.method-tags .tag:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -231,6 +305,8 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+
 
 /* ====== BUTTONS ====== */
 .button-container {
@@ -267,21 +343,6 @@ body::before {
     transform: translateY(-3px);
     box-shadow: 0 0 18px rgba(255, 255, 255, 0.2);
 }
-.link-text {
-  color: white;             /* same color as surrounding text */
-  text-decoration: none;    /* remove underline */
-  font-weight: normal;      /* looks like plain text */
-  transition: all 0.3s ease;
-}
-
-.link-text:hover {
-cursor: pointer;
-   color: #00e0ff;
-  text-shadow:
-    0 0 8px rgba(23, 162, 184, 0.6),
-    0 0 15px rgba(23, 162, 184, 0.4);
-  cursor: pointer;
-}
 
 /* ====== RESPONSIVE ====== */
 @media (max-width: 700px) {
@@ -300,6 +361,7 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0,0,0,0.5);
 }
+
 
 </style>
 
@@ -424,7 +486,7 @@ html::-webkit-scrollbar-thumb:hover {
     <div class="container">
         <h2 class="bold-text">Practice Problem</h2>
     </div>
-   <div class="problem-box">		
+   <div class="problem-box" id = "vector_Problem1">		
         <div class="problem-title">Problem 1</div>
         <div class="problem-tag hardness-very">Very Hard</div>
        
@@ -438,5 +500,55 @@ html::-webkit-scrollbar-thumb:hover {
             <a href="loigiaivectobai1.html" class="button solution-btn">My Solution</a>
         </div>
     </div>
+<script>	
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("problems_set.json");
+    const problems = await response.json();
+    
+    const currentPage = window.location.pathname.split("/").pop();
+    
+    const filteredProblems = problems.filter(p => p.section_html === currentPage);
+
+    filteredProblems.forEach(problem => {
+      const problemBox = document.getElementById(problem.id);
+      if (!problemBox) return;
+
+      // Problem tags
+      const problemTagsDiv = document.createElement("div");
+      problemTagsDiv.className = "problem-tags";
+      problem.problemTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        problemTagsDiv.appendChild(span);
+      });
+
+      // Method tags
+      const methodTagsDiv = document.createElement("div");
+      methodTagsDiv.className = "method-tags";
+      problem.methodTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        methodTagsDiv.appendChild(span);
+      });
+
+      // Insert right after the difficulty tag
+      const difficultyDiv = problemBox.querySelector(".problem-tag");
+      if (difficultyDiv) {
+        difficultyDiv.insertAdjacentElement("afterend", problemTagsDiv);
+        problemTagsDiv.insertAdjacentElement("afterend", methodTagsDiv);
+      } else {
+        problemBox.appendChild(problemTagsDiv);
+        problemBox.appendChild(methodTagsDiv);
+      }
+    });
+
+  } catch (err) {
+    console.error("Failed to load problems.json:", err);
+  }
+});
+</script>
 </body>
 </html>

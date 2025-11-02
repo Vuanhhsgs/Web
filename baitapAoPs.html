@@ -7,8 +7,8 @@
       src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script type="text/javascript" async
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <style>
-	        body {
+ <style>
+	    body {
             margin: 0;
             padding: 0;
             font-family: "Segoe UI", Arial, sans-serif;
@@ -147,6 +147,21 @@ body::before {
     margin-bottom: 15px;
     letter-spacing: 1px;
 }
+.link-text {
+  color: white;             /* same color as surrounding text */
+  text-decoration: none;    /* remove underline */
+  font-weight: normal;      /* looks like plain text */
+  transition: all 0.3s ease;
+}
+
+.link-text:hover {
+cursor: pointer;
+   color: #00e0ff;
+  text-shadow:
+    0 0 8px rgba(23, 162, 184, 0.6),
+    0 0 15px rgba(23, 162, 184, 0.4);
+  cursor: pointer;
+}
 
 /* ====== PROBLEM BOX ====== */
 .problem-box {
@@ -195,7 +210,7 @@ body::before {
     border-radius: 12px;
     line-height: 1.6;
 }
-/* Base tag style */
+/* Difficulty tag */
 .problem-tag {
     display: block;
     width: fit-content;
@@ -206,7 +221,7 @@ body::before {
     border-radius: 12px;
     color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.4);
-    margin: 6px auto 14px auto; /* top 6px, bottom 14px */
+    margin: -10px auto 20px auto; /* top 6px, bottom 14px */
 }
 
 
@@ -222,6 +237,65 @@ body::before {
 .hardness-very { background-color: #dc3545; }       /* red */
 .hardness-extreme { background-color: #6f42c1; }   /* purple */
 .hardness-misc { background-color: #6c757d; }       /* grey */
+
+/* ====== PROBLEM TAGS ====== */
+.problem-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: -4px;       /* tightens spacing under difficulty */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.problem-tags .tag {
+    background-color: #6c757d;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.problem-tags .tag:hover {
+    background-color: #7d8690;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+.method-tags {
+    display: none;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 6px;       /* tightens spacing under problem tag */
+    margin-bottom: 14px;
+}
+
+/* Each tag style */
+.method-tags .tag {
+    background-color: #2E7D32;   /* grey background */
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 6px 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    transition: all 0.25s ease;
+}
+
+/* Hover interaction */
+.method-tags .tag:hover {
+    background-color: #1B5E20;
+    transform: translateY(-2px);
+    box-shadow: 0 0 16px rgba(255,255,255,0.15);
+}
+
+
 /* ====== IMAGE ====== */
 .problem-image {
     width: 100%;
@@ -231,6 +305,8 @@ body::before {
     border-radius: 10px;
     box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
 }
+
+
 
 /* ====== BUTTONS ====== */
 .button-container {
@@ -286,6 +362,7 @@ html::-webkit-scrollbar-thumb:hover {
   background-color: rgba(0,0,0,0.5);
 }
 
+
 </style>
 
 </head>
@@ -294,7 +371,7 @@ html::-webkit-scrollbar-thumb:hover {
      <div class = "title-container">
     <h1>Problems from AoPS Forum that I solved</h1>
 	 </div>
-    <div class="problem-box">		
+    <div class="problem-box" id = "aops_problem1">		
         <div class="problem-title">Problem 1</div>
 		<div class="problem-tag hardness-extreme">Extremely Hard</div>
         <div class="problem-content">
@@ -307,7 +384,7 @@ html::-webkit-scrollbar-thumb:hover {
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem2">		
         <div class="problem-title">Problem 2</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -321,9 +398,9 @@ html::-webkit-scrollbar-thumb:hover {
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem3">		
         <div class="problem-title">Problem 3</div>
-		<div class="problem-tag hardness-misc">Geometric Number Theory</div>
+		<div class="problem-tag hardness-easy">Easy</div>
         <div class="problem-content">
            (Teacher <a href="https://artofproblemsolving.com/community/user/68918" target="_blank" style =  "color: white">Tran Quang Hung</a>, problem for the IMO Vietnam 2025 Team) Let \(ABCD\) be a square with point \(P\) lying on side \(AB\). Let \(K\) and \(L\) be the centers of the Euler circles of triangles \(PAC\) and \(PBD\), respectively. Suppose that \(PA\) and \(PB\) are positive integers. Prove that
 \[
@@ -338,7 +415,7 @@ is a perfect square.
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem4">		
         <div class="problem-title">Problem 4</div>
 		<div class="problem-tag hardness-extreme">Extremely Hard</div>
         <div class="problem-content">
@@ -351,7 +428,7 @@ is a perfect square.
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem5">		
         <div class="problem-title">Problem 5</div>
 		<div class="problem-tag hardness-moderate">Moderate</div>
         <div class="problem-content">
@@ -368,7 +445,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem6">		
         <div class="problem-title">Problem 6</div>
 		<div class="problem-tag hardness-moderate">Moderate</div>
         <div class="problem-content">
@@ -383,7 +460,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem7">		
         <div class="problem-title">Problem 7</div>
 		<div class="problem-tag hardness-moderate">Moderate</div>
         <div class="problem-content">
@@ -398,7 +475,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem8">		
         <div class="problem-title">Problem 8</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -411,7 +488,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem9">		
         <div class="problem-title">Problem 9</div>
 		<div class="problem-tag hardness-hard">Hard</div>
         <div class="problem-content">
@@ -425,7 +502,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem10">		
         <div class="problem-title">Problem 10</div>
 		<div class="problem-tag hardness-moderate">Moderate</div>
         <div class="problem-content">
@@ -439,7 +516,7 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
         </div>
     </div>
 
-	<div class="problem-box">		
+	<div class="problem-box" id = "aops_problem11">		
         <div class="problem-title">Problem 11</div>
 		<div class="problem-tag hardness-easy">Easy</div>
         <div class="problem-content">
@@ -453,8 +530,56 @@ For triangle \(ABC\), the \(HD\)-line corresponding to vertex \(A\) intersects \
     </div>
 	
 
-	
+<script>	
+window.addEventListener("DOMContentLoaded", async () => {
+  try {
+    const response = await fetch("problems_set.json");
+    const problems = await response.json();
+    
+    const currentPage = window.location.pathname.split("/").pop();
+    
+    const filteredProblems = problems.filter(p => p.section_html === currentPage);
 
+    filteredProblems.forEach(problem => {
+      const problemBox = document.getElementById(problem.id);
+      if (!problemBox) return;
+
+      // Problem tags
+      const problemTagsDiv = document.createElement("div");
+      problemTagsDiv.className = "problem-tags";
+      problem.problemTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        problemTagsDiv.appendChild(span);
+      });
+
+      // Method tags
+      const methodTagsDiv = document.createElement("div");
+      methodTagsDiv.className = "method-tags";
+      problem.methodTags.forEach(tag => {
+        const span = document.createElement("span");
+        span.className = "tag";
+        span.textContent = tag;
+        methodTagsDiv.appendChild(span);
+      });
+
+      // Insert right after the difficulty tag
+      const difficultyDiv = problemBox.querySelector(".problem-tag");
+      if (difficultyDiv) {
+        difficultyDiv.insertAdjacentElement("afterend", problemTagsDiv);
+        problemTagsDiv.insertAdjacentElement("afterend", methodTagsDiv);
+      } else {
+        problemBox.appendChild(problemTagsDiv);
+        problemBox.appendChild(methodTagsDiv);
+      }
+    });
+
+  } catch (err) {
+    console.error("Failed to load problems.json:", err);
+  }
+});
+</script>
 	
     
 </body>
