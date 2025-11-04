@@ -109,6 +109,24 @@
     "methodTags": ["angle chasing", "radical axis", "cross-ratio", "harmonic conjugate", "pole and polar", "La Hire theorem"]
   },
   {
+    "id": "vietnamese_geoforum_problem13",
+    "problem_name": "Problem 13",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Very Hard",
+    "problemTags": ["orthocenter", "symmedian-Lemoine point", "circumcircle/circumcenter", "symmedian line", "Euler-reflection point"],
+    "methodTags": ["special points construction", "angle chasing", "ratio chasing", "homothety", "Menelaus-Ceva theorem", "geometric similarity", "geometric transformation"]
+  },
+  {
+    "id": "vietnamese_geoforum_problem14",
+    "problem_name": "Problem 14",
+    "section_html": "group_hinhhocphang.html",
+    "section_display_name": "Vietnamese Geometry Forum",
+    "difficulty": "Very Hard",
+    "problemTags": ["Euler-reflection point", "Feuerbach point", "incircle/incenter", "circumcircle/circumcenter", "Jerabek point"],
+    "methodTags": ["special points construction", "angle chasing", "homothety", "geometric transformation"]
+  },
+  {
     "id": "exam_problem1",
     "problem_name": "Problem 1",
     "section_html": "dethi.html",
