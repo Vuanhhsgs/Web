@@ -1068,7 +1068,6 @@
   <span class="problem-tag">equal segments</span>
   <span class="problem-tag">orthocenter</span>
   <span class="problem-tag">tangents</span>
-  <span class="problem-tag">power of a point</span>
   <span class="problem-tag">circumcircle</span>
   <span class="problem-tag">geometric number theory</span>
   <span class="problem-tag">vector</span>
@@ -1480,6 +1479,7 @@ while (sibling) {
     methodTags.style.pointerEvents = 'none';
     difficultyTags.style.pointerEvents = 'none';
     problemTags.style.pointerEvents = 'none';
+    closeOverlay.disabled = 'true';
 
     // Update button text
     searchButton.textContent = "Search for another tags?";
@@ -1592,7 +1592,7 @@ problemLink.addEventListener('click', () => {
             
             const methodTagsDiv = document.createElement("div");
             methodTagsDiv.className = "generate-method-tags";       
-            methodTagsDiv.display = 'block'     
+            methodTagsDiv.style.display = 'flex'     
             problem.methodTags.forEach(tag => {
                 const span = document.createElement("span");
                 span.className = "tag";
@@ -1755,20 +1755,29 @@ fetch('problems_set.json')
 
 }
   else {  
+
     // Second click → restore everything
+
     const tagContainer = document.querySelector('.tag-container');
 const searchButtons = document.querySelector('.search-buttons');
     let resultsContainer = document.getElementById('searchResultsContainer');
 
     if(resultsContainer) {resultsContainer.innerHTML = ''}
-    const buttonContainer = searchButton.parentElement;
-let sibling = buttonContainer.nextElementSibling;
+        const buttonContainer = searchButton.parentElement;
+        let sibling = buttonContainer.nextElementSibling;
+
 while (sibling) {
   sibling.style.visibility = '';
   sibling.style.height = '';
   sibling.style.overflow = '';
   sibling = sibling.nextElementSibling;
 }
+  let current = buttonContainer.nextElementSibling;
+  while (current && current !== tagContainer) {
+    const next = current.nextElementSibling;
+    current.remove();
+    current = next;
+  }
 
 
     // Clear search tag container
@@ -1784,12 +1793,10 @@ while (sibling) {
     // Reset button text
     searchButton.textContent = "SEARCH";
     searchToggled = false;
-    if (searchButton && tagContainer) {
-  // Compute the current offset and force a consistent margin
-  const fixedGap = 12; // <-- you can tune this to look perfect (px)
-  tagContainer.style.marginTop = fixedGap + 'px';
-  searchButton.style.marginBottom = '0px';
-}
+  if (tagContainer) {
+    const fixedGap = 12; // adjust visually if needed
+    tagContainer.style.marginTop = fixedGap + 'px';
+  }
 
   }
 
