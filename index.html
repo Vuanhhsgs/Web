@@ -1438,6 +1438,7 @@ searchButton.addEventListener('click', () => {
     // Save original text and disable button
     const originalText = searchButton.textContent;
     searchButton.disabled = true;
+
     searchButton.style.opacity = "0.6";
     searchButton.style.cursor = "not-allowed";
 
@@ -1479,7 +1480,7 @@ while (sibling) {
     methodTags.style.pointerEvents = 'none';
     difficultyTags.style.pointerEvents = 'none';
     problemTags.style.pointerEvents = 'none';
-    closeOverlay.disabled = 'true';
+    closeOverlay.disabled = true;
 
     // Update button text
     searchButton.textContent = "Search for another tags?";
@@ -1786,6 +1787,7 @@ while (sibling) {
     // Re-enable interactive elements
     overlayInput.disabled = false;
     advancedToggle.disabled = false;
+    closeOverlay.disabled = false;
     methodTags.style.pointerEvents = '';
     difficultyTags.style.pointerEvents = '';
     problemTags.style.pointerEvents = '';
