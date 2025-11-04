@@ -805,6 +805,15 @@
     border-radius: 12px;
     line-height: 1.6;
 }
+/* ====== IMAGE ====== */
+.problem-image {
+    width: 100%;
+    max-width: 600px;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+}
 /* Difficulty tag */
 .generate-difficulty-tag {
     display: block;
@@ -1718,6 +1727,8 @@ problemLink.addEventListener('click', () => {
             //problem content
             const problemContent = document.createElement("div");
             problemContent.className = "problem-content"; 
+            const problemImage = document.createElement("div");
+            problemImage.className = 'problem-image';
             fetch(problem.section_html)
             .then(response => response.text())
             .then(html => {
@@ -1728,13 +1739,18 @@ problemLink.addEventListener('click', () => {
                 // Find the div with the matching id
                 const problemBox = doc.getElementById(problem.id);
                 const contentDiv = problemBox.querySelector(".problem-content");
+                const imgElement = problemBox.querySelector("img.problem-image");
+                  const imgClone = imgElement.cloneNode(true);
+                  problemImage.appendChild(imgClone);
                 problemContent.innerHTML = contentDiv.textContent.trim();
                  if (window.MathJax) {
       MathJax.typesetPromise([problemContent]);
     }
           })
           box.appendChild(problemContent);
+          box.appendChild(problemImage)
         sectionContainer.appendChild(box);
+
 
     });
 
