@@ -50,7 +50,7 @@
     "problem_name": "Problem 6",
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
-    "difficulty": "Easy",
+    "difficulty": "Very Easy",
     "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "reflections"],
     "methodTags": ["inversion", "ratio chasing", "cross-ratio", "harmonic conjugate"]
   },
