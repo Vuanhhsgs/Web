@@ -235,6 +235,15 @@
     "methodTags": ["special points construction", "power of a point", "angle chasing"]
   },
   {
+    "id": "exam_problem13",
+    "problem_name": "Problem 12",
+    "section_html": "dethi.html",
+    "section_display_name": "HSGS Entrance Exam",
+    "difficulty": "Hard",
+    "problemTags": ["circumcircle/circumcenter", "arbitrary point", "fixed line"],
+    "methodTags": ["special points construction", "homothety", "geometric similarity", "ratio chasing", "angle chasing"]
+  },
+  {
     "id": "aops_problem1",
     "problem_name": "Problem 1",
     "section_html": "baitapAoPs.html",
@@ -394,7 +403,34 @@
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Very Hard",
     "problemTags": ["vector", "circumcircle/circumcenter", "incircle/incenter", "centroid", "symmedian-Lemoine point","collinearity"],
-    "methodTags": ["special points construction", "geometric similarity", "ratio chasing","angle chasing", "vectorial geometry"]
+    "methodTags": ["special points construction", "geometric similarity", "ratio chasing","angle chasing", "vectorial geometry", "barycentric coordinates"]
+  },
+  {
+    "id": "vector_Problem2",
+    "problem_name": "Problem 2",
+    "section_html": "vector.html",
+    "section_display_name": "Problems exemplifying the use of vector",
+    "difficulty": "Easy",
+    "problemTags": ["circumcircle/circumcenter", "pedal triangle", "centroid", "arbitrary point", "symmedian-Lemoine point"],
+    "methodTags": ["special points construction", "vectorial geometry"]
+  },
+  {
+    "id": "vector_Problem3",
+    "problem_name": "Problem 3",
+    "section_html": "vector.html",
+    "section_display_name": "Problems exemplifying the use of vector",
+    "difficulty": "Easy",
+    "problemTags": ["circumcircle/circumcenter", "incircle/incenter", "pedal triangle", "centroid", "arbitrary point", "symmedian-Lemoine point"],
+    "methodTags": ["special points construction", "vectorial geometry"]
+  },
+  {
+    "id": "vector_Problem4",
+    "problem_name": "Problem 4",
+    "section_html": "vector.html",
+    "section_display_name": "Problems exemplifying the use of vector",
+    "difficulty": "Hard",
+    "problemTags": ["circumcircle/circumcenter", "orthocenter", "nine-point center", "concurrency", "centroid"],
+    "methodTags": ["trigonometric computation", "angle chasing", "vectorial geometry", "barycentric coordinates"]
   },
   {
     "id": "ratiochasing_Problem1",
