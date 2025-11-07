@@ -240,7 +240,7 @@
     "section_html": "dethi.html",
     "section_display_name": "HSGS Entrance Exam",
     "difficulty": "Hard",
-    "problemTags": ["circumcircle/circumcenter", "arbitrary point", "fixed line"],
+    "problemTags": ["circumcircle/circumcenter", "arbitrary point", "moving point"],
     "methodTags": ["special points construction", "homothety", "geometric similarity", "ratio chasing", "angle chasing"]
   },
   {
@@ -429,7 +429,7 @@
     "section_html": "vector.html",
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Hard",
-    "problemTags": ["circumcircle/circumcenter", "orthocenter", "nine-point center", "concurrency", "centroid"],
+    "problemTags": ["circumcircle/circumcenter", "orthocenter", "nine-point circle/center", "concurrency", "centroid"],
     "methodTags": ["trigonometric computation", "angle chasing", "vectorial geometry", "barycentric coordinates"]
   },
   {
@@ -485,6 +485,46 @@
     "difficulty": "Very Hard",
     "problemTags": ["circumcircle/circumcenter", "arc midpoints", "projections", "orthocenter", "collinearity"],
     "methodTags": ["homothety", "angle chasing", "ratio chasing", "law of Sines","special points construction"]
+  },
+  {
+    "id": "illustrate_vector",
+    "problem_name": "Illustrative Vector Problem",
+    "section_html": "vector.html",
+    "section_display_name": "Problems exemplifying the use of vector",
+    "difficulty": "Hard",
+    "problemTags": [
+  "circumcircle/circumcenter",
+  "orthocenter",
+  "symmedian-Lemoine point",
+  "isotomic conjugate",
+  "parallelism"
+],
+"methodTags": [
+  "vectorial geometry",
+  "barycentric coordinates",
+  "special points construction"
+]
+
+  },
+  {
+    "id": "illustrate_inversion",
+    "problem_name": "Illustrative Inversion Problem",
+    "section_html": "nghich_dao.html",
+    "section_display_name": "Problems exemplifying the use of inversion",
+    "difficulty": "Very Hard",
+    "problemTags": ["circumcircle/circumcenter", "moving point", "incircle/incenter", "mixtilinear incircle", "reflections"],
+    "methodTags": ["inversion", "angle chasing", "ratio chasing", "radical axis","special points construction"]
+  },
+    {
+    "id": "illustrate_ratio",
+    "problem_name": "Illustrative Ratio Chasing Problem",
+    "section_html": "bien_doi_ti_le.html",
+    "section_display_name": "Problems exemplifying the use of ratio chasing",
+    "difficulty": "Very Hard",
+    "problemTags": ["circumcircle/circumcenter", "orthocenter", "tangents", "nine-point circle/center", "diameter", "pole and polar"],
+    "methodTags": ["radical axis", "Desargues theorem", "ratio chasing", "radical axis","Menelaus-Ceva theorem", "La Hire theorem", "pole and polar"]
   }
+
+
 
 ]

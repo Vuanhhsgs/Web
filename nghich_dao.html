@@ -25,38 +25,58 @@
 
     <div class="container">
         <h2 class="bold-text">Example from a problem I solved</h2>
-        <p class="bold-text">Problem (Source: Plane Geometry group on Facebook): Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
-a) Prove: \(L\) lies on \((T)\).  
-b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O)\) again at \(N\), and let \(NL\) meet \((O)\) again at \(J\). Prove: \(AJ\) always passes through a fixed point.</p>
+        <div class="problem-box" id = "illustrate_inversion">		
+        <div class="problem-title">Illustrative Problem</div>
+	   <div class="problem-tag hardness-very">Very Hard</div>
+       <div class = "problem-tags">  <span class = "tag"> circumcircle/circumcenter </span> <span class = "tag"> moving point </span>
+        <span class = "tag"> incircle/incenter </span> <span class = "tag"> mixtilinear incircle </span> <span class = "tag"> reflections </span>
+       </div>
+        <div class = "method-tags">  <span class = "tag"> inversion </span> <span class = "tag"> special points construction </span>
+        <span class = "tag"> radical axis </span> <span class = "tag"> ratio chasing </span> <span class = "tag"> angle chasing </span>
+       </div>
+        <div class="problem-content">
+            (Source: Vietnamese Euclidean Geometry group on Facebook, user <a href="https://web.facebook.com/groups/205466756603509/user/100072450942447/" target="_blank" style =  "color: white">Duong Nguyen</a>)
+            Let triangle \(ABC\) be inscribed in circle \((O)\), with \(B, C\) fixed and \(A\) moving on the major arc \(BC\) of \((O)\). Let \((I)\) be the incircle of the triangle, tangent to \(BC\) at \(D\). Line \(AI\) meets \((O)\) again at \(P\). Let \((T)\) be the internal \(A\)-mixtilinear circle, tangent to \((O)\) at \(X\). Segment \(XP\) meets \(AD\) at \(L\).  
+<p>a) Prove: \(L\) lies on \((T)\).</p>  
+<p>b) Let \(K\) be the reflection of \(A\) across line \(OI\). Let \(KD\) meet \((O)\) again at \(N\), and let \(NL\) meet \((O)\) again at \(J\). Prove: \(AJ\) always passes through a fixed point.</p>
         
-        <p class="bold-text">Illustration:</p>
-        <img src="https://cdn.glitch.global/74d4ead2-2d05-4752-aaf9-74ab42e15381/nghichdaoanhminhhoabaividu.jpg?v=1739639363024" alt="Illustration" class="problem-image">
+        <img src="inversion_figure.png" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "inversion_illustrativeProblem.gsp" target = "_blank">Try It Yourself</a>
+        </div>
+    </div>
+    </div>
+  
+     
 
         <p class="bold-text">Solution:</p>
-        <p>(Using the first figure) Redefine point \(L\) as the intersection of \(AD\) and the \(A\)-mixtilinear circle. Let \(NL\) meet \((O)\) at \(U\) such that \(U\) is not the diametral opposite point.</p> 
+        <p>(Using the first figure) Redefine point \(L\) as the intersection of \(AD\) and the \(A\)-mixtilinear circle. Let \(NL\) cut \((O)\) at \(U\).</p> 
         <p class="bold-text">Figure 1:</p>    
-        <img src="random_pic1.png" alt="Figure 1" class="problem-image">
+        <img src="inversion_pic1.png" alt="Figure 1" class="problem-image">
 <p>Let \(J\) be the excenter of triangle \(ABC\) that is tangent to \(BC\) at \(E\); then \(AX\) and \(AE\) are isogonal (a familiar result). Let line \(XI\) meet \((O)\) at \(Q\), the midpoint of arc \(BAC\) of \((O)\). Then \(JQ\) meets \((O)\) at \(G\), and we have \(AD\) and \(AG\) are isogonal (another standard result).</p>
 
-<p>The perpendicular bisector of \(AJ\) meets \(BC\) at \(W\). Denote the three excenters of triangle \(ABC\) by \(I_A, I_B, I_C\), and let \(V\) be the circumcenter of the triangle formed by these three excenters. Then \(W\) lies on the radical axis between \((JV)\) and \((JI)\). Hence \(JW\) is perpendicular to \(IV\); note that \(IV\) is the Euler line of the triangle formed by the three excenters, whose circumcenter is \(O\). Therefore \(JW\) is perpendicular to \(OI\), so \(JW \parallel AK\). On the other hand, \(WJ = WA\), thus \(AW\) and \(AK\) are isogonal.</p>
+<p>Denote the three excenters of triangle \(ABC\) by \(J, J_B, J_C\). Let \( JB, JC\) cut \((O)\) again at \(W_b, W_c \) respectively then they are the midpoints of \( JJ_B, JJ_C \) respectively. Let \( W_bW_c \), which is also the perpendicular bisector of \(AJ\) meets \(BC\) at \(W\), and let \(V\) be the center of \( (JJ_BJ_C)\), then \( W_B, W_C, J, V\) lies on the circle with diameter \( JV \). Also, \( P(W, (JI)) = WB \cdot WC = WW_B \cdot WW_C = P(W, (JV))\), therefore \(W\) lies on the radical axis between \((JV)\) and \((JI)\). Hence \(JW\) is perpendicular to \(IV\); note that \(O\) is the nine-point center of triangle \( JJ_BJ_C \), hence \(O\) is the midpoint of \( IV \). Therefore \(JW\) is perpendicular to \(OI\), so \(JW \parallel AK\). On the other hand, \(WJ = WA\), thus \(AW\) and \(AK\) are isogonal.</p>
 
-<p>Consider inversion centered at \(A\) with power \(AB\cdot AC\), combined with reflection across the bisector of \(\angle BAC\). Under this transformation we obtain:</p>
-<p>- The internal \(A\)-mixtilinear circle maps to \((J)\) (the excenter circle).  
-- \(K\) maps to \(W\).  
-- \(D\) maps to \(G\).  
-- \(X\) maps to \(E\).  
-- \(P\) maps to \(T\) (the intersection of \(AI\) with \(BC\)).  
-- \(N\) maps to \(Y\) (the intersection of \((AGW)\) with \(BC\)).  
-- \(L\) maps to \(R\) (the intersection of \(AG\) with \((J)\); point \(R\) lies closer to \(A\)).  
-- \(U\) maps to \(M\) (the intersection of \((ARY)\) with \(BC\)).</p>
+<p>Consider inversion centered at \(A\) with power \(AB\cdot AC\), combined with reflection across the bisector of \(\angle BAC\). It maps:</p>
+<p>- The internal \(A\)-mixtilinear circle \( \mapsto \) \((J)\) (the A-excenter circle).  
+- \(K \mapsto  W\).  
+- \(D \mapsto G\).  
+- \(X \mapsto E\).  
+- \(P \mapsto T\) (the intersection of \(AI\) with \(BC\)).  
+</p>
+Hence, it maps:
+<p>
+- \(N \mapsto Y\) (the intersection of \((AGW)\) with \(BC\)).  
+- \(L \mapsto R\) (the intersection of \(AG\) with \((J)\), which is the \(A\)-excenter of triangle \( ABC \), with point \(R\) lies closer to \(A\)).  
+- \(U \mapsto M\) (the intersection of \((ARY)\) with \(BC\)).</p>
 
-<p>Thus the problem is equivalent to proving:</p>
-<p>1. That \(X, L, P\) are collinear, which is equivalent to showing that \(A,T,R,E\) are concyclic.  
-2. That \(AU\) passes through the intersection of the two tangents at \(B\) and \(C\) to \((O)\); equivalently, that \(AU\) is a symmedian, or that \(M\) (the intersection of \((ARY)\) with \(BC\)) is the midpoint of \(BC\).</p>
+<p>From the inversion transformation above, the problem is equivalent to proving:</p>
+<p>(a)\(X, L, P\) are collinear, which is equivalent to showing that \(A,T,R,E\) are concyclic.  
+(b) That \(AU\) passes through the intersection of the two tangents at \(B\) and \(C\) to \((O)\) which is equivalent to \(AU\) being a symmedian line, or that \(M\) (the intersection of \((ARY)\) with \(BC\)) is the midpoint of \(BC\), since \( AU, AM \) are isogonal wrt \( \angle BAC \). </p>
 
 <p>(Using the second figure) Transforming the above into the configuration with an incircle, we restate the problem as follows:</p>
 <p class="bold-text">Figure 2:</p>
-<img src="random_pic2.png" alt="Figure 2" class="problem-image">
+<img src="inversion_pic2.png" alt="Figure 2" class="problem-image">
 <p>Triangle \(ABC\) is inscribed in \((O)\) and has incircle \((I)\). Line \(AI\) meets \(BC\) at \(T\), and \((I)\) is tangent to \(BC\) at \(D\). Let \(G\) be the tangency point of the \(A\)-mixtilinear circle with \((O)\). Then:</p>
 <p>- \(AG\) meets \((I)\) at \(R\) (the point \(R\) is closer to \(G\)).  
 - The circle \((AGW)\) meets \(BC\) at \(Y\).</p>

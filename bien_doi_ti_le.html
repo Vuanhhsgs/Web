@@ -28,20 +28,35 @@
     </div>
 
     <div class="container">
+        <div class="container">
         <h2 class="bold-text">Example from a problem I solved</h2>
-        <p class="bold-text">Problem(AoPS):</p>
-        <p>Let \( \triangle ABC \) be a triangle with orthocenter \( H \) and circumcircle \( (O) \).  
+        <div class="problem-box" id = "illustrate_ratio">		
+        <div class="problem-title">Illustrative Problem</div>
+	   <div class="problem-tag hardness-very">Very Hard</div>
+       <div class = "problem-tags">  <span class = "tag"> circumcircle/circumcenter </span> <span class = "tag"> orthocenter </span>
+        <span class = "tag"> tangents </span> <span class = "tag">  nine-point circle/center </span> <span class = "tag"> pole and polar</span> <span class = "tag"> diameter</span>
+       </div>
+        <div class = "method-tags">  <span class = "tag"> La Hire theorem </span> <span class = "tag"> pole and polar </span>
+        <span class = "tag"> radical axis </span> <span class = "tag"> Desargues theorem </span> <span class = "tag"> ratio chasing </span> <span class = "tag"> Menelaus-Ceva theorem </span>
+       </div>
+        <div class="problem-content">
+            (Source: AoPs, user <a href="https://artofproblemsolving.com/community/user/1039572" target="_blank" style =  "color: white">goaoat</a>)
+            Let \( \triangle ABC \) be a triangle with orthocenter \( H \) and circumcircle \( (O) \).  
        Let the tangents from \( B \) and \( C \) to \( (O) \) intersect at \( K \),  
        and let the feet of \( K \) onto \( AC \) and \( AB \) be \( E \) and \( F \).  
        Let the circle with diameter \( EF \) intersect the nine-point circle of \( \triangle ABC \)  
        at \( X \) and \( Y \). If the tangents from \( X \) and \( Y \)  
-       to the nine-point circle intersect at \( Z \), show that \( H, K, Z \) are collinear.</p>
-        <p class="bold-text">Problem Figure:</p>
-        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbaividuhinhminhhoa.png?v=1739714854795" alt="Hình minh họa" class="problem-image">
-
+       to the nine-point circle intersect at \( Z \), show that \( H, K, Z \) are collinear.
+        
+        <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbaividuhinhminhhoa.png?v=1739714854795" alt="Problem Image" class="problem-image">
+        <div class="button-container">
+            <a class="button try-btn" href = "ratio_illustrativeProblem.gsp" target = "_blank">Try It Yourself</a>
+        </div>
+    </div>
+    </div>
         <p class="bold-text">Solution:</p>
         <p>
-          <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbaividuhinhloigiai1.png?v=1739715184985" alt="Hình lời giải 1" class="problem-image">
+          <img src="ratio_solvepic1.png" alt="Figure 1" class="problem-image">
           <p>By simple angle chasing: Let \( M \) be the midpoint of \( BC \), then \( M \) is the orthocenter of \( \triangle AEF \).  
        Therefore, the midpoint \( N \) of \( EF \) is also the midpoint of \( MK \).  
        Let \( U, V \) be the projection of \( M \) on \( AB, AC \), and let \( UV \) cut \( BC \) at \( T \).  
@@ -63,7 +78,7 @@
     <p>Proving the problem is equivalent to proving that the pole of \( XY \) with respect to \( (I) \) lies on \( KH \),  
        which is equivalent to proving that the pole of \( KH \) with respect to \( (I) \), which is \( W \),  
        lies on \( XY \), which is the radical axis of \( (EF) \) and \( (I) \).  
-       Since \( T \) lies on \( (EF) \) and \( (I) \),  
+       Since \( T \) lies on the radical axis of \( (EF) \) and \( (I) \),  
        we need to prove \( TW \perp NI \) and since \( NI \parallel KQ \),  
        we will prove \( TW \perp KQ \).</p>
     <p> Here, we have reduced the problem to proving that two lines are perpendicular, so we can consider handling it using ratio chasing:</p>
@@ -76,11 +91,11 @@
        \]
     </p>
       
-      <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/bdtlbaividuhinhloigiai2.png?v=1739715245997" alt="Hình lời giải 2" class="problem-image">
+      <img src="ratio_solvepic2.png" alt="Figure 2" class="problem-image">
 
     <p>Let \( Z \) be the midpoint of \( E'F' \).  
        Since \( UZVM \) is a parallelogram, \( UV \) bisects \( MZ \).  
-       Let \( UV \) cut \( EF \) at \( J \).  
+       Let \( UV \) cut \( E'F' \) at \( J \).  
        Applying Menelaus’ theorem to \( \triangle ZGM \) with \( \overline{T, J, L} \),  
        we get  
        \[
@@ -89,7 +104,7 @@
        Since \( UV \perp AK \), by angle chasing, we get \( \triangle LZJ \sim \triangle MDA \).  
        Let \( P \) be the midpoint of \( AD \),  
        then \( \triangle MZJ \sim \triangle MDP \).  
-       Let \( AH \) cut \( EF \) at \( X \), we get \( (AX, HD) = -1 \).  
+       Let \( AH \) cut \( E'F' \) at \( X \), we get \( (AX, HD) = -1 \).  
        Then \( \triangle MZG \sim \triangle MDQ \), therefore  
        \[
        \frac{DP}{DQ} = \frac{ZJ}{ZG}.
@@ -103,9 +118,10 @@
     <p>A well-known lemma states that:  
        Let \( AM \) cut \( OD \) at \( R \),  
        then \( R \) lies on the radical axis of \( (BOC) \) and \( (I) \).  
-       Since we can easily prove \( G \) lies on the radical axis,  
-       therefore \( KH \perp GR \), and so \( IW \parallel GR \).  
-       Let \( AH \) cut \( EF \) at \( X \), we get \( (AX, HD) = -1 \).  
+       Since we can easily prove \( G \) lies on the radical axis of these two circles,  
+       \(GR\) is perpendicular to the line connecting centers of these two circles that are the midpoint of \( OH, OK\), which is parallel to HK, we get That
+        \( KH \perp GR \), and so \( IW \parallel GR \).  
+       Let \( AH \) cut \( E'F' \) at \( X \), we get \( (AX, HD) = -1 \).  
        Applying Desargues’ theorem for \( \triangle ODQ \) and \( \triangle MAH \)  
        with \( OM \parallel AD \parallel HQ \), we get \( X, I, R \) are collinear.  
        Therefore,  
