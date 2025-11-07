@@ -943,6 +943,27 @@
         inset 0 0 20px rgba(255, 255, 255, 0.08);
     transform: translateY(-3px);
 }
+.container {
+    background: rgba(34, 34, 34, 0.9);
+    padding: 25px 30px;
+    margin: 25px auto;
+    width: 80%;
+    max-width: 850px;
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(4px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
+}
+.container h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
 
 </style>
 
@@ -1535,7 +1556,11 @@ resultsContainer.innerHTML = '';
         if (!sectionsMap[problem.section_display_name]) sectionsMap[problem.section_display_name] = [];
         sectionsMap[problem.section_display_name].push(problem);
     });
-    
+    const numberof_Problems = document.createElement('div');
+    const problemCount = matchingProblems.length;
+    numberof_Problems.className = "container";
+    numberof_Problems.innerHTML = `<h1>Number of problems with matching tags: ${problemCount}</h1>`;
+    resultsContainer.appendChild(numberof_Problems);
     for (const sectionName in sectionsMap) {
         const problems = sectionsMap[sectionName];
         const sectionContainer = document.createElement('div');
@@ -1664,7 +1689,11 @@ problemLink.addEventListener('click', () => {
         if (!sectionsMap[problem.section_display_name]) sectionsMap[problem.section_display_name] = [];
         sectionsMap[problem.section_display_name].push(problem);
     });
-    
+        const numberof_Problems = document.createElement('div');
+    const problemCount = matchingProblems.length;
+    numberof_Problems.className = "container";
+    numberof_Problems.innerHTML = `<h1>Number of problems with matching tags: ${problemCount}</h1>`;
+    resultsContainer.appendChild(numberof_Problems);
     for (const sectionName in sectionsMap) {
         const problems = sectionsMap[sectionName];
         const sectionContainer = document.createElement('div');
