@@ -78,7 +78,7 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Hard",
-    "problemTags": ["Feuerbach point", "A-Humpty point", "incircle/incenter", "orthocenter", "parallelism"],
+    "problemTags": ["Feuerbach point", "A-Humpty point", "incircle/incenter", "orthocenter", "circles intersection"],
     "methodTags": ["angle chasing", "radical axis", "power of a point", "harmonic conjugate", "special points construction", "homothety", "pole and polar", "La Hire theorem"]
   },
   {
