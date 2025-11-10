@@ -14,6 +14,18 @@
 
     <a href="index.html" class="home-button">Home</a>
     <a id="extra-button" class="extra-button">Show techniques used</a>
+        <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
     <div class = "title-container">
     <h1>Vector</h1>
     </div>
@@ -22,14 +34,12 @@
 <p class="centered-text">In problems that require proving collinearity or parallelism and involve special points, we use vector tools as well as the known isotomic conjugates of these points to handle them.</p>
 </div>
 
-<div class="container">
         <div class="container">
         <h2 class="bold-text">Example from a problem I solved</h2>
         <div class="problem-box" id = "illustrate_vector">		
         <div class="problem-title">Illustrative Problem</div>
 	   <div class="problem-tag hardness-hard">Hard</div>
-     
-       </div>
+
         <div class="problem-content">
             (Source: Vietnamese Euclidean Geometry Facebook group, collected by <a href="https://web.facebook.com/groups/205466756603509/user/100007955232157" target="_blank" style =  "color: white">Khương Nguyễn</a>)
             Given a triangle \(ABC\) inscribed in circle \((O)\) with orthocenter \(H\). Let \(L\) be the <i>Lemoine</i> point. Let \(T\) be the isotomic conjugate of \(L\). Prove that \(HT \parallel OL\).
@@ -40,102 +50,15 @@
         </div>
     </div>
     </div>
-
-
-    <p class="bold-text">Solution:</p>
-    <h2>Lemma</h2>
-    <p>Given a triangle <span class="math">ABC</span> with cevian triangle <span class="math">DEF</span> of an arbitrary point <span class="math">Q</span> with respect to <span class="math">ABC</span>. Then:</p>
-    <p class="math">\( \overrightarrow{u} = \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
-    <p>is parallel to <span class="math">\( \overrightarrow{QQ^*} \)</span>, where <span class="math">Q^*</span> is the isotomic conjugate of <span class="math">Q</span> with respect to triangle <span class="math">ABC</span>.</p>
-    <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/hinh1baiminhhoavecto.png?v=1739728583341" alt="Solution illustration 1" class="problem-image">
-    <h2>Proof</h2>
-    <p>Let <span class="math">\(Q(a,b,c)\)</span>, then:</p>
-    <p class="math">\(DB/DC = b/c.\)</p>
-    <p>Let <span class="math">\(AQ^*\)</span> intersect <span class="math">\(BC\)</span> at <span class="math">\(D'\)</span>, then <span class="math">\(\dfrac{D'B}{D'C} = \dfrac{c}{b}\)</span>, hence <span class="math">\(Q^*(1/a,1/b,1/c)\)</span>.</p>
-
-    <p>We have:</p>
-    <p class="math">\( \overrightarrow{u} = \overrightarrow{QD} + \overrightarrow{QE} + \overrightarrow{QF} - (\overrightarrow{QA} + \overrightarrow{QB} + \overrightarrow{QC}) \)</p>
-    <p class="math">\( = \sum \left( \frac{b}{b+c} \overrightarrow{QB} + \frac{c}{b+c} \overrightarrow{QC} \right) - \sum \overrightarrow{QA} \)</p>
-    <p class="math">\( = \sum \left( \frac{a}{a+b} + \frac{a}{a+c} - 1 \right) \overrightarrow{QA} \)</p>
-    <p class="math">\( = \frac{1}{(a+b)(b+c)(c+a)} \sum (a^2 - bc)(b+c) \overrightarrow{QA} \quad (1) \)</p>
-
-    <p>We also have:</p>
-    <p class="math">\( \sum (a^2 - bc)(b+c) \overrightarrow{QA} = a(ab+bc+ca) \overrightarrow{QA} - bc(a+b+c) \overrightarrow{QA} \)</p>
-    <p class="math">\( = (ab+bc+ca) \sum a \overrightarrow{QA} - (a+b+c) \sum bc \overrightarrow{QA} \)</p>
-    <p class="math">\( = -(a+b+c) \sum bc \overrightarrow{QA} \quad (2) \)</p>
-
-    <p>From (1) and (2), we deduce:</p>
-    <p class="math">\( \overrightarrow{u} \parallel \sum bc \overrightarrow{QA} \)</p>
-
-    <p>Moreover, we have:</p>
-    <p class="math">\( \left( \frac{1}{a} + \frac{1}{b} + \frac{1}{c} \right) \overrightarrow{QQ^*} = \sum \frac{1}{a} \overrightarrow{AQ^*} + \sum \frac{1}{a} \overrightarrow{QA} \)</p>
-    <p class="math">\( = \frac{1}{abc} \sum bc \overrightarrow{QA} \)</p>
-
-    <p>Hence:</p>
-    <p class="math">\( \overrightarrow{QQ^*} \parallel \sum bc \overrightarrow{QA} \parallel \overrightarrow{u} \)</p>
-    <p>Thus, the statement is proved.</p>
-
-    <p>Back to the problem:</p>
-    <img src="https://cdn.glitch.global/cdbdf310-1a0b-4f89-b891-b9398c5e11d6/hinh2baiminhhoavecto.png?v=1739728700860" alt="Solution illustration 2" class="problem-image">
-    <p>Let <span class="math">MNQ</span> be the median triangle of <span class="math">ABC</span>, then <span class="math">ML</span> bisects the altitude. Similarly, <span class="math">L</span> is the isotomic conjugate of <span class="math">O</span> with respect to <span class="math">MNQ</span>. Since <span class="math">O</span> is the orthocenter of triangle <span class="math">ABC</span>, we have:</p>
-    <p class="math">\(OL \parallel HH^*\)</p>
-    <p>where <span class="math">H^*</span> is the isotomic conjugate of <span class="math">H</span> with respect to <span class="math">ABC</span>. We prove that <span class="math">H, T, H^*</span> are collinear. We have:</p>
-    <p class="math">\( \overrightarrow{HH^*} \parallel \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
-    <p>with <span class="math">AD, BE, CF</span> being the altitudes. Therefore, we prove:</p>
-    <p class="math">\( \overrightarrow{HT} \parallel \overrightarrow{u} = \overrightarrow{AD} + \overrightarrow{BE} + \overrightarrow{CF} \)</p>
-    <p>Next, we have:</p>
-    <p class="math"> \(L(a^2, b^2, c^2) \Rightarrow T(1/a^2, 1/b^2, 1/c^2)\)</p>
-    <p class="math">\( \overrightarrow{HT} = \overrightarrow{HA} + \overrightarrow{AT} \)</p>
-    <p>Leading to:</p>
-    <p>
-        \( \overrightarrow{HT} \left( \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} \right) = \sum \frac{\overrightarrow{AT}}{a^2} + \sum \frac{\overrightarrow{HA}}{a^2} = \sum \frac{\overrightarrow{HA}}{a^2} \)
-    </p>
-    <p>
-        \( = \sum \frac{\cos B \cos C \cdot bc}{(a^2+c^2-b^2)(a^2+b^2-c^2)} \overrightarrow{HA} \)
-    </p>
-    <p>
-        \( = \frac{1}{(a^2+c^2-b^2)(a^2+b^2-c^2)(b^2+c^2-a^2)} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
-    </p>
-    <p>
-        \( \frac{AH}{R} = \frac{2OM}{R} = 2\cos A, \quad \frac{AD}{AH} = \frac{S}{a \cdot AH} = \frac{S}{2aR \cos A} \)
-    </p>
-    <p>
-        \( \sum \overrightarrow{AD} = \frac{S}{2R} \sum \frac{\overrightarrow{AH}}{a \cos A} = \frac{S}{R \cos A \cos B \cos C \cdot abc} \sum \cos B \cos C \cdot bc \overrightarrow{AH} \)
-    </p>
-    <p>
-        \( = \frac{S}{R} (a^2+b^2+c^2) \cos A \cos B \cos C \cdot abc \sum \cos B \cos C \cdot bc \cdot (a^2+b^2+c^2) \overrightarrow{AH} \)
-    </p>
-    <p>
-        \( H (\cos B \cos C, \cos A \cos C, \cos B \cos A) \Rightarrow \sum \cos B \cos C \overrightarrow{AH} = 0 \)
-    </p>
-    <p>
-        \( \sum \cos B \cos C \cdot 2abc (a+b+c) \overrightarrow{HA} = 0 \)
-    </p>
-    <p>
-        \( x = \frac{1}{(a^2+c^2-b^2)(a^2+b^2-c^2)(b^2+c^2-a^2)}, \quad y = \frac{S}{R} (a^2+b^2+c^2) \cos A \cos B \cos C \cdot abc, \quad z = \frac{1}{a^2} + \frac{1}{b^2} + \frac{1}{c^2} \)
-    </p>
-    <p>
-        \( \overrightarrow{HT} \cdot z = x \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
-    </p>
-    <p>
-        \( \overrightarrow{HT} = \frac{x}{z} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} \)
-    </p>
-    <p>
-        \( = \frac{x}{z} \left( \sum \cos B \cos C \cdot bc \cdot (b^2+c^2-a^2) \overrightarrow{HA} + \sum \cos B \cos C \cdot 2abc (a+b+c) \overrightarrow{HA} \right) \)
-    </p>
-    <p>
-        \( = \frac{x}{z} \sum \cos B \cos C \cdot bc \cdot (b^2+c^2+a^2) \)
-    </p>
-    <p>
-        \( \overrightarrow{u} = y \sum \cos B \cos C \cdot bc \overrightarrow{AH} \)
-    </p>
-    <p>
-        \( \overrightarrow{u} = \frac{y \cdot z}{x} (a^2+b^2+c^2) \overrightarrow{HT} \)
-    </p>
-    <p class="math">\( \overrightarrow{HT} \parallel \overrightarrow{u} \)</p>
-    <p>Thus, <span class="math">\( \overrightarrow{HT} \parallel \overrightarrow{HH^*}\)</span>, from which we prove the desired result.</p>
-
-          
+</div>
+<div class = "container" style = "width: 100%; max-width: 1000px;">
+    <h2>Solution:</h2>
+    <iframe 
+  src="vectorProblem_solution.pdf"
+  width="100%"
+  height="800px"
+  style="border:none; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.1);">
+</iframe>
           
 
     

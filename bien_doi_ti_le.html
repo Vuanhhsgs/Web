@@ -14,6 +14,18 @@
 
     <a href="index.html" class="home-button">Home</a>
     <a id="extra-button" class="extra-button">Show techniques used</a>
+        <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
     <div class = "title-container">
     <h1>Ratio Chasing</h1>
     </div>
@@ -49,109 +61,18 @@
         </div>
     </div>
     </div>
-        <p class="bold-text">Solution:</p>
-        <p>
-          <img src="ratio_solvepic1.png" alt="Figure 1" class="problem-image">
-          <p>By simple angle chasing: Let \( M \) be the midpoint of \( BC \), then \( M \) is the orthocenter of \( \triangle AEF \).  
-       Therefore, the midpoint \( N \) of \( EF \) is also the midpoint of \( MK \).  
-       Let \( U, V \) be the projection of \( M \) on \( AB, AC \), and let \( UV \) cut \( BC \) at \( T \).  
-       Since \( A, M, U, D, V \) lie on the circle with diameter \( AM \), we easily get that \( T \) lies on the radical axis of \( (EF) \) and the Euler circle.</p>
+     </div>
+<div class = "container" style = "width: 100%; max-width: 1000px;">
+    <h2>Solution:</h2>
+    <iframe 
+  src="ratiochasingProblem_solution.pdf"
+  width="100%"
+  height="800px"
+  style="border:none; border-radius:12px; box-shadow:0 0 20px rgba(255,255,255,0.1);">
+</iframe>
+          
 
-    <p>Let \( E', F' \) be the projections of \( B, C \) on \( AC, AB \), and let \( Q \) be the midpoint of \( AH \).  
-       Let \( I \) be the midpoint of \( MQ \).  
-       We get that \( I \) is the center of the Euler circle.  
-       Let \( KH \) cut \( MQ \) at \( S \).  
-       We can easily prove that  
-       \[
-       \frac{SQ}{SM} = \frac{HQ}{MK} = \frac{E'Q^2}{E'M^2}
-       \]
-       Therefore, \( SE' \) is the tangent at \( E' \) of \( (I) \),  
-       so the polar of \( E'F' \) with respect to \( (I) \) lies on \( KH \).  
-       Therefore, the polar of \( KH \) with respect to \( (I) \) lies on \( E'F' \).  
-       We call it \( W \).</p>
     
-    <p>Proving the problem is equivalent to proving that the pole of \( XY \) with respect to \( (I) \) lies on \( KH \),  
-       which is equivalent to proving that the pole of \( KH \) with respect to \( (I) \), which is \( W \),  
-       lies on \( XY \), which is the radical axis of \( (EF) \) and \( (I) \).  
-       Since \( T \) lies on the radical axis of \( (EF) \) and \( (I) \),  
-       we need to prove \( TW \perp NI \) and since \( NI \parallel KQ \),  
-       we will prove \( TW \perp KQ \).</p>
-    <p> Here, we have reduced the problem to proving that two lines are perpendicular, so we can consider handling it using ratio chasing:</p>
-    <p>Let \( E'F' \) cut \( BC \) at \( G \).  
-       Since \( TG \perp MK \) and \( GW \perp MQ \),  
-       to prove \( TW \perp KQ \), we will prove \( \triangle GWT \sim \triangle MQK \),  
-       or equivalently, we will prove  
-       \[
-       \frac{GW}{GT} = \frac{MQ}{MK} \quad (*).
-       \]
-    </p>
-      
-      <img src="ratio_solvepic2.png" alt="Figure 2" class="problem-image">
-
-    <p>Let \( Z \) be the midpoint of \( E'F' \).  
-       Since \( UZVM \) is a parallelogram, \( UV \) bisects \( MZ \).  
-       Let \( UV \) cut \( E'F' \) at \( J \).  
-       Applying Menelaus’ theorem to \( \triangle ZGM \) with \( \overline{T, J, L} \),  
-       we get  
-       \[
-       \frac{TG}{TM} = \frac{JG}{JZ}.
-       \]
-       Since \( UV \perp AK \), by angle chasing, we get \( \triangle LZJ \sim \triangle MDA \).  
-       Let \( P \) be the midpoint of \( AD \),  
-       then \( \triangle MZJ \sim \triangle MDP \).  
-       Let \( AH \) cut \( E'F' \) at \( X \), we get \( (AX, HD) = -1 \).  
-       Then \( \triangle MZG \sim \triangle MDQ \), therefore  
-       \[
-       \frac{DP}{DQ} = \frac{ZJ}{ZG}.
-       \]
-       So,  
-       \[
-       \frac{TG}{TM} = \frac{JG}{JZ} = \frac{PQ}{PD} = \frac{PQ}{PA} \Longleftrightarrow \frac{GT}{GM} = \frac{QP}{QA} = \frac{HD}{2QA} \quad (1).
-       \]
-    </p>
-
-    <p>A well-known lemma states that:  
-       Let \( AM \) cut \( OD \) at \( R \),  
-       then \( R \) lies on the radical axis of \( (BOC) \) and \( (I) \).  
-       Since we can easily prove \( G \) lies on the radical axis of these two circles,  
-       \(GR\) is perpendicular to the line connecting centers of these two circles that are the midpoint of \( OH, OK\), which is parallel to HK, we get That
-        \( KH \perp GR \), and so \( IW \parallel GR \).  
-       Let \( AH \) cut \( E'F' \) at \( X \), we get \( (AX, HD) = -1 \).  
-       Applying Desargues’ theorem for \( \triangle ODQ \) and \( \triangle MAH \)  
-       with \( OM \parallel AD \parallel HQ \), we get \( X, I, R \) are collinear.  
-       Therefore,  
-       \[
-       \frac{GW}{GX} = \frac{RI}{RX}.
-       \]
-       Applying Menelaus' theorem for \( \triangle QXI \) with \( \overline{A, R, M} \),  
-       we get  
-       \[
-       \frac{RI}{RX} \cdot \frac{AX}{AQ} \cdot \frac{MQ}{MI} = 1.
-       \]
-       This implies  
-       \[
-       \frac{GW}{GX} = \frac{RI}{RX} = \frac{AQ}{2AX} = \frac{DQ}{2DA} \quad (2).
-       \]
-    </p>
-
-    <p>From \( (1) \) and \( (2) \), combined, we get  
-       \[
-       \frac{GW}{GT} = \frac{GW}{GX} \cdot \frac{GM}{GT} \cdot \frac{GX}{GM} = \frac{DQ}{2DA} \cdot \frac{2QA}{HD} \cdot \frac{XD}{ZM}.
-       \]
-       Therefore, from \( (*) \), we need to prove  
-       \[
-       \frac{MQ}{MK} = \frac{GW}{GT} = \frac{QA.QD}{DA.DH} \cdot \frac{XD}{ZM} = \frac{QA.QD}{DX.DQ} \cdot \frac{XD}{ZM} = \frac{QA}{ZM}.
-       \]
-       This is true since  
-       \[
-       \frac{QA}{QM} = \frac{QZ}{QA} = \frac{MZ}{MK}.
-       \]
-       Hence, the problem is solved.
-    </p>
-      
-      
-      
-      </p>
     </div>
 
     <div class="container">

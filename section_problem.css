@@ -127,6 +127,78 @@
     background-color: #333;
     box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
 }
+/* === SIDE NAVIGATION BUTTON === */
+.side-nav {
+    position: fixed;
+    left: 10px;
+     top: 130px;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99;
+}
+
+/* Main button */
+.main-nav-btn {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav-btn:hover {
+    background-color: #333;
+    box-shadow: 0px 6px 10px rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+/* Submenu hidden initially */
+.nav-submenu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Activated state controlled by JS */
+.side-nav.active .nav-submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Submenu links */
+.nav-submenu a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    margin-top: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.nav-submenu a:hover {
+    background-color: #333;
+    box-shadow: 0px 8px 12px rgba(255,255,255,0.4);
+    transform: translateX(6px);
+}
 
 
 /* Ensure no parent is creating stacking context that breaks fixed positioning */
