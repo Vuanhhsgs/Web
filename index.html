@@ -1662,7 +1662,9 @@ problemLink.addEventListener('click', () => {
                 const imgElement = problemBox.querySelector("img.problem-image");
                   const imgClone = imgElement.cloneNode(true);
                   problemImage.appendChild(imgClone);
-                problemContent.innerHTML = contentDiv.textContent.trim();
+                let contentText = contentDiv.textContent.trim();
+                contentText = contentText.replace("Try It Yourself", "");
+                problemContent.innerHTML = contentText;
                  if (window.MathJax) {
       MathJax.typesetPromise([problemContent]);
     }
@@ -1783,7 +1785,9 @@ problemLink.addEventListener('click', () => {
                 const imgElement = problemBox.querySelector("img.problem-image");
                   const imgClone = imgElement.cloneNode(true);
                   problemImage.appendChild(imgClone);
-                problemContent.innerHTML = contentDiv.textContent.trim();
+                let contentText = contentDiv.textContent.trim();
+                contentText = contentText.replace("Try It Yourself", "");
+                problemContent.innerHTML = contentText;
                  if (window.MathJax) {
       MathJax.typesetPromise([problemContent]);
     }
