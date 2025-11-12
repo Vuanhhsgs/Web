@@ -41,6 +41,79 @@
             box-shadow: 0px 6px 10px rgba(255, 255, 255, 0.4);
         }
 
+/* === SIDE NAVIGATION BUTTON === */
+.side-nav {
+    position: fixed;
+    left: 10px;
+    top: 70px;
+    transform: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 99;
+}
+
+/* Main button */
+.main-nav-btn {
+    background-color: black;
+    color: white;
+    padding: 12px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.main-nav-btn:hover {
+    background-color: #333;
+    box-shadow: 0px 6px 10px rgba(255,255,255,0.4);
+    transform: translateY(-2px);
+}
+
+/* Submenu hidden initially */
+.nav-submenu {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-6px);
+    transition:
+        opacity 0.45s cubic-bezier(0.23, 1, 0.32, 1),
+        transform 0.45s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* Activated state controlled by JS */
+.side-nav.active .nav-submenu {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+
+/* Submenu links */
+.nav-submenu a {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    padding: 10px 18px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 6px rgba(255,255,255,0.3);
+    margin-top: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.nav-submenu a:hover {
+    background-color: #333;
+    box-shadow: 0px 8px 12px rgba(255,255,255,0.4);
+    transform: translateX(6px);
+}
+
         /* Center card */
         .container {
             width: 90%;
@@ -137,6 +210,19 @@ html::-webkit-scrollbar-thumb:hover {
 </head>
 <body>
      <a href="index.html" class="home-button">Home</a>
+     <div class="side-nav">
+  <div class="main-nav-btn">Navigate</div>
+
+  <div class="nav-submenu">
+    <a href="dethi.html">Problems from Exams</a>
+    <a href="baitapAoPs.html">Problems from AoPS Forum</a>
+    <a href="group_hinhhocphang.html">Problems from Vietnamese Geometry Forum</a>
+    <a href="nghich_dao.html">Inversion Problems</a>
+    <a href="bien_doi_ti_le.html">Ratio Chasing Problems</a>
+    <a href="vector.html">Vectors Problems</a>
+  </div>
+</div>
+
 
     <div class="container">
 
@@ -175,6 +261,20 @@ html::-webkit-scrollbar-thumb:hover {
 
         </div>
     </div>
+
+<script>const sideNav = document.querySelector('.side-nav');
+const mainBtn = document.querySelector('.main-nav-btn');
+
+// Add "active" class on first hover
+mainBtn.addEventListener('mouseenter', () => {
+    sideNav.classList.add('active');
+});
+
+// Optional: remove "active" when leaving the button + submenu area
+sideNav.addEventListener('mouseleave', () => {
+    sideNav.classList.remove('active');
+});
+</script>
 </body>
 </html>
 
