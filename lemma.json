@@ -1,0 +1,120 @@
+{
+  "loigiaivectorbai3": {},
+  "loigiaidethibai4": {},
+  "loigiaidethibai10": {
+    "Lemma1": "textbf{Lemma:} $K$ is the pole of $d$ with respect to $(I)$ — this is a well-known result."
+  },
+  "loigiaiaopsbai6": {},
+  "loigiaidethibai6": {},
+  "loigiainghichdaobai2": {},
+  "loigiaibdtlbai5": {},
+  "loigiaihhpbai8": {
+    "Lemma1": "Lemma: triangle $ABC$ with $P,Q$ on $AB,AC$ respectively. Let $BQ$ cut $CP$ at $R$. Then $R$ lies on $(APQ)$ if and only if $P(M,(APQ)) = MB^2$."
+  },
+  "loigiainghichdaobai6": {
+    "Lemma1": "Consider triangle $ABC$ have $AQ', AR'$ are isogonal wrt $angle BAC$, $I$ is the intersection of $BQ'$ and $CR'$, $J$ is the intersection of $BR'$ and $CQ'$"
+  },
+  "loigiaihhpbai10": {},
+  "loigiaiaopsbai11": {},
+  "loigiaiaopsbai7": {
+    "Lemma1": "Lemma: Let $ABCD$ be a quadrilateral inscribed in $(O)$ such that $AD parallel BC$, $E$ be an arbitrary point lies on the line connecting the midpoint of $AB$ and $CD$. The line from $E$ perpendicular to $OE$ cut $AB,CD$ at $UV$. Prove that $E$ is the midpoint of $UV$."
+  },
+  "loigiaidethibai8": {},
+  "loigiaidethibai5": {},
+  "loigiaihhpbai7": {},
+  "loigiaivectorbai5": {},
+  "loigiaivectorbai2": {},
+  "loigiaidethibai9": {
+    "Lemma1": "We will prove separately as a lemma: Let the acute, scalene triangle $ABC$ be inscribed in circle $(O)$. The incircle $(I)$ of triangle $ABC$ touches sides $BC, CA, AB$ at $D, E, F$, respectively. Let $R$ be the midpoint of $BC$, the ray $EF$ meets $(O)$ again at $M$, the ray $FE$ meets $(O)$ again at $N$, $MD$ meets $(O)$ at $W$, and $NR$ meets $(O)$ at $L$. Prove that $dfrac{ML}{MW} = dfrac{R}{R+r}$"
+  },
+  "loigiaiaopsbai10": {},
+  "loigiaihhpbai13": {
+    "Lemma1": "Draw the diameter $AA'$ of $(O)$, then the familiar result $G, O_a, A'$ and the midpoint of $DO$ are collinear",
+      },
+  "loigiainghichdaobai4": {
+    "Lemma1": "ERIQ lemma: Let $ABCD$ be a quadrilateral, and let $E$ be a point on $AB$, $F$ be a point on $CD$.\nLet $X$ be a point on $AB$, $Y$ a point on $CD$, and $Z$ a point on $EF$ such that\n$dfrac{AX}{XD} = dfrac{BY}{YC} = dfrac{EZ}{ZF}.$\nThen the points $X, Y, Z$ are collinear.",
+    "Lemma2": "Lemma: Let triangle $ABC$ have orthocenter $H$, and let $X, Y$ be arbitrary points such that $A, X, Y$ are collinear, $angle BHX = angle CHY = 90^circ$. Let $BX$ intersect $CY$ at $Z$, let $M$ be the midpoint of $ZH$, and let $MA$ intersect $(BHC)$ at $N$. Then $ZH$ is tangent to $(AHN)$"
+  },
+  "loigiaihhpbai14": {},
+  "loigiaibdtlbai3": {},
+  "loigiainghichdaobai5": {
+    "Lemma1": "Lemma: Let $ABC$ be a triangle with incenter $(I)$, a circle pass through $B,C$ tangents to $(I)$ at $L$, $AL$ cut $(BLC)$ at $P$. Let $(I)$ touch $BC$ at $D$; $U,V$ be the midpoint of arc $BC$ not contain $L$ and contain $L$ respectively.\nThen: $LIDP$ are cyclic, $L,D,U$ and $P,I,V$ are collinear"
+  },
+  "loigiaibdtlbai2": {},
+  "loigiainghichdaobai3": {
+    "Lemma1": "Since $DD'$ be a diameter of $(I)$; we have the familiar result that $AD', AK$ are isogonal $W.R.T$ $angle BAC$"
+  },
+  "loigiaihhpbai3": {},
+  "loigiaidethibai13": {},
+  "loigiaihhpbai11": {
+    "Lemma1": "Moreover, the familiar result: $OI$ intersects $BC$ at $W$, $A^*$ is the reflection of $A$ across $I$, then $X, A^*, W$ are collinear and $OI$ is tangent to $(IXA^*)$\nHence $angle QXA^* = angle OIN$",
+    "Lemma2": "$overrightarrow{ANa} = 2 cdot overrightarrow{IM}$"
+  },
+  "loigiaihhpbai12": {
+    "Lemma1": "Lemma 1: Triangle $ABC$ is inscribed in $(O)$ with $K$ as the orthocenter of $triangle BOC$, and $H$ as the orthocenter of $triangle ABC$\nLet the line through $A$ perpendicular to $OH$ be $Ax$, then\n$(AK, Ax, AB, AC) = -1$",
+    "Lemma2": "Lemma 2: Triangle $ABC$ is inscribed in $(O)$ and circumscribed about $(I)$, with $BI, CI$ intersecting $AB, AC$ at $X, Y$\n$(I)$ touches $BC, CA, AB$ at $D, E, F$; $EF$ intersects $XY$ at $Z$, then $I(ZO, BC) = -1$",
+  }, 
+  "loigiaihhpbai4": {
+    "Lemma1": "Lemma: Given tangential quadrilateral $ABCD$ with $(I)$ being its incircle.\nLet $AD$ cut $BC$ at $E$, $AB$ cut $CD$ at $F$, let $G$ be the Miquel point of the complete quadrilateral $ABCD.EF$ then $GI$ is the angle bisector of $EGF$",
+    "Lemma2": "Then it is a common result that $P'J$ is the angle bisector of $angle BP'C$"
+  },
+  "loigiaidethibai7": {
+    "Lemma1": "Lemma 1: Let triangle $ABC$ be circumscribed about the incircle $(I)$. The $A$-mixcircle is tangent to $AC, AB, (O)$ at points $E, F, U$, respectively. Let $BE$ and $CF$ intersect at $G$. Then lines $AG, UI, BC$ are concurrent.",
+    "Lemma2": "Lemma 2: Let triangle $ABC$ be circumscribed about the incircle $(I)$. The incircle $(I)$ is tangent to $BC, CA, AB$ at $D, E, F$, respectively. Let $BE$ and $CF$ intersect at $G_e$. Let $N$ be the point on $(I)$ such that the circle $(BNC)$ is tangent to $(I)$ at $N$. Prove that lines $ND, G_eM, EF$ are concurrent",
+    "Lemma3": "It is a well-known result that if $DI$ intersects $EF$ at $L$, then points $A, L, M$ are collinear",
+    "Lemma4": "We have a well-known result regarding tangential quadrilaterals:\nthe lines $AC, BD, XZ, YT$ are concurrent at $G$, and\n[\ndfrac{GA}{GC} = dfrac{AX}{CZ} = dfrac{AT}{CZ},",
+
+  },
+  "loigiaiaopsbai2": {},
+  "loigiaibdtlbai1": {
+    "Lemma1": "Lemma : Let $ABC$ be a triangle with circumcircle $(O)$, $H$ be an arbitrary point that lies on the line from $A$ perpendicular to $BC$. Let $AH, AO$ cut $(O)$ at $D, A'$, $HJ$ be the diameter of $(BHC)$,  $E$ be the midpoint of $HA'$, $JA'$ cut $(O)$ at $K$, $EK$ cut $BC$ at $L$, $JL$ cut $A'D$ at $W$; $I$ be an arbitrary point that lies on the line from $E$ parallel to $BC$. Let $X,Y$ be the points lies on $AB, AC$ such that $IX, IY$ is parallel to $HB, HC$ respectively. Prove that $W$ lies on the radical axis of $(X,XB)$ and $(Y,YC)$"
+  },
+  "loigiaivectorbai1": {},
+  "ratiochasingProblem_solution": {
+    "Lemma1": "A well-known lemma states that:\nLet $AM$ cut $OD$ at $R$,\nthen $R$ lies on the radical axis of $(BOC)$ and $(I)$.\nSince we can easily prove $G$ lies on the radical axis of these two circles,"
+  },
+  "loigiaidethibai1": {
+    "Lemma1": "Lemma: $ABC$, $P,Q$ be two arbitrary points. Let $BP$ cut $CQ$ at $X$, $BQ$ cut $CP$ at $Y$. Then $AP,AQ$ are reflections through the angle bisector of $angle BAC$ if and only if $AX,AY$ are reflections through the angle bisector of $angle BAC$.\nProof:\nAssume that $AP, AQ$ are reflections across the angle bisector of $angle BAC$.\nLet $BP, BQ$ intersect $AC$ at $K, L$, respectively."
+  },
+  "loigiaiaopsbai3": {},
+  "loigiaiaopsbai5": {},
+  "loigiaibdtlbai6": {},
+  "loigiaibdtlbai4": {},
+  "vectorProblem_solution": {
+    "Lemma1": "textbf{Lemma.}\nGiven a triangle $ABC$ with cevian triangle $DEF$ of an arbitrary point $Q$ with respect to $ABC$. Then:\n$$ overrightarrow{u} = overrightarrow{AD} + overrightarrow{BE} + overrightarrow{CF} $$\nis parallel to $overrightarrow{QQ^*}$, where $Q^*$ is the isotomic conjugate of $Q$ with respect to triangle $ABC$."
+  },
+  "loigiaiaopsbai4": {
+    "Lemma1": "Lemma: Let $ABC$ be a triangle with incenter $I$, $DEF$ be the pedal triangle of $I$ wrt $ABC$, $K$ be the Kosnita point of $DEF$\nthen $IK$ is parallel to the euler line of the orthic triangle of $DEF$."
+  },
+  "loigiaivectorbai4": {
+    "Lemma1": "textbf{Lemma.}\nLet $I(x, y, z)$ be the barycentric coordinates of a point $I$ with respect to $triangle ABC$, and let $a, b, c$ be the side lengths opposite $A, B, C$, respectively.\nThen, if $I'$ and $I^*$ are the isogonal and isotomic conjugates of $I$ with respect to $triangle ABC$, their barycentric coordinates are\n$I^*left(dfrac{1}{x}, dfrac{1}{y}, dfrac{1}{z}right)$ and $I'left(dfrac{a^2}{x}, dfrac{b^2}{y}, dfrac{c^2}{z}right)$, respectively."
+  },
+  "loigiaiaopsbai9": {
+    "Lemma1": "We will prove the following lemma: Let $ABC$ be a triangle with an arbitrary point $D$ lies inside $ABC$. Let tangents at $A,B$ of $(DAB)$ intersects at $X$, tangents at $A,C$ of $(DAC)$ intersects at $Y$, $P,Q$ be the Lemoine point of $DAB, DAC$ respectively. Prove that: the tangent at $A$ of $(ABC)$, $PQ, XY$ concurrent at a point"
+  },
+  "loigiaihhpbai9": {
+    "Lemma1": "Lemma: Given triangle $ABC$, Let $D$ be the point symmetric to the intersection of the two tangents at $B$ and $C$ of $(O)$ across $BC$, $M$ be the midpoint of $BC$, and $W$ lie on $(O)$ such that $AW perp OH$. Then: $angle AWM + 90^circ = angle ADM$."
+  },
+  "loigiaidethibai2": {},
+  "loigiaidethibai11": {},
+  "loigiaidethibai12": {},
+  "loigiainghichdaobai1": {},
+  "loigiaiaopsbai1": {
+    "Lemma1": "Lemma: Given circle $(O)$, Let $B,C, D, N, P, Q$ be arbitrary points lies on $(O)$ such that $CQ, BM, PD$ are concurrent at a point $S$ ($Q$ near $S$ than $C$, $D$ near $S$ than $P$, $B$ near $S$ than $M$. Let $PQ$ cut $CD$ at $G$, $GB, GM$ cut $(O)$ at $A, N$ respectively. Prove that: $(AB, CD) = (MN, PQ)$"
+  },
+  "loigiaihhpbai2": {
+    "Lemma1": "textbf{Lemma 1}: In triangle $triangle ABC$ with orthocenter $H$, let $H'$ be the isotomic conjugate of $H$ with respect to $ABC$, and let $N_a$, $G_e$ be the Nagel point and Gergonne point of $triangle ABC$, respectively.\ntextbf{1.1}: Prove that $overline{H', N_a, G_e}$ ",
+    "Lemma2": "Then $L$ is the isotomic conjugate of the orthocenter of $triangle ABC$, and since $I$ is the Nagel point of $triangle ABC$, by Lemma 1.1 we have $overline{I, G_e, L}$.",
+    "Lemma4": "textbf{Lemma 2}: $triangle ABC$ is inscribed in $(O)$ with orthocenter $H$. Let $H'$ and $O'$ be the isotomic conjugates of $H$ and $O$ with respect to $triangle ABC$.\ntextbf{2.1}: $overline{H, H', O'}$ (Figure 2.1)."
+  },
+  "loigiaiaopsbai8": {
+    "Lemma1": "Lemma: Let triangle $ABC$ have arbitrary point $D,E$ lies on $AB, AC$ respectively. Construct diameter $AA'$ of $(ADE)$, let $M$ be the midpoint of $DE$. The line from $A$ perpendicular to $DE$ cut $(BC)$ at $X$ such that $X$ lies inside triangle $ABC$. Let $Y$ be the isogonal conjugate of $X$ wrt $ABC$. Prove that $XY parallel A'M$."
+     },
+  "loigiaihhpbai6": {},
+  "loigiaihhpbai1": {
+    "Lemma1": "Lemma: Let $ABC$ be a triangle, Let $P, Q$ be 2 arbitrary points such that they are isogonal conjugates $W.R.T$ $ABC$, $AP$ meets $(O)$ again at $R$, for any point arbitrary $V$ on $(O)$, $VR$ meets $BC$ at $D$, then $angle PDB = angle QVA$."
+  },
+  "loigiaihhpbai5": {
+    "Lemma1": "A well known lemma: given $(A), (B), (C)$ are 3 coaxial circles, then for every point $W$ on $(C)$,\n$dfrac{P(W,(A))}{P(W,(B))} = constant$."
+  }
+}

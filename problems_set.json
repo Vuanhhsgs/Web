@@ -5,18 +5,44 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Hard",
-    "problemTags": ["isogonal conjugates", "orthocenter", "circumcircle/circumcenter", "parallelism"],
-    "methodTags": ["angle chasing", "ratio chasing", "radical axis", "power of a point"]
+    "problemTags": [
+      "isogonal conjugates",
+      "orthocenter",
+      "circumcircle/circumcenter",
+      "parallelism"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "ratio chasing",
+      "radical axis",
+      "power of a point"
+    ],
+    "content": "(Nguyen Hoang Nam) Given triangle ABC with circumcenter O. A line through O meets AB and AC at E and F, respectively. Let H and K be the orthocenters of triangle ABC and triangle AEF, respectively. The line KH meets EF at P. Let Q be the isogonal conjugate of P with respect to triangle ABC. Prove that HQ is parallel to OP."
   },
-
   {
     "id": "vietnamese_geoforum_problem2",
     "problem_name": "Problem 2",
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Extremely Hard",
-    "problemTags": ["circumcircle/circumcenter", "symmedian-Lemoine point", "arc midpoints", "concurrency", "collinearity"],
-    "methodTags": ["geometric similarity", "cross-ratio", "ratio chasing", "law of sines", "special points construction", "geometric transformation", "homothety"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "symmedian-Lemoine point",
+      "arc midpoints",
+      "concurrency",
+      "collinearity"
+    ],
+    "methodTags": [
+      "geometric similarity",
+      "cross-ratio",
+      "ratio chasing",
+      "law of sines",
+      "special points construction",
+      "geometric transformation",
+      "homothety"
+      "arc midpoints"
+    ],
+    "content": "(Le Xuan Hoang) Let triangle ABC be inscribed in (O). Let M,N,P be the midpoints of arcs BC,CA,AB not containing A,B,C, respectively. Let AO intersect NP at X. Define Y and Z similarly. a) Prove that MX, NY, PZ are concurrent at K. b) Prove that OK passes through the Lemoine point of triangle ABC."
   },
   {
     "id": "vietnamese_geoforum_problem3",
@@ -24,8 +50,21 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Hard",
-    "problemTags": ["tangency", "symmedian-Lemoine point", "circumcircle/circumcenter", "orthocenter", "reflections"],
-    "methodTags": ["ratio chasing", "law of sines", "Menelaus-Ceva theorem", "harmonic conjugate", "special points construction"]
+    "problemTags": [
+      "tangency",
+      "symmedian-Lemoine point",
+      "circumcircle/circumcenter",
+      "orthocenter",
+      "reflections"
+    ],
+    "methodTags": [
+      "ratio chasing",
+      "law of sines",
+      "Menelaus-Ceva theorem",
+      "harmonic conjugate",
+      "special points construction"
+    ],
+    "content": "(Teacher Nguyen Van Linh) Let triangle ABC be inscribed in (O) with orthocenter H. Point X lies on segment HO such that HX = 1/2 OX. Let L be the Lemoine point of triangle ABC. The line through H parallel to the bisector of angle XLO meets the line through B parallel to AC and the line through C parallel to AB at points B1 and C1, respectively. Points B2 and C2 are the reflections of B1 over B and C1 over C, respectively. Prove that line B2C2 is tangent to the circumcircle (O)."
   },
   {
     "id": "vietnamese_geoforum_problem4",
@@ -33,8 +72,20 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Hard",
-    "problemTags": ["similar triangles", "arbitrary point", "parallelism", "isogonal lines", "angle bisectors"],
-    "methodTags": ["geometric similarity", "angle chasing", "ratio chasing", "special points construction"]
+    "problemTags": [
+      "similar triangles",
+      "arbitrary point",
+      "parallelism",
+      "isogonal lines",
+      "angle bisectors"
+    ],
+    "methodTags": [
+      "geometric similarity",
+      "angle chasing",
+      "ratio chasing",
+      "special points construction"
+    ],
+    "content": "(Teacher Nguyen Van Linh) Given triangle ABC with J being an arbitrary point on the bisector of angle A. Point P lies inside angle BJC such that triangles BPJ and JPC are similar. AK is the isogonal ray of AP with respect to angle BAC. Let M be the midpoint of BC. Prove that JM is parallel to AK."
   },
   {
     "id": "vietnamese_geoforum_problem5",
@@ -42,8 +93,21 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Hard",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "radical axis"],
-    "methodTags": ["angle chasing", "coaxial circles", "ratio chasing", "law of sines", "Menelaus-Ceva theorem", "power of a point", "butterfly theorem"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "radical axis"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "coaxial circles",
+      "ratio chasing",
+      "law of sines",
+      "Menelaus-Ceva theorem",
+      "power of a point",
+      "butterfly theorem"
+    ],
+    "content": "(Duong Nguyen)Given triangle ABC inscribed in (O) and circumscribed about (I). (I) is tangent to BC at D, and K is the reflection of D across I. Take points X, Y on the line through K parallel to BC such that angle XIY = 90 degrees. OI meets (XY) again at Z. Prove that I lies on the radical axis of (AXY) and (AOZ)."
   },
   {
     "id": "vietnamese_geoforum_problem6",
@@ -51,8 +115,18 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Easy",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "reflections"],
-    "methodTags": ["inversion", "ratio chasing", "cross-ratio", "harmonic conjugate"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "reflections"
+    ],
+    "methodTags": [
+      "inversion",
+      "ratio chasing",
+      "cross-ratio",
+      "harmonic conjugate"
+    ],
+    "content": "Let ABC be a triangle with incenter I. Let (I) be tangent to BC,AB,AC at D,E,F respectively, and let the Euler line of triangle DEF meet EF at J. Prove that the reflection of the line JA across EF passes through the midpoint of BC."
   },
   {
     "id": "vietnamese_geoforum_problem7",
@@ -60,8 +134,18 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Moderate",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "mixtilinear incircle", "tangent circles"],
-    "methodTags": ["angle chasing", "cross-ratio", "harmonic conjugate"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "mixtilinear incircle",
+      "tangent circles"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "cross-ratio",
+      "harmonic conjugate"
+    ],
+    "content": "Let ABC be a triangle inscribed in (O) and circumscribed about (I). Let T be the tangency point of the A-mixtilinear incircle of triangle ABC with (O). The line through T perpendicular to BC meets (O) again at D. Prove that the Euler circle of triangle DBC is tangent to (I)."
   },
   {
     "id": "vietnamese_geoforum_problem8",
@@ -69,8 +153,21 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Hard",
-    "problemTags": ["orthocenter", "centroid", "arbitrary point", "Euler line", "parallelism"],
-    "methodTags": ["angle chasing", "power of a point", "Pascal theorem", "special points construction", "geometric similarity"]
+    "problemTags": [
+      "orthocenter",
+      "centroid",
+      "arbitrary point",
+      "Euler line",
+      "parallelism"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "power of a point",
+      "Pascal theorem",
+      "special points construction",
+      "geometric similarity"
+    ],
+    "content": "(Teacher Nguyen Van Linh) Given triangle ABC with H,G be its orthocenter and centroid respectively. Let J be the orthocenter of triangle AHG. Let R be an arbitrary point on (AJ), and let AR cut (BRC) again at S. Prove that the Euler lines of triangle SBC and triangle ABC are parallel."
   },
   {
     "id": "vietnamese_geoforum_problem9",
@@ -78,8 +175,24 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Hard",
-    "problemTags": ["Feuerbach point", "A-Humpty point", "incircle/incenter", "orthocenter", "circles intersection"],
-    "methodTags": ["angle chasing", "radical axis", "power of a point", "harmonic conjugate", "special points construction", "homothety", "pole and polar", "La Hire theorem"]
+    "problemTags": [
+      "Feuerbach point",
+      "A-Humpty point",
+      "incircle/incenter",
+      "orthocenter",
+      "circles intersection"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "radical axis",
+      "power of a point",
+      "harmonic conjugate",
+      "special points construction",
+      "homothety",
+      "pole and polar",
+      "La Hire theorem"
+    ],
+    "content": "Let ABC be a triangle inscribed in (O) and escribed to (I), with orthocenter H. Let P be the A-Humpty point and Fe the Feuerbach point of triangle ABC. Let K be the second intersection point of (AIP) and (BHC). Prove that Fe is the midpoint of AK."
   },
   {
     "id": "vietnamese_geoforum_problem10",
@@ -87,8 +200,20 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Moderate",
-    "problemTags": ["arbitrary point", "arc midpoints", "incircle/incenter", "equal angles"],
-    "methodTags": ["angle chasing", "power of a point", "harmonic conjugate", "cross-ratio", "special points construction"]
+    "problemTags": [
+      "arbitrary point",
+      "arc midpoints",
+      "incircle/incenter",
+      "equal angles"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "power of a point",
+      "harmonic conjugate",
+      "cross-ratio",
+      "special points construction"
+    ],
+    "content": "Let ABC be a triangle. Let I be the incenter and J be the midpoint of arc BC not containing A of (ABC). Let S be an arbitrary point on the circumcircle (ABC). The line IS intersects the circle (BSC) again at P. The line through I parallel to JP meets BC at R. Prove that angle ASI = angle RSP."
   },
   {
     "id": "vietnamese_geoforum_problem11",
@@ -96,8 +221,22 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Hard",
-    "problemTags": ["circumcircle/circumcenter", "Nagel point", "mixtilinear incircle", "centroid", "symmedian line"],
-    "methodTags": ["angle chasing", "ratio chasing", "cross-ratio", "Menelaus-Ceva theorem", "special points construction", "geometric transformation"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "Nagel point",
+      "mixtilinear incircle",
+      "centroid",
+      "symmedian line"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "ratio chasing",
+      "cross-ratio",
+      "Menelaus-Ceva theorem",
+      "special points construction",
+      "geometric transformation"
+    ],
+    "content": "(Teacher Nguyen Duy Khuong) Let ABC be a triangle inscribed in (O) and escribed to (I). Let Na be the Nagel point of triangle ABC. The line ONa meets (O) again at P. Let X be the point of tangency of the A-mixtilinear incircle with (O). Let M be the midpoint of BC. The line MNa meets the line through A perpendicular to BC at S. Let G be the centroid of triangle ABC. The line SG meets XP at J. Prove that AJ is the A-symmedian of triangle ABC."
   },
   {
     "id": "vietnamese_geoforum_problem12",
@@ -105,8 +244,19 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Moderate",
-    "problemTags": ["orthocenter", "concurrency"],
-    "methodTags": ["angle chasing", "radical axis", "cross-ratio", "harmonic conjugate", "pole and polar", "La Hire theorem"]
+    "problemTags": [
+      "orthocenter",
+      "concurrency"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "radical axis",
+      "cross-ratio",
+      "harmonic conjugate",
+      "pole and polar",
+      "La Hire theorem"
+    ],
+    "content": "Let ABC be a triangle inscribed in (O) with altitudes AD, BE, CF concurrent at the orthocenter H. Let P be the intersection of DF and BE, and Q the intersection of DE and CF. Let M and N be the midpoints of BF and CE, respectively. Prove that the lines MP, NQ, and OH are concurrent."
   },
   {
     "id": "vietnamese_geoforum_problem13",
@@ -114,8 +264,23 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Hard",
-    "problemTags": ["orthocenter", "symmedian-Lemoine point", "circumcircle/circumcenter", "symmedian line", "Euler-reflection point"],
-    "methodTags": ["special points construction", "angle chasing", "ratio chasing", "homothety", "Menelaus-Ceva theorem", "geometric similarity", "geometric transformation"]
+    "problemTags": [
+      "orthocenter",
+      "symmedian-Lemoine point",
+      "circumcircle/circumcenter",
+      "symmedian line",
+      "Euler-reflection point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "angle chasing",
+      "ratio chasing",
+      "homothety",
+      "Menelaus-Ceva theorem",
+      "geometric similarity",
+      "geometric transformation"
+    ],
+    "content": "(Nguyen Duc Gia Bach  )Let triangle ABC have Euler-reflection point Eu. The line through Eu perpendicular to A Eu intersects the median from A at point X. Define points Y and Z similarly for vertices B and C. Prove that the line connecting the circumcenters of triangles XYZ and ABC passes through the Lemoine point of triangle ABC."
   },
   {
     "id": "vietnamese_geoforum_problem14",
@@ -123,8 +288,20 @@
     "section_html": "group_hinhhocphang.html",
     "section_display_name": "Vietnamese Geometry Forum",
     "difficulty": "Very Hard",
-    "problemTags": ["Euler-reflection point", "Feuerbach point", "incircle/incenter", "circumcircle/circumcenter", "Jerabek point"],
-    "methodTags": ["special points construction", "angle chasing", "homothety", "geometric transformation"]
+    "problemTags": [
+      "Euler-reflection point",
+      "Feuerbach point",
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "Jerabek point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "angle chasing",
+      "homothety",
+      "geometric transformation"
+    ],
+    "content": "(Nguyen Duc Gia Bach ) Given an acute triangle ABC inscribed in (O) with orthocenter H and incenter I. Let G be the midpoint of segment OI. Let Eu, Je, and Fe be the Euler reflection point, Jerabek point, and Feuerbach point of triangle ABC, respectively. Prove that Eu G is perpendicular to Je Fe."
   },
   {
     "id": "exam_problem1",
@@ -132,8 +309,19 @@
     "section_html": "dethi.html",
     "section_display_name": "HSGS Team Selection Test 2024",
     "difficulty": "Hard",
-    "problemTags": ["equal angles", "arbitrary point", "perpendicularity"],
-    "methodTags": ["cross-ratio", "ratio chasing", "Menelaus-Ceva theorem", "law of Sines", "Desargues theorem"]
+    "problemTags": [
+      "equal angles",
+      "arbitrary point",
+      "perpendicularity"
+    ],
+    "methodTags": [
+      "cross-ratio",
+      "ratio chasing",
+      "Menelaus-Ceva theorem",
+      "law of Sines",
+      "Desargues theorem"
+    ],
+    "content": "(P4 Day 4) Given a triangle ABC. Points E, F lie on sides AC, AB respectively, such that there exists a point P inside the triangle satisfying AP perpendicular to EF and angle BPF = angle CPE. On PE, PF, choose points M, N such that FM perpendicular to PB and EN perpendicular to PC. Let Q = BM intersection CN. Prove that PQ perpendicular to MN."
   },
   {
     "id": "exam_problem2",
@@ -141,8 +329,23 @@
     "section_html": "dethi.html",
     "section_display_name": "HSGS Team Selection Test 2024",
     "difficulty": "Hard",
-    "problemTags": ["circles intersection","orthocenter", "similar triangles", "perpendicularity", "concurrency", "symmedian line", "radical axis"],
-    "methodTags": ["power of a point", "ratio chasing", "law of Sines", "angle chasing", "spiral similarity"]
+    "problemTags": [
+      "circles intersection",
+      "orthocenter",
+      "similar triangles",
+      "perpendicularity",
+      "concurrency",
+      "symmedian line",
+      "radical axis"
+    ],
+    "methodTags": [
+      "power of a point",
+      "ratio chasing",
+      "law of Sines",
+      "angle chasing",
+      "spiral similarity"
+    ],
+    "content": "(P3 Day 3) Given a triangle ABC, take a point Y in the half-plane bounded by AC not containing B, and a point Z in the half-plane bounded by AB not containing C, such that triangle AYC = triangle BZA. Let K and L be the orthocenters of triangles BZA and AYC, respectively. (a) Prove that the circle with diameter KY and the circle with diameter LZ intersect at a point R lying on BC. (b) Prove that (AYK) and (AZL) intersect at a point lying on the A-symmedian of triangle ABC."
   },
   {
     "id": "exam_problem3",
@@ -150,8 +353,21 @@
     "section_html": "dethi.html",
     "section_display_name": "DGO – Discord Geometry Olympiad",
     "difficulty": "Hard",
-    "problemTags": ["cyclic quadrilateral", "isogonal conjugates", "Newton-Gauss line", "bisects"],
-    "methodTags": ["geometric similarity", "harmonic conjugate", "cross-ratio", "power of a point", "Pascal theorem", "homothety"]
+    "problemTags": [
+      "cyclic quadrilateral",
+      "isogonal conjugates",
+      "Newton-Gauss line",
+      "bisects"
+    ],
+    "methodTags": [
+      "geometric similarity",
+      "harmonic conjugate",
+      "cross-ratio",
+      "power of a point",
+      "Pascal theorem",
+      "homothety"
+    ],
+    "content": "(P3 DGO 2023) Let ABCD be a cyclic quadrilateral with M1,M2,M3,M4 being the midpoints of segments AB,BC,CD,DA respectively. Suppose E is the intersection of diagonals AC,BD of quadrilateral ABCD. Define E1 to be the isogonal conjugate point of point E in triangle M1 CD. Define E2,E3,E4 similarly. Suppose E1 E3 intersects E2 E4 at a point W. Prove that: The Newton-Gauss line of quadrilateral ABCD bisects segment EW."
   },
   {
     "id": "exam_problem4",
@@ -159,8 +375,18 @@
     "section_html": "dethi.html",
     "section_display_name": "DGO – Discord Geometry Olympiad",
     "difficulty": "Very Easy",
-    "problemTags": ["arbitrary point", "cyclic quadrilateral", "circumcircle/circumcenter", "collinearity"],
-    "methodTags": ["radical center", "power of a point", "angle chasing"]
+    "problemTags": [
+      "arbitrary point",
+      "cyclic quadrilateral",
+      "circumcircle/circumcenter",
+      "collinearity"
+    ],
+    "methodTags": [
+      "radical center",
+      "power of a point",
+      "angle chasing"
+    ],
+    "content": "(P4 DGO 2023) Let triangle ABC be a triangle with altitude AD, circumcircle Gamma and diameter AP of Gamma. Points U,V lie on the perpendicular bisector of BC such that B,U,C,V lie on a circle. Line AU intersects BC at K. VP intersects the circle with diameter UV again at S. Line SK intersects the circle with diameter UV again at T. Prove that: T,D,U are collinear."
   },
   {
     "id": "exam_problem5",
@@ -168,8 +394,20 @@
     "section_html": "dethi.html",
     "section_display_name": "DGO – Discord Geometry Olympiad",
     "difficulty": "Moderate",
-    "problemTags": ["A-Humpty point", "harmonic conjugate", "angle bisectors", "perpendicular bisector", "arbitrary point", "concyclic"],
-    "methodTags": ["ratio chasing", "angle chasing", "power of a point"]
+    "problemTags": [
+      "A-Humpty point",
+      "harmonic conjugate",
+      "angle bisectors",
+      "perpendicular bisector",
+      "arbitrary point",
+      "concyclic"
+    ],
+    "methodTags": [
+      "ratio chasing",
+      "angle chasing",
+      "power of a point"
+    ],
+    "content": "(P2 DGO 2023) Given triangle ABC with K being the A-Humpty point. Points X,D lie on line BC such that (XD,BC) = -1. Point W lies on the bisector of angle BAC such that XW is perpendicular to AD. The perpendicular bisector of segment WK cuts the line from point X perpendicular to the bisector of angle BAC at point P and line AD at point N. Prove that: A,P,N,K lie on a circle."
   },
   {
     "id": "exam_problem6",
@@ -177,8 +415,21 @@
     "section_html": "dethi.html",
     "section_display_name": "DGO – Discord Geometry Olympiad",
     "difficulty": "Moderate",
-    "problemTags": ["circles intersection", "arc midpoints", "harmonic conjugate", "angle bisectors", "arbitrary point", "perpendicularity", "circumcircle/circumcenter"],
-    "methodTags": ["power of a point", "angle chasing", "harmonic conjugate"]
+    "problemTags": [
+      "circles intersection",
+      "arc midpoints",
+      "harmonic conjugate",
+      "angle bisectors",
+      "arbitrary point",
+      "perpendicularity",
+      "circumcircle/circumcenter"
+    ],
+    "methodTags": [
+      "power of a point",
+      "angle chasing",
+      "harmonic conjugate"
+    ],
+    "content": "(P3 DJGO 2023) Let triangle ABC be an acute triangle with N,P being the midpoint of arc BC not containing A and the arc BC containing A of the circumcircle of triangle ABC respectively. The external bisector of angle BAC intersects BC at point S. Construct the point N* to be the reflection of point N over BC. D is an arbitrary point lying on segment BC. E is a point lying on line BC and satisfying (BC,DE) = -1. Line AE intersects the circumcircle of triangle ABC again at Z. Line PZ and BC intersects at K. Line PD intersects the circumcircle of triangle ABC again at R. The circumcircle of triangle PDK intersects the circumcircle of triangle PRN* again at L. Prove that: Lines LS and LP are perpendicular."
   },
   {
     "id": "exam_problem7",
@@ -186,8 +437,23 @@
     "section_html": "dethi.html",
     "section_display_name": "DGO – Discord Geometry Olympiad",
     "difficulty": "Hard",
-    "problemTags": ["tangential quadrilateral", "tangent circles", "circumcircle/circumcenter", "incircle/incenter", "concyclic", "assumption", "geometric construction"],
-    "methodTags": ["power of a point", "Menelaus-Ceva theorem", "harmonic conjugate", "cross-ratio", "special points construction"]
+    "problemTags": [
+      "tangential quadrilateral",
+      "tangent circles",
+      "circumcircle/circumcenter",
+      "incircle/incenter",
+      "concyclic",
+      "assumption",
+      "geometric construction"
+    ],
+    "methodTags": [
+      "power of a point",
+      "Menelaus-Ceva theorem",
+      "harmonic conjugate",
+      "cross-ratio",
+      "special points construction"
+    ],
+    "content": "(P6 DJGO 2023) Let ABCD be a convex quadrilateral. Suppose there exists a circle Omega with center I, lying inside ABCD such that AB,BC,CD,DA are tangent to Omega at X,Y,Z,T respectively. Let N,P be the midpoints of segments DC,DA. Let DX,AZ intersect at K and DY,CT intersect at L. KP intersects XZ at point U and LN intersects YT at point V. Suppose the circumcircle of triangle DAC is internally tangent to Omega. Prove that: Points X,U,V,Y lie on a circle."
   },
   {
     "id": "exam_problem8",
@@ -195,8 +461,19 @@
     "section_html": "dethi.html",
     "section_display_name": "Provincial and National Olympiad Exams",
     "difficulty": "Hard",
-    "problemTags": ["incircle/incenter", "equal segments", "circumcircle/circumcenter", "geometric construction"],
-    "methodTags": ["angle chasing", "harmonic conjugate", "cross-ratio"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "arbitrary point",
+      "moving point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "homothety",
+      "geometric similarity",
+      "ratio chasing",
+      "angle chasing"
+    ],
+    "content": "(Nghe An TST 2024 P3) Let triangle ABC be inscribed in circle (O), and let M be the midpoint of side BC. We call a point X on (O) a balanced point if the line through X perpendicular to MX intersects AB and AC at two points that are equidistant from M. Suppose D, E, F are three distinct balanced points. Prove that M is the incenter of triangle DEF."
   },
   {
     "id": "exam_problem9",
@@ -204,8 +481,23 @@
     "section_html": "dethi.html",
     "section_display_name": "Provincial and National Olympiad Exams",
     "difficulty": "Very Hard",
-    "problemTags": ["equal angles", "incircle/incenter", "circumcircle/circumcenter", "tangents"],
-    "methodTags": ["angle chasing", "ratio chasing", "Menelaus-Ceva theorem", "Pascal theorem", "cross-ratio", "harmonic conjugate", "pole and polar", "La Hire theorem"]
+    "problemTags": [
+      "equal angles",
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "tangents"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "ratio chasing",
+      "Menelaus-Ceva theorem",
+      "Pascal theorem",
+      "cross-ratio",
+      "harmonic conjugate",
+      "pole and polar",
+      "La Hire theorem"
+    ],
+    "content": "(Vietnam TST P5) Let ABC be an acute, non-isosceles triangle inscribed in circle (O). The incircle (I) of triangle ABC touches sides BC, CA, AB at D, E, F, respectively. The ray EF intersects circle (O) again at M. The tangents to (O) at A and M intersect at S, while the tangents at B and C intersect at T. Suppose that line IT intersects OA at J. Prove that angle ASJ = angle TSI."
   },
   {
     "id": "exam_problem10",
@@ -213,8 +505,19 @@
     "section_html": "dethi.html",
     "section_display_name": "Iranian Geometry Olympiad",
     "difficulty": "Hard",
-    "problemTags": ["angle bisectors", "orthocenter", "incircle/incenter", "bisects"],
-    "methodTags": ["Desargues theorem", "pole and polar", "La Hire theorem", "special points construction"]
+    "problemTags": [
+      "angle bisectors",
+      "orthocenter",
+      "incircle/incenter",
+      "bisects"
+    ],
+    "methodTags": [
+      "Desargues theorem",
+      "pole and polar",
+      "La Hire theorem",
+      "special points construction"
+    ],
+    "content": "(IGO Advanced 2023 - P4, Proposed by Tran Quang Hung - Vietnam) Let ABC be a triangle with angle bisectors BE and CF meeting at I. Let D be the perpendicular projection of I onto BC. Let M and N be the orthocenters of triangles AIF and AIE, respectively. Lines EM and FN meet at P. Let X be the midpoint of BC. Let Y be the point on line AD such that XY is perpendicular to IP. Prove that line AI bisects segment XY."
   },
   {
     "id": "exam_problem11",
@@ -222,8 +525,17 @@
     "section_html": "dethi.html",
     "section_display_name": "Iranian Geometry Olympiad",
     "difficulty": "Moderate",
-    "problemTags": ["angle bisectors", "concyclic", "incircle/incenter"],
-    "methodTags": ["power of a point", "harmonic conjugate", "angle chasing"]
+    "problemTags": [
+      "angle bisectors",
+      "concyclic",
+      "incircle/incenter"
+    ],
+    "methodTags": [
+      "power of a point",
+      "harmonic conjugate",
+      "angle chasing"
+    ],
+    "content": "(IGO Advanced 2024 - P4, Proposed by Hussein Khayou - Syria) Point P is inside the acute triangle triangle ABC such that angle BPC=90 degrees and angle BAP=angle PAC. Let D be the projection of P onto the side BC. Let M and N be the incenters of the triangles triangle ABD and triangle ADC, respectively. Prove that the quadrilateral BMNC is cyclic."
   },
   {
     "id": "exam_problem12",
@@ -231,8 +543,18 @@
     "section_html": "dethi.html",
     "section_display_name": "Iranian Geometry Olympiad",
     "difficulty": "Hard",
-    "problemTags": ["circumcircle/circumcenter", "perpendicular bisector", "isosceles triangle", "circles intersection"],
-    "methodTags": ["special points construction", "power of a point", "angle chasing"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "perpendicular bisector",
+      "isosceles triangle",
+      "circles intersection"
+    ],
+    "methodTags": [
+      "special points construction",
+      "power of a point",
+      "angle chasing"
+    ],
+    "content": "(IGO Advanced 2025 - P4, Proposed by Tran Quang Hung - Vietnam) Given an isosceles triangle ABC with vertex A. Points M and N lie on BC such that angle MAN = 1/2 angle BAC. Let P be the circumcenter of triangle AMN. The perpendicular bisectors of AM and AN intersect BC at R and Q, respectively. Points S and T lie on PQ and PR such that ST is perpendicular to AP. Let L and K be the reflections of A over lines RS and TQ, respectively. Prove that circles (CMK) and (BNL) intersect on the perpendicular bisector of BC."
   },
   {
     "id": "exam_problem13",
@@ -240,8 +562,19 @@
     "section_html": "dethi.html",
     "section_display_name": "HSGS Entrance Exam",
     "difficulty": "Hard",
-    "problemTags": ["circumcircle/circumcenter", "arbitrary point", "moving point"],
-    "methodTags": ["special points construction", "homothety", "geometric similarity", "ratio chasing", "angle chasing"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "arbitrary point",
+      "moving point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "homothety",
+      "geometric similarity",
+      "ratio chasing",
+      "angle chasing"
+    ],
+    "content": "(Entrance exam 2024, Teacher Tran Quang Hung, Round 2 geometry problem part c) Let ABC be an acute, non-isosceles triangle with circumcircle (O). Denote E,F the midpoints of AC,AB respectively. Let P vary on the minor arc BC of (O). Let M,N be the intersections of PC,PB with EF. Let S,T lie on AC,AB respectively such that ET is parallel to FS is parallel to AP. Let K,L be the circumcenters of triangles NFS and MET, respectively. The line through K perpendicular to AB meets the line through L perpendicular to AC at J. Prove that as P varies on the minor arc BC, the point J always lies on a fixed line."
   },
   {
     "id": "aops_problem1",
@@ -249,8 +582,24 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Extremely Hard",
-    "problemTags": ["isosceles trapezoid", "circumcircle/circumcenter", "mixtilinear incircle", "tangents", "concyclic"],
-    "methodTags": ["angle chasing", "special points construction", "inversion", "ratio chasing", "cross-ratio", "Pascal theorem", "pole and polar", "La Hire theorem"]
+    "problemTags": [
+      "isosceles trapezoid",
+      "circumcircle/circumcenter",
+      "mixtilinear incircle",
+      "tangents",
+      "concyclic"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "special points construction",
+      "inversion",
+      "ratio chasing",
+      "cross-ratio",
+      "Pascal theorem",
+      "pole and polar",
+      "La Hire theorem"
+    ],
+    "content": "(Teacher Tran Quang Hung) Given a triangle ABC inscribed in a circle omega. Choose a point P on omega such that AP is parallel to BC. The A-mixtilinear incircle of ABC is Omega, which is tangent to omega at D. The two tangents from P to Omega intersect AD at M and N, with M lying between A and D. Prove that two lines NB and CM intersect on omega."
   },
   {
     "id": "aops_problem2",
@@ -258,8 +607,21 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Hard",
-    "problemTags": ["isosceles trapezoid", "circumcircle/circumcenter", "mixtilinear incircle", "angle bisectors", "equal segments"],
-    "methodTags": ["special points construction", "inversion", "angle chasing", "power of a point", "radical axis"]
+    "problemTags": [
+      "isosceles trapezoid",
+      "circumcircle/circumcenter",
+      "mixtilinear incircle",
+      "angle bisectors",
+      "equal segments"
+    ],
+    "methodTags": [
+      "special points construction",
+      "inversion",
+      "angle chasing",
+      "power of a point",
+      "radical axis"
+    ],
+    "content": "(Teacher Tran Quang Hung, problem for the IMO Vietnam 2025 Team)Let triangle ABC be inscribed in a circle (O), with bisectors BE and CF intersecting at I. Circle (K) is tangent to CA, AB, and internally tangent to (O) at D. Line EF intersects BC and AD at P and T, respectively. Line PD intersects (O) again at Q. Let L be the circumcenter of triangle APD, and R the midpoint of IL. Construct an isosceles trapezoid AIRJ. Line AI intersects OJ and QT at Y and Z, respectively. Point X lies on QT such that YX is perpendicular to OJ. Prove that XY = XZ."
   },
   {
     "id": "aops_problem3",
@@ -267,8 +629,13 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Non-synthetic geometry",
-    "problemTags": ["geometric number theory"],
-    "methodTags": ["algebraic manipulations"]
+    "problemTags": [
+      "geometric number theory"
+    ],
+    "methodTags": [
+      "algebraic manipulations"
+    ],
+    "content": "(Teacher Tran Quang Hung, problem for the IMO Vietnam 2025 Team) Let ABCD be a square with point P lying on side AB. Let K and L be the centers of the Euler circles of triangles PAC and PBD, respectively. Suppose that PA and PB are positive integers. Prove that 32/3 (AL^4 + BK^4 + KL^4) is a perfect square."
   },
   {
     "id": "aops_problem4",
@@ -276,8 +643,19 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Extremely Hard",
-    "problemTags": ["incircle/incenter", "angle bisectors", "parallelism", "Euler line", "perspective triangles"],
-    "methodTags": ["special points construction", "geometric transformation", "geometric similarity"]
+    "problemTags": [
+      "incircle/incenter",
+      "angle bisectors",
+      "parallelism",
+      "Euler line",
+      "perspective triangles"
+    ],
+    "methodTags": [
+      "special points construction",
+      "geometric transformation",
+      "geometric similarity"
+    ],
+    "content": "(user Zhaom) Let triangle ABC have incenter I. Let AI, BI, and CI intersect BC, CA, and AB at D, E, and F, respectively. The perpendiculars from D to BC, from E to CA, and from F to AB form a triangle T. Let the incenter of T be I1. Prove that II1 is parallel to the Euler line of triangle ABC."
   },
   {
     "id": "aops_problem5",
@@ -285,8 +663,17 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Moderate",
-    "problemTags": ["A-Humpty point", "A-Dumpty point", "parallelism"],
-    "methodTags": ["power of a point", "cross-ratio", "ratio chasing"]
+    "problemTags": [
+      "A-Humpty point",
+      "A-Dumpty point",
+      "parallelism"
+    ],
+    "methodTags": [
+      "power of a point",
+      "cross-ratio",
+      "ratio chasing"
+    ],
+    "content": "(Teacher Tran Quang Hung) In triangle ABC, we call the line connecting the A-Humpty and A-Dumpty the HD-line corresponding to vertex A of the triangle ABC. For triangle ABC, the HD-line corresponding to vertex A intersects CA and AB at points E and F, respectively. Prove that the HD-line corresponding to vertex A of triangle AEF is parallel to BC."
   },
   {
     "id": "aops_problem6",
@@ -294,8 +681,20 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Moderate",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "arbitrary point", "pole and polar", "radical axis"],
-    "methodTags": ["special points construction", "harmonic conjugate", "radical axis", "pole and polar"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "arbitrary point",
+      "pole and polar",
+      "radical axis"
+    ],
+    "methodTags": [
+      "special points construction",
+      "harmonic conjugate",
+      "radical axis",
+      "pole and polar"
+    ],
+    "content": "(Teacher Tran Quang Hung) Given a triangle ABC inscribed in the circle Omega, and the incircle (I) is tangent to BC at D. Let omega be a circle passing through I with its center lying on the line ID. Let D* be the inverse of D with respect to omega. Prove that the pole with respect to omega of the radical axis of omega and Omega lies on the line AD*."
   },
   {
     "id": "aops_problem7",
@@ -303,8 +702,18 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Moderate",
-    "problemTags": ["external homothety center", "common tangents", "tangents", "equal segments"],
-    "methodTags": ["angle chasing", "radical axis", "harmonic conjugate"]
+    "problemTags": [
+      "external homothety center",
+      "common tangents",
+      "tangents",
+      "equal segments"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "radical axis",
+      "harmonic conjugate"
+    ],
+    "content": "(user lxhoanghsgs) Given two circles (O1) and (O2) having two common tangents meeting at the exsimilicenter A. Suppose that P is on (O1) and Q is on (O2), such that A, P, Q are collinear, and O1 P is not parallel to O2 Q. Let R be the intersection of the lines P O1 and Q O2, and M be the intersection of RB and AP, where B is the midpoint of O1 O2. The line passing through M and perpendicular to RB cuts the two external tangents of (O1) and (O2) at X and Y, respectively. Prove that M is the midpoint of XY."
   },
   {
     "id": "aops_problem8",
@@ -312,8 +721,21 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Hard",
-    "problemTags": ["trapezoid", "arbitrary point", "incircle/incenter", "equal segments", "excircle/excenter", "similar triangles"],
-    "methodTags": ["inversion", "power of a point", "angle chasing", "ratio chasing"]
+    "problemTags": [
+      "trapezoid",
+      "arbitrary point",
+      "incircle/incenter",
+      "equal segments",
+      "excircle/excenter",
+      "similar triangles"
+    ],
+    "methodTags": [
+      "inversion",
+      "power of a point",
+      "angle chasing",
+      "ratio chasing"
+    ],
+    "content": "(Teacher Tran Quang Hung) Given trapezoid ABCD with AB parallel to CD and point P outside the trapezoid such that lines PA and PD intersect side BC at points Q and R respectively. Let I, J, and K be the incenters of triangles PQR, QAB, and RCD respectively. The P-excircle (L) of triangle PAD is tangent to AD at F. Let Y and Z be the points on lines LA and LD respectively such that IY perpendicular to AJ and IZ perpendicular to DK. On segment LF, choose point W such that FW equals the inradius of triangle PQR. Bisectors of angles BAD and CDA meet at X. Prove that two triangles WYZ and XAD are similar."
   },
   {
     "id": "aops_problem9",
@@ -321,8 +743,19 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Hard",
-    "problemTags": ["incircle/incenter", "arbitrary point", "symmedian-Lemoine point", "concurrency"],
-    "methodTags": ["angle chasing", "cross-ratio", "harmonic conjugate", "Desargues theorem"]
+    "problemTags": [
+      "incircle/incenter",
+      "arbitrary point",
+      "symmedian-Lemoine point",
+      "concurrency"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "cross-ratio",
+      "harmonic conjugate",
+      "Desargues theorem"
+    ],
+    "content": "(user ngduchieu1903, source: Winter School) Given triangle ABC with incircle (I), denote D, E, F the tangent points of (I) with BC, CA, AB, respectively. Let P be an arbitrary point inside (I) and let X, Y, Z be the Lemoine points of triangles EPF, FPD, DPE, respectively. Prove that AX, BY, CZ concur at a point that lies on IP."
   },
   {
     "id": "aops_problem10",
@@ -330,8 +763,19 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Moderate",
-    "problemTags": ["incircle/incenter", "orthocenter", "reflections", "orthocenter", "centroid", "collinearity"],
-    "methodTags": ["geometric similarity", "angle chasing"]
+    "problemTags": [
+      "incircle/incenter",
+      "orthocenter",
+      "reflections",
+      "orthocenter",
+      "centroid",
+      "collinearity"
+    ],
+    "methodTags": [
+      "geometric similarity",
+      "angle chasing"
+    ],
+    "content": "(user goaoat) Let ABC be a triangle with incircle (I) and orthocenter H. Let (I) touch the sides of ABC at D,E,F. Let the reflections of H over EF,DF,DE be X,Y,Z. Show that the centroid of XYZ lies on HI."
   },
   {
     "id": "aops_problem11",
@@ -339,8 +783,19 @@
     "section_html": "baitapAoPs.html",
     "section_display_name": "Problems from AoPS Forum that I solved",
     "difficulty": "Easy",
-    "problemTags": ["tangent circles", "tangents", "radical axis", "external homothety center"],
-    "methodTags": ["angle chasing", "radical axis", "power of a point", "Pascal theorem"]
+    "problemTags": [
+      "tangent circles",
+      "tangents",
+      "radical axis",
+      "external homothety center"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "radical axis",
+      "power of a point",
+      "Pascal theorem"
+    ],
+    "content": "(user home245) Let Omega1,Omega2 be circles touching each other internally at point K and R_Omega1 > R_Omega2. Let A,B be points on Omega1 and AE,AF,BR,BS be tangents from A,B to Omega2. Let the circumcircles (ARS) and (BEF) intersect at points P,Q. Prove that P,Q,K are collinear."
   },
   {
     "id": "inversion_Problem1",
@@ -348,8 +803,20 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Hard",
-    "problemTags": ["orthocenter", "circles intersection", "tangency"],
-    "methodTags": ["inversion", "power of a point", "coaxial circles", "ratio chasing", "angle chasing", "radical axis"]
+    "problemTags": [
+      "orthocenter",
+      "circles intersection",
+      "tangency"
+    ],
+    "methodTags": [
+      "inversion",
+      "power of a point",
+      "coaxial circles",
+      "ratio chasing",
+      "angle chasing",
+      "radical axis"
+    ],
+    "content": "(Teacher Tran Quang Hung) Given a triangle ABC with altitude AD and orthocenter H. Let M be the midpoint of BC. G is the projection of A onto HM. GD intersects the circle with diameter AH again at X. XM intersects the circle with diameter AH again at Y. DY intersects the circle with diameter AH again at Z. The circles (ZXD) and (ZGM) intersect again at T. Prove that the circle (ZTH) is tangent to line BC."
   },
   {
     "id": "inversion_Problem2",
@@ -357,8 +824,21 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Hard",
-    "problemTags": ["incircle/incenter", "excircle/excenter", "angle bisectors", "circumcircle/circumcenter", "concurrency", "reflections"],
-    "methodTags": ["inversion", "power of a point", "ratio chasing", "radical axis"]
+    "problemTags": [
+      "incircle/incenter",
+      "excircle/excenter",
+      "angle bisectors",
+      "circumcircle/circumcenter",
+      "concurrency",
+      "reflections"
+    ],
+    "methodTags": [
+      "inversion",
+      "power of a point",
+      "ratio chasing",
+      "radical axis"
+    ],
+    "content": "(AoPS, navi_09220114 Malaysian SST 2024) Given a triangle ABC, let I be the incenter, and J be the A-excenter. A line l through A perpendicular to BC intersects the lines BI, CI, BJ, CJ at P, Q, R, S respectively. Suppose the angle bisector of angle BAC meets BC at K, and L is a point such that AL is a diameter in (ABC). Prove that the line KL, l, and the line through the centers of circles (IPQ) and (JRS) are concurrent."
   },
   {
     "id": "inversion_Problem3",
@@ -366,8 +846,20 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Hard",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "Feuerbach point", "mixtilinear incircle", "concurrency"],
-    "methodTags": ["angle chasing", "inversion", "symmetry", "special points construction"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "Feuerbach point",
+      "mixtilinear incircle",
+      "concurrency"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "inversion",
+      "symmetry",
+      "special points construction"
+    ],
+    "content": "(Teacher Nguyen Duy Khuong) Let triangle ABC be inscribed in circle (O) and have circumcircle (I). X is the touchpoint of the A-mix incircle with (O). Let A' be the reflection of A across I. The line through X perpendicular to A' X intersects (A-mix) at the second point T. Prove that AT passes through the Feuerbach point."
   },
   {
     "id": "inversion_Problem4",
@@ -375,8 +867,21 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Very Hard",
-    "problemTags": ["parallelogram", "power of a point", "arbitrary line", "equal segments", "reflections"],
-    "methodTags": ["ERIQ lemma", "inversion", "ratio chasing", "symmetry", "homothety"]
+    "problemTags": [
+      "parallelogram",
+      "power of a point",
+      "arbitrary line",
+      "equal segments",
+      "reflections"
+    ],
+    "methodTags": [
+      "ERIQ lemma",
+      "inversion",
+      "ratio chasing",
+      "symmetry",
+      "homothety"
+    ],
+    "content": "(Teacher Tran Quang Hung) Let ABCD be a parallelogram. Construct a point K such that KD is perpendicular to AD and KB is perpendicular to AB. On an arbitrary line through A, take two points E, F such that KE is parallel to AB and KF is parallel to AD. The lines ED and FB intersect at P. Let L be symmetric to K with respect to C. Let Q on PL such that PL times PQ = PK^2. Prove that AQ = AK."
   },
   {
     "id": "inversion_Problem5",
@@ -384,8 +889,23 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Moderate",
-    "problemTags": ["geometric construction", "circumcircle/circumcenter", "mixtilinear incircle", "incircle/incenter", "concyclic", "parallelism"],
-    "methodTags": ["special points construction", "extraversion", "inversion", "harmonic conjugate", "cross-ratio", "angle chasing"]
+    "problemTags": [
+      "geometric construction",
+      "circumcircle/circumcenter",
+      "mixtilinear incircle",
+      "incircle/incenter",
+      "concyclic",
+      "parallelism"
+    ],
+    "methodTags": [
+      "special points construction",
+      "extraversion",
+      "inversion",
+      "harmonic conjugate",
+      "cross-ratio",
+      "angle chasing"
+    ],
+    "content": "(AoPS forum, user tuquanhang) Given triangle ABC inscribed in circle (O). The circle (K) is tangent with AB, AC and tangent with (O) internally at T. Let L be the point on (K) such that circle (BLC) is tangent with (K). AL cuts (BLC) again at P. Let I be the incenter of triangle ABC. a. Prove that L, P, T and I are concyclic. b. Let M, N be the points on the circle (BLC) such that PM, PN are tangent with the incircle (I). Prove that MN is parallel to BC."
   },
   {
     "id": "inversion_Problem6",
@@ -393,8 +913,22 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Moderate",
-    "problemTags": ["perpendicular bisector", "equal angles", "circumcircle/circumcenter", "parallelism", "arbitrary point"],
-    "methodTags": ["inversion", "radical axis", "angle chasing", "ratio chasing", "law of Sines", "Desargues theorem"]
+    "problemTags": [
+      "perpendicular bisector",
+      "equal angles",
+      "circumcircle/circumcenter",
+      "parallelism",
+      "arbitrary point"
+    ],
+    "methodTags": [
+      "inversion",
+      "radical axis",
+      "angle chasing",
+      "ratio chasing",
+      "law of Sines",
+      "Desargues theorem"
+    ],
+    "content": "(Teacher Tran Quang Hung) Given triangle ABC with circumcenter O. Choose any point P on line AO. On circles (PAB) and (PAC), take points Q and R such that angle BAQ = angle CAR. Take points M and N on AQ and AR respectively such that MA = MB and NA = NC. Let E and F be points on CA and AB respectively such that NE is perpendicular to AB and MF is perpendicular to AC. Let S and T be the intersections of MF and NE with the perpendicular bisectors of AQ and AR respectively. Prove that EF is parallel to ST is parallel to BC."
   },
   {
     "id": "vector_Problem1",
@@ -402,8 +936,23 @@
     "section_html": "vector.html",
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Very Hard",
-    "problemTags": ["vector", "circumcircle/circumcenter", "incircle/incenter", "centroid", "symmedian-Lemoine point","collinearity"],
-    "methodTags": ["special points construction", "geometric similarity", "ratio chasing","angle chasing", "vectorial geometry", "barycentric coordinates"]
+    "problemTags": [
+      "vector",
+      "circumcircle/circumcenter",
+      "incircle/incenter",
+      "centroid",
+      "symmedian-Lemoine point",
+      "collinearity"
+    ],
+    "methodTags": [
+      "special points construction",
+      "geometric similarity",
+      "ratio chasing",
+      "angle chasing",
+      "vectorial geometry",
+      "barycentric coordinates"
+    ],
+    "content": "(Teacher Tran Quang Hung))Given a triangle ABC inscribed in the circle (O, R) and tangent to the incircle (I, r), with centroid G and Lemoine point L. Let P satisfy the equation 3R vector GP + r vector OI = vector 0. Prove that P lies on the line IL."
   },
   {
     "id": "vector_Problem2",
@@ -411,8 +960,18 @@
     "section_html": "vector.html",
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Easy",
-    "problemTags": ["circumcircle/circumcenter", "pedal triangle", "centroid", "arbitrary point", "symmedian-Lemoine point"],
-    "methodTags": ["special points construction", "vectorial geometry"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "pedal triangle",
+      "centroid",
+      "arbitrary point",
+      "symmedian-Lemoine point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "vectorial geometry"
+    ],
+    "content": "Given triangle ABC with circumcenter O and Lemoine point L. Let P be an arbitrary point on the line OL. Let DEF be the pedal triangle of P with respect to ABC. Let G be the centroid of triangle DEF. Prove that the line PG is parallel to the Euler line of triangle ABC."
   },
   {
     "id": "vector_Problem3",
@@ -420,8 +979,19 @@
     "section_html": "vector.html",
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Easy",
-    "problemTags": ["circumcircle/circumcenter", "incircle/incenter", "pedal triangle", "centroid", "arbitrary point", "symmedian-Lemoine point"],
-    "methodTags": ["special points construction", "vectorial geometry"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "incircle/incenter",
+      "pedal triangle",
+      "centroid",
+      "arbitrary point",
+      "symmedian-Lemoine point"
+    ],
+    "methodTags": [
+      "special points construction",
+      "vectorial geometry"
+    ],
+    "content": "(Application of generalization of problem 2)Given triangle ABC with circumcenter O, incenter I and Lemoine point L. Let P be an arbitrary point on the line IL. Let DEF be the pedal triangle of P with respect to ABC. Let G be the centroid of triangle DEF. Prove that the line PG is parallel to OI."
   },
   {
     "id": "vector_Problem4",
@@ -429,8 +999,20 @@
     "section_html": "vector.html",
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Hard",
-    "problemTags": ["circumcircle/circumcenter", "orthocenter", "nine-point circle/center", "concurrency", "centroid"],
-    "methodTags": ["trigonometric computation", "angle chasing", "vectorial geometry", "barycentric coordinates"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "orthocenter",
+      "nine-point circle/center",
+      "concurrency",
+      "centroid"
+    ],
+    "methodTags": [
+      "trigonometric computation",
+      "angle chasing",
+      "vectorial geometry",
+      "barycentric coordinates"
+    ],
+    "content": "(Teacher Tran Quang Hung)Let ABC be a triangle with circumcenter (O), orthocenter H, and nine-point center Eu. Let X,Y,Z be the orthocenters of triangles AEF, BDF, and CDE, respectively. Lines AD, BE, CF meet (O) again at P,Q,R, respectively. Let the line through X parallel to AD meet EF and OP at A1 and A2, respectively. Define B1,C1 and B2,C2 analogously. Let G be the centroid of triangle A2 B2 C2. a) Prove that lines AA1, BB1, CC1 are concurrent at a point J. b) Prove that Eu J is parallel to OG."
   },
   {
     "id": "ratiochasing_Problem1",
@@ -438,8 +1020,22 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Extremely Hard",
-    "problemTags": ["cyclic quadrilateral", "radical axis", "geometric construction", "tangents"],
-    "methodTags": ["ratio chasing", "Menelaus-Ceva theorem", "power of a point", "law of Sines", "angle chasing", "radical axis", "trigonometric computation"]
+    "problemTags": [
+      "cyclic quadrilateral",
+      "radical axis",
+      "geometric construction",
+      "tangents"
+    ],
+    "methodTags": [
+      "ratio chasing",
+      "Menelaus-Ceva theorem",
+      "power of a point",
+      "law of Sines",
+      "angle chasing",
+      "radical axis",
+      "trigonometric computation"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum) Given triangle ABC. Circle (K) passing through B and C intersects CA and AB again at points E and F respectively. Let H be a point such that HE is perpendicular to CA and HF is perpendicular to AB. Line AH intersects the circle (BHC) again at D. Line KD intersects BC at P. On line AP, choose point X such that HX is parallel to BC. A circle passing through A and H intersects CA and AB again at points M and N respectively. Circle (J) passes through B and N and is tangent to line HB. Circle (L) passes through C and M and is tangent to line HC. Prove that point X lies on the radical axis of circles (J) and (L)."
   },
   {
     "id": "ratiochasing_Problem2",
@@ -447,8 +1043,21 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Moderate",
-    "problemTags": ["circumcircle/circumcenter", "collinearity", "concyclic", "arbitrary point", "diameter"],
-    "methodTags": ["law of Sines", "Pythagores theorem", "ratio chasing", "angle chasing", "power of a point"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "collinearity",
+      "concyclic",
+      "arbitrary point",
+      "diameter"
+    ],
+    "methodTags": [
+      "law of Sines",
+      "Pythagores theorem",
+      "ratio chasing",
+      "angle chasing",
+      "power of a point"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum)Let triangle ABC be inscribed in the circle (O), and let P be an arbitrary point. PQ is the diameter of the circumcircle of triangle PBC. Points E and F lie on PC and PB, respectively, such that EF is perpendicular to OQ. Lines PB and PC intersect (O) again at M and N, respectively. The circumcircles of triangle CME and triangle BNF intersect PB and PC again at K and L, respectively. Prove that the four points E, F, K, L lie on a circle (J), and J lies on PQ."
   },
   {
     "id": "ratiochasing_Problem3",
@@ -456,8 +1065,17 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Moderate",
-    "problemTags": ["circumcircle/circumcenter", "incircle/incenter", "perpendicular bisector", "perpendicularity"],
-    "methodTags": ["angle chasing", "ratio chasing"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "incircle/incenter",
+      "perpendicular bisector",
+      "perpendicularity"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "ratio chasing"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum)Given a triangle ABC with incenter I. The perpendicular bisectors of AB and AC intersect IB and IC at M and N, respectively. The perpendicular bisector of IA intersects CA and AB at E and F, respectively. Choose points S and T such that AS is perpendicular to AM, FS is perpendicular to AB, AT is perpendicular to AN, and ET is perpendicular to AC. Choose points Q and R such that MQ is parallel to SR is parallel to AB and TQ is parallel to NR is parallel to AC. Prove that QR is perpendicular to AO, where O is the circumcenter of triangle ABC."
   },
   {
     "id": "ratiochasing_Problem4",
@@ -465,8 +1083,21 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Hard",
-    "problemTags": ["incircle/incenter", "circumcircle/circumcenter", "reflections", "concurrency"],
-    "methodTags": ["angle chasing","ratio chasing", "law of Sines", "cross-ratio","Monge D'Alembert theorem", "geometric similarity"]
+    "problemTags": [
+      "incircle/incenter",
+      "circumcircle/circumcenter",
+      "reflections",
+      "concurrency"
+    ],
+    "methodTags": [
+      "angle chasing",
+      "ratio chasing",
+      "law of Sines",
+      "cross-ratio",
+      "Monge D'Alembert theorem",
+      "geometric similarity"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum)Given a triangle ABC with incircle (I) touching CA and AB at E and F, respectively. The lines IB and IC intersect the circumcircle (ABC) again at M and N, respectively. Let P and Q be the reflections of C and B across M and N, respectively. Denote J, K, and L as the circumcenters of triangles APQ, BFQ, and CEP, respectively. Prove that FK, EL, and AJ are concurrent."
   },
   {
     "id": "ratiochasing_Problem5",
@@ -474,8 +1105,19 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Moderate",
-    "problemTags": ["isogonal conjugates", "reflections", "parallelism", "projections"],
-    "methodTags": ["radical axis", "power of a point", "ratio chasing", "angle chasing"]
+    "problemTags": [
+      "isogonal conjugates",
+      "reflections",
+      "parallelism",
+      "projections"
+    ],
+    "methodTags": [
+      "radical axis",
+      "power of a point",
+      "ratio chasing",
+      "angle chasing"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum)Let the triangle ABC with P,Q as two isogonal conjugate points. E,F are the projections of P onto CA,AB respectively. M,N are symmetrical of Q through the midpoints of BE,CF respectively. MN meets EF at R. Prove that PR is parallel to BC."
   },
   {
     "id": "ratiochasing_Problem6",
@@ -483,8 +1125,21 @@
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Very Hard",
-    "problemTags": ["circumcircle/circumcenter", "arc midpoints", "projections", "orthocenter", "collinearity"],
-    "methodTags": ["homothety", "angle chasing", "ratio chasing", "law of Sines","special points construction"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "arc midpoints",
+      "projections",
+      "orthocenter",
+      "collinearity"
+    ],
+    "methodTags": [
+      "homothety",
+      "angle chasing",
+      "ratio chasing",
+      "law of Sines",
+      "special points construction"
+    ],
+    "content": "(Teacher Tran Quang Hung on AoPS forum)Let ABC be an acute triangle inscribed in circle (O). Let M,N be the midpoints of AB,AC, respectively. Let E,F be the midpoints of the minor arcs CA,AB, respectively. EF meets CA,AB at Q,R, respectively. Let L,K be the projections of E,F onto AO, respectively. Let S,T be the centers of (RMK),(QNL), respectively. On line ST, take X such that XO is perpendicular to OA. Suppose the line through X parallel to EF intersects (O) at Y,Z. Prove that the orthocenter of triangle AYZ lies on EF."
   },
   {
     "id": "illustrate_vector",
@@ -493,18 +1148,18 @@
     "section_display_name": "Problems exemplifying the use of vector",
     "difficulty": "Hard",
     "problemTags": [
-  "circumcircle/circumcenter",
-  "orthocenter",
-  "symmedian-Lemoine point",
-  "isotomic conjugate",
-  "parallelism"
-],
-"methodTags": [
-  "vectorial geometry",
-  "barycentric coordinates",
-  "special points construction"
-]
-
+      "circumcircle/circumcenter",
+      "orthocenter",
+      "symmedian-Lemoine point",
+      "isotomic conjugate",
+      "parallelism"
+    ],
+    "methodTags": [
+      "vectorial geometry",
+      "barycentric coordinates",
+      "special points construction"
+    ],
+    "content": "(Source: Vietnamese Euclidean Geometry Facebook group, collected by Khuong Nguyen) Given a triangle ABC inscribed in circle (O) with orthocenter H. Let L be the Lemoine point. Let T be the isotomic conjugate of L. Prove that HT is parallel to OL."
   },
   {
     "id": "illustrate_inversion",
@@ -512,19 +1167,45 @@
     "section_html": "nghich_dao.html",
     "section_display_name": "Problems exemplifying the use of inversion",
     "difficulty": "Very Hard",
-    "problemTags": ["circumcircle/circumcenter", "moving point", "incircle/incenter", "mixtilinear incircle", "reflections"],
-    "methodTags": ["inversion", "angle chasing", "ratio chasing", "radical axis","special points construction"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "moving point",
+      "incircle/incenter",
+      "mixtilinear incircle",
+      "reflections"
+    ],
+    "methodTags": [
+      "inversion",
+      "angle chasing",
+      "ratio chasing",
+      "radical axis",
+      "special points construction"
+    ],
+    "content": "(Source: Vietnamese Euclidean Geometry group on Facebook, user Duong Nguyen) Let triangle ABC be inscribed in circle (O), with B, C fixed and A moving on the major arc BC of (O). Let (I) be the incircle of the triangle, tangent to BC at D. Line AI meets (O) again at P. Let (T) be the internal A-mixtilinear circle, tangent to (O) at X. Segment XP meets AD at L. a) Prove: L lies on (T). b) Let K be the reflection of A across line OI. Let KD meet (O) again at N, and let NL meet (O) again at J. Prove: AJ always passes through a fixed point."
   },
-    {
+  {
     "id": "illustrate_ratio",
     "problem_name": "Illustrative Ratio Chasing Problem",
     "section_html": "bien_doi_ti_le.html",
     "section_display_name": "Problems exemplifying the use of ratio chasing",
     "difficulty": "Very Hard",
-    "problemTags": ["circumcircle/circumcenter", "orthocenter", "tangents", "nine-point circle/center", "diameter", "pole and polar"],
-    "methodTags": ["radical axis", "Desargues theorem", "ratio chasing", "radical axis","Menelaus-Ceva theorem", "La Hire theorem", "pole and polar"]
+    "problemTags": [
+      "circumcircle/circumcenter",
+      "orthocenter",
+      "tangents",
+      "nine-point circle/center",
+      "diameter",
+      "pole and polar"
+    ],
+    "methodTags": [
+      "radical axis",
+      "Desargues theorem",
+      "ratio chasing",
+      "radical axis",
+      "Menelaus-Ceva theorem",
+      "La Hire theorem",
+      "pole and polar"
+    ],
+    "content": "(Source: AoPs, user goaoat) Let triangle ABC be a triangle with orthocenter H and circumcircle (O). Let the tangents from B and C to (O) intersect at K, and let the feet of K onto AC and AB be E and F. Let the circle with diameter EF intersect the nine-point circle of triangle ABC at X and Y. If the tangents from X and Y to the nine-point circle intersect at Z, show that H, K, Z are collinear."
   }
-
-
-
 ]
