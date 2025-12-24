@@ -11,6 +11,7 @@ from flask import Flask, render_template, request, jsonify
 import os
 from PIL import Image
 import pytesseract
+pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files (x86)\Tesseract-OCR\tesseract.exe"
 import pdfplumber
 import io
 
