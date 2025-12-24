@@ -27,6 +27,42 @@ document.addEventListener('keydown', function(e) {
   }
 });
 
+//Drop image files
+const dropArea = document.getElementById("drop-area");
+const fileElem = document.getElementById("fileElem");
+
+
+dropArea.addEventListener("click", () => fileElem.click());
+
+dropArea.addEventListener("dragover", e => {
+    e.preventDefault();
+    dropArea.style.backgroundColor = "#777";
+});
+dropArea.addEventListener("dragleave", e => {
+    e.preventDefault();
+    dropArea.style.backgroundColor = "#555";
+});
+dropArea.addEventListener("drop", e => {
+    e.preventDefault();
+    dropArea.style.backgroundColor = "#555";
+    handleFiles(e.dataTransfer.files);
+});
+
+fileElem.addEventListener("change", () => handleFiles(fileElem.files));
+
+function handleFiles(files) {
+    for (const file of files) {
+        const formData = new FormData();
+        formData.append("file", file);
+        fetch("/upload", { method: "POST", body: formData })
+            .then(res => res.json())
+            .then(data => {
+                textareaInput.value = data.text;  // show text in textarea
+            })
+            .catch(err => console.log(err));
+    }
+}
+
 
 
 

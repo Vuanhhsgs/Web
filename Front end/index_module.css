@@ -70,3 +70,15 @@
   max-width: none !important;
   border: 5px solid rgb(0, 0, 0);
 }
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 40px;
+    width: 400px;
+    margin: 20px auto;
+    background-color: #555; /* gray background */
+    color: white;           /* white text */
+    text-align: center;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}

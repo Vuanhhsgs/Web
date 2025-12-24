@@ -68,7 +68,7 @@ window.addEventListener("load", function() {
                     url: '/process',
                     type: 'POST',
                     contentType: 'application/json',
-                    data: JSON.stringify({ 'value': textareaInput.value }),
+                    data: JSON.stringify(textareaInput.value),
                     success: function(response) {
                         draw_diagram(response.result);
                     },
