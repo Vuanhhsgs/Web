@@ -9,7 +9,7 @@ This is my personal-but-public Euclidean geometry website: a curated archive of 
 
 ## What’s inside
 
-### 1) Selected Exercises — Competition / Exam Problems (dethi.html)
+### 1) Selected Exercises - Competition / Exam Problems (dethi.html)
 A curated set of competition-style problems with:
 - difficulty labels
 - a diagram image
@@ -17,14 +17,14 @@ A curated set of competition-style problems with:
 
 Sources include team selection tests, DGO/DJGO sets, provincial/national exams, and IGO Advanced problems.
 
-### 2) Selected Exercises — Vietnamese Euclidean Geometry Forum (group_hinhhocphang.html)
+### 2) Selected Exercises - Vietnamese Euclidean Geometry Forum (group_hinhhocphang.html)
 Problems credited to teachers and community contributors (often from the Vietnamese Euclidean Geometry community), with the same structure:
 - difficulty
 - statement
 - diagram
 - Try It Yourself + My Solution
 
-### 3) Selected Exercises — AoPS Forum Problems I Solved (baitapAoPs.html)
+### 3) Selected Exercises - AoPS Forum Problems I Solved (baitapAoPs.html)
 Problems collected from AoPS threads (plus credited problem authors), again with:
 - diagram
 - Try It Yourself + My Solution
@@ -98,7 +98,7 @@ My website began as a curated Euclidean geometry archive (problems, diagrams, so
   - used this extraction in an early prototype pipeline to explore “text to structure” and expose where the hard cases break
 
 ### Why the research papers mattered (the mental model I adopted)
-I originally assumed “problem text → correct construction code” could be done in one shot. Prototyping showed why that fails: geometry language is nested, constraint-heavy, and many constructions are ambiguous unless you encode a selection rule.
+I originally assumed “problem text to correct construction code” could be done in one shot. Prototyping showed why that fails: geometry language is nested, constraint-heavy, and many constructions are ambiguous unless you encode a selection rule.
 
 Studying recent work (AlphaGeometry, autoformalization papers, and geometry DSL/diagram-generation work like GMBL) gave me a clearer mindset:
 - In messy domains like geometry text, the hardest step is semantic parsing (natural language to structured meaning)
@@ -142,7 +142,7 @@ Next steps:
 
 ---
 
-### 3) Automated diagram generation (text → executable construction)
+### 3) Automated diagram generation (text to executable construction)
 Goal: paste a problem statement and get a reproducible interactive diagram.
 
 Progress:
@@ -183,4 +183,4 @@ Whenever possible, I credit problem sources and authors on the pages themselves.
 - The GitHub Pages site is the stable public version.
 - The Render deployment is where I test features that may require server-side logic.
 
-If you find errors, broken links, or want to suggest problems/technique sets, feel free to open an issue or message me.
+
