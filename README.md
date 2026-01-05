@@ -1,7 +1,7 @@
 # My Geometry Website - Overview
 
 Official website (GitHub Pages): https://vuanhhsgs.github.io/Web/  
-Testing / experimental deployment (Render): https://art-of-euclidean-geometry.onrender.com
+Testing / experimental deployment (Render): [https://art-of-euclidean-geometry.onrender.com](https://art-of-euclidean-geometry.onrender.com/)
 
 This is my personal-but-public Euclidean geometry website: a curated archive of Olympiad-style problems with diagrams, solutions, and interactive constructions. I built it to document my problem-solving journey and make advanced geometry more approachable for others.
 
