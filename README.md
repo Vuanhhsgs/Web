@@ -4,12 +4,15 @@ Official website (GitHub Pages): https://vuanhhsgs.github.io/Web/
 Testing / experimental deployment (Render): [https://art-of-euclidean-geometry.onrender.com](https://art-of-euclidean-geometry.onrender.com/)
 
 This is my personal-but-public Euclidean geometry website: a curated archive of Olympiad-style problems with diagrams, solutions, and interactive constructions. I built it to document my problem-solving journey and make advanced geometry more approachable for others.
+![Snippet of my website mainpage](readme_images/Snippet%20of%20my%20website%20mainpage.jpg)
 
 ---
 
 ## What’s inside
 
 ### 1) Selected Exercises - Competition / Exam Problems (dethi.html)
+![Snippet of this section](readme_images/competition.jpg)
+
 A curated set of competition-style problems with:
 - difficulty labels
 - a diagram image
@@ -18,6 +21,8 @@ A curated set of competition-style problems with:
 Sources include team selection tests, DGO/DJGO sets, provincial/national exams, and IGO Advanced problems.
 
 ### 2) Selected Exercises - Vietnamese Euclidean Geometry Forum (group_hinhhocphang.html)
+![Snippet of this section](readme_images/hhp.jpg)
+
 Problems credited to teachers and community contributors (often from the Vietnamese Euclidean Geometry community), with the same structure:
 - difficulty
 - statement
@@ -25,11 +30,15 @@ Problems credited to teachers and community contributors (often from the Vietnam
 - Try It Yourself + My Solution
 
 ### 3) Selected Exercises - AoPS Forum Problems I Solved (baitapAoPs.html)
+![Snippet of this section](readme_images/aops.jpg)
+
 Problems collected from AoPS threads (plus credited problem authors), again with:
 - diagram
 - Try It Yourself + My Solution
 
 ### 4) Technique problem sets (method-first learning)
+![Snippet of this section](readme_images/technique_example.jpg)
+
 Each technique page includes:
 - a “Common Approach” explanation
 - an illustrative example
@@ -43,6 +52,8 @@ Current technique sets include:
 ---
 
 ## What each problem page provides
+
+![Snippet of this section](readme_images/problem_layout.jpg)
 
 Each problem is presented with:
 - difficulty tag (from very easy to extremely hard)
@@ -59,6 +70,7 @@ I also maintain manual metadata to support structured practice:
 ---
 
 ## Search and practice workflow
+![Snippet of this section](readme_images/seach.jpg)
 
 The homepage includes a tag-based search overlay so users can filter problems by:
 - configuration tags
@@ -70,6 +82,7 @@ This supports targeted practice, for example: “altitudes + Ceva + hard”.
 ---
 
 ## Experimental direction: automated diagram generation from text
+![Snippet of this section](readme_images/diagram_generator.jpg)
 
 A long-term goal (and the reason for the testing deployment) is a “Generate Diagram” tool:
 - user pastes a geometry problem statement
